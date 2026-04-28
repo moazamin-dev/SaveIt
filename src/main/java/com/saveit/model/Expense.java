@@ -1,4 +1,4 @@
-package com.budget.model;
+package com.saveit.model;
 
 import java.util.Date;
 

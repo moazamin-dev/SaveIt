@@ -1,6 +1,6 @@
-package com.budget.controller;
+package com.saveit.controller;
 
-import com.budget.service.ReportGenerator;
+import com.saveit.service.ReportGenerator;
 import javafx.scene.Node;
 
 public class ChartController extends Controller {

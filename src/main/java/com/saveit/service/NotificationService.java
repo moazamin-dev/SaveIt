@@ -1,4 +1,4 @@
-package com.budget.service;
+package com.saveit.service;
 
 public class NotificationService {
 

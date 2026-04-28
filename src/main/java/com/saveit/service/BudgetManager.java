@@ -1,10 +1,10 @@
-package com.budget.service;
+package com.saveit.service;
 
-import com.budget.dao.DAO;
-import com.budget.dao.CycleDAO;
-import com.budget.model.Category;
-import com.budget.model.Expense;
-import com.budget.model.User;
+import com.saveit.dao.DAO;
+import com.saveit.dao.CycleDAO;
+import com.saveit.model.Category;
+import com.saveit.model.Expense;
+import com.saveit.model.User;
 
 import java.util.Date;
 import java.util.Map;

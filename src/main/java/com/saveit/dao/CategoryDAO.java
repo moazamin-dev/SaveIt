@@ -1,4 +1,4 @@
-package com.budget.dao;
+package com.saveit.dao;
 
 import com.budget.model.Category;
 import java.sql.Connection;

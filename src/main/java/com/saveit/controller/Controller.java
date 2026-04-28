@@ -1,6 +1,6 @@
-package com.budget.controller;
+package com.saveit.controller;
 
-import com.budget.model.User;
+import com.saveit.model.User;
 import javafx.scene.Node;
 
 public abstract class Controller {

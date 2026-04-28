@@ -1,8 +1,8 @@
-package com.budget.controller;
+package com.saveit.controller;
 
-import com.budget.model.Category;
-import com.budget.model.Expense;
-import com.budget.service.ReportGenerator;
+import com.saveit.model.Category;
+import com.saveit.model.Expense;
+import com.saveit.service.ReportGenerator;
 import javafx.scene.Node;
 import javafx.scene.control.TableView;
 

@@ -1,4 +1,4 @@
-package com.budget.dao;
+package com.saveit.dao;
 
 import java.sql.Connection;
 

@@ -1,8 +1,8 @@
-package com.budget.service;
+package com.saveit.service;
 
-import com.budget.dao.DAO;
-import com.budget.model.Category;
-import com.budget.model.Expense;
+import com.saveit.dao.DAO;
+import com.saveit.model.Category;
+import com.saveit.model.Expense;
 
 import java.time.LocalDate;
 import java.util.Map;

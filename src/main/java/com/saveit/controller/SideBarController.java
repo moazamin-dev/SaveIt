@@ -1,4 +1,4 @@
-package com.budget.controller;
+package com.saveit.controller;
 
 import javafx.scene.Node;
 

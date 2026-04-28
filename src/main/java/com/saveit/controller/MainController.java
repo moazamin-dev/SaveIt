@@ -1,6 +1,6 @@
-package com.budget.controller;
+package com.saveit.controller;
 
-import com.budget.service.BudgetManager;
+import com.saveit.service.BudgetManager;
 import javafx.scene.Node;
 import javafx.scene.control.Label;
 

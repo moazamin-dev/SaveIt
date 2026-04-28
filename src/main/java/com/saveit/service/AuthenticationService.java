@@ -1,7 +1,7 @@
-package com.budget.service;
+package com.saveit.service;
 
-import com.budget.dao.UserDAO;
-import com.budget.model.User;
+import com.saveit.dao.UserDAO;
+import com.saveit.model.User;
 
 public class AuthenticationService {
 

@@ -1,6 +1,6 @@
-package com.budget.controller;
+package com.saveit.controller;
 
-import com.budget.service.AuthenticationService;
+import com.saveit.service.AuthenticationService;
 import javafx.scene.Node;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
