@@ -1,6 +1,6 @@
 package com.saveit.dao;
 
-import com.budget.model.User;
+import com.saveit.model.User;
 import java.sql.Connection;
 
 public class UserDAO {

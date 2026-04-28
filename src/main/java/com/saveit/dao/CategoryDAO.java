@@ -1,6 +1,6 @@
 package com.saveit.dao;
 
-import com.budget.model.Category;
+import com.saveit.model.Category;
 import java.sql.Connection;
 import java.util.List;
 

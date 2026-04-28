@@ -1,6 +1,6 @@
 package com.saveit.dao;
 
-import com.budget.model.Expense;
+import com.saveit.model.Expense;
 import java.sql.Connection;
 import java.util.List;
 
