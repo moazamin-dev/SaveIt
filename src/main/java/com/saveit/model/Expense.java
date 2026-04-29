@@ -10,11 +10,10 @@ public class Expense {
     private Category category;
 
     public double getAmount() {
-        // TODO: implement
-        return 0;
+        return amount;
     }
 
     public void setAmount(double amount) {
-        // TODO: implement
+        this.amount = amount;
     }
 }

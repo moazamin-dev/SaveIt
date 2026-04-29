@@ -10,7 +10,6 @@ public class CategoryDAO implements DAO<Category> {
 
     @Override
     public void save(Category c) {
-        // TODO: implement
     }
 
     @Override

@@ -6,16 +6,14 @@ public class Category {
     private String category;
 
     public String getCategory() {
-        // TODO: implement
-        return null;
+        return category;
     }
 
     public void setCategory(String category) {
-        // TODO: implement
+        this.category = category;
     }
 
     public int getId() {
-        // TODO: implement
-        return 0;
+        return id;
     }
 }
