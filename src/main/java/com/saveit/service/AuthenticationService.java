@@ -8,8 +8,8 @@ public class AuthenticationService {
     private UserDAO userDAO;
     private static User currentUser;
 
-    public AuthenticationService(UserDAO userDAO) {
-        this.userDAO = userDAO;
+    public AuthenticationService() {
+        this.userDAO = new UserDAO();
     }
 
     public boolean login(String username, String rawPassword) {
@@ -34,5 +34,13 @@ public class AuthenticationService {
         newUser.setPassword(password);
         newUser.setPin(pin);
         return userDAO.register(newUser);
+    }
+
+    public static void logout() {
+        currentUser = null;
+    }
+
+    public static User getCurrentUser() {
+        return currentUser;
     }
 }
