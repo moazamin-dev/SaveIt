@@ -70,27 +70,11 @@
                                         <Font name="System Bold" size="10.0" />
                                     </font>
                                 </Label>
-                                <Pane HBox.hgrow="ALWAYS" />
-                                <Hyperlink text="Forgot?" textFill="#8898AA" style="-fx-underline: false;">
-                                    <font>
-                                        <Font size="11.0" />
-                                    </font>
-                                </Hyperlink>
                             </children>
                         </HBox>
                         <PasswordField fx:id="passwordField" onAction="#handleLogin" prefHeight="45.0" promptText="••••••••" style="-fx-background-color: #FCFCFC; -fx-border-color: #E0E4E8; -fx-border-radius: 5; -fx-background-radius: 5; -fx-padding: 0 10 0 10;" />
                     </children>
                 </VBox>
-
-                <HBox alignment="CENTER_LEFT">
-                    <children>
-                        <CheckBox mnemonicParsing="false" text="Keep me logged in" textFill="#8898AA">
-                            <font>
-                                <Font size="11.0" />
-                            </font>
-                        </CheckBox>
-                    </children>
-                </HBox>
                 <Label fx:id="errorLabel" text="" textFill="#FF0000" wrapText="true">
                     <font>
                         <Font size="12.0" />
