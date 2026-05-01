@@ -8,8 +8,6 @@ public class User {
     private String name;
     private String phone;
     private String username;
-    private String password;
-    private int pin;
 
     public void setId(int id) {
         this.id = id;
@@ -35,15 +33,7 @@ public class User {
 
     public String getPhone() {return phone;}
 
-    public void setPin(int pin) {this.pin = pin;}
-
-    public int getPin() {return pin;}
-
-    public void setPassword(String password) {this.password = hashPassword(password);}
-
-    public String getPassword() {return password;}
-
-    public String hashPassword(String pass) {
+    public static String hashPassword(String pass) {
         try {
             MessageDigest digest = MessageDigest.getInstance("SHA-256");
             byte[] encodedHash = digest.digest(pass.getBytes());

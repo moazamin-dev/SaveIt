@@ -13,6 +13,7 @@ public class DatabaseConnection {
     private DatabaseConnection() {
         try{
             this.connection = DriverManager.getConnection(url);
+            initializeDatabase();
         } catch (SQLException e){
             System.err.println(e.getMessage());
         }
@@ -32,7 +33,7 @@ public class DatabaseConnection {
     public void initializeDatabase() {
         String userTable = "CREATE TABLE IF NOT EXISTS users (" +
                 "id INTEGER PRIMARY KEY AUTOINCREMENT, " +
-                "name TEXT, phone TEXT UNIQUE, username TEXT UNIQUE, " +
+                "name TEXT, phone TEXT, username TEXT UNIQUE, " +
                 "password TEXT, pin INTEGER);";
         String categoryTable = "CREATE TABLE IF NOT EXISTS categories (" +
                 "id INTEGER PRIMARY KEY AUTOINCREMENT, " +

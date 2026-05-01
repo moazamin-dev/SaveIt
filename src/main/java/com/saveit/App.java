@@ -10,7 +10,7 @@ public class App extends Application {
 
     @Override
     public void start(Stage stage) throws Exception {
-        FXMLLoader loader = new FXMLLoader(getClass().getResource("/com/saveit/view/login-view.fxml"));
+        FXMLLoader loader = new FXMLLoader(getClass().getResource("/com/saveit/view/signup-view.fxml"));
         Scene scene = new Scene(loader.load());
         stage.setScene(scene);
         Image icon = new Image("logo.png");

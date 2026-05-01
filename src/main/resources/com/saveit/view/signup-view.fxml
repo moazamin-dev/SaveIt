@@ -1,14 +1,131 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
+<?import javafx.geometry.Insets?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
 
-<AnchorPane xmlns="http://javafx.com/javafx"
-            xmlns:fx="http://javafx.com/fxml"
-            fx:controller="CONTROLLER_NAME"
-            prefHeight="400.0" prefWidth="600.0">
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.image.Image?>
+<HBox prefHeight="600.0" prefWidth="900.0" style="-fx-background-color: #ffffff;" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.saveit.controller.SignUpController">
+    <children>
+        <!-- Left Side: Information Panel -->
+        <VBox alignment="CENTER_LEFT" prefWidth="400.0" spacing="20.0" style="-fx-background-color: #121921;">
+            <padding>
+                <Insets bottom="40.0" left="40.0" right="40.0" top="40.0" />
+            </padding>
+            <children>
+                <Label text="SaveIt" textFill="WHITE">
+                    <font>
+                        <Font name="System Bold" size="36.0" />
+                    </font>
+                </Label>
+                <Label text="Precision financial management for the modern professional. Join thousands of users optimizing their wealth today." textFill="#94a3b8" wrapText="true">
+                    <font>
+                        <Font size="14.0" />
+                    </font>
+                </Label>
+                <Region VBox.vgrow="ALWAYS" />
+                <HBox spacing="15.0">
+                    <children>
+                        <ImageView fitHeight="100.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@../../../logo.png" />
+                            </image>
+                            <clip>
+                                <Rectangle arcHeight="40.0" arcWidth="40.0" height="100.0" width="100.0" />
+                            </clip>
+                        </ImageView>
+                        <VBox>
+                            <children>
+                                <Label text="Bank-grade security" textFill="WHITE" />
+                                <Label text="Your data is always encrypted" textFill="#64748b">
+                                    <font>
+                                        <Font size="10.0" />
+                                    </font>
+                                </Label>
+                            </children>
+                        </VBox>
+                    </children>
+                </HBox>
+            </children>
+        </VBox>
 
-</AnchorPane>
+        <!-- Right Side: Registration Form -->
+        <VBox alignment="CENTER_LEFT" prefWidth="500.0" spacing="15.0">
+            <padding>
+                <Insets bottom="40.0" left="50.0" right="50.0" top="40.0" />
+            </padding>
+            <children>
+                <Label text="Create an account">
+                    <font>
+                        <Font name="System Bold" size="24.0" />
+                    </font>
+                </Label>
+                <Label text="Start your journey toward financial freedom." textFill="#64748b" />
+
+                <!-- Error Label -->
+                <Label fx:id="errorLabel" textFill="#ef4444" wrapText="true" />
+
+                <GridPane hgap="15.0" vgap="10.0">
+                    <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                    </columnConstraints>
+                    <rowConstraints>
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="40.0" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                    <children>
+                        <Label text="FULL NAME" GridPane.columnIndex="0" />
+                        <TextField fx:id="nameField" promptText="John Doe" style="-fx-padding: 10;" GridPane.rowIndex="1" />
+
+                        <Label text="USERNAME" GridPane.columnIndex="1" />
+                        <TextField fx:id="usernameField" promptText="johndoe88" style="-fx-padding: 10;" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                    </children>
+                </GridPane>
+
+                <Label text="PHONE NUMBER" />
+                <TextField fx:id="phoneField" promptText="+1 234 567 890" style="-fx-padding: 10;" />
+
+                <GridPane hgap="15.0" vgap="10.0">
+                    <columnConstraints>
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                        <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                    </columnConstraints>
+                    <rowConstraints>
+                        <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                        <RowConstraints minHeight="10.0" prefHeight="40.0" vgrow="SOMETIMES" />
+                    </rowConstraints>
+                    <children>
+                        <Label text="PASSWORD" />
+                        <PasswordField fx:id="passwordField" promptText="••••••••" style="-fx-padding: 10;" GridPane.rowIndex="1" />
+
+                        <Label text="CONFIRM PASSWORD" GridPane.columnIndex="1" />
+                        <PasswordField fx:id="confirmPasswordField" promptText="••••••••" style="-fx-padding: 10;" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                    </children>
+                </GridPane>
+
+                <Button maxWidth="Infinity" onAction="#handleRegister" style="-fx-background-color: #000000; -fx-text-fill: white; -fx-padding: 12; -fx-background-radius: 5; -fx-cursor: hand;" text="Register →">
+                    <font>
+                        <Font name="System Bold" size="14.0" />
+                    </font>
+                    <VBox.margin>
+                        <Insets top="10.0" />
+                    </VBox.margin>
+                </Button>
+
+                <HBox alignment="CENTER" spacing="5.0">
+                    <children>
+                        <Label text="Already have an account?" textFill="#64748b" />
+                        <Hyperlink onAction="#backToLogin" style="-fx-text-fill: #000000; -fx-font-weight: bold;" text="Back to Login" />
+                    </children>
+                    <padding>
+                        <Insets top="20.0" />
+                    </padding>
+                </HBox>
+            </children>
+        </VBox>
+    </children>
+</HBox>

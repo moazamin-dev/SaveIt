@@ -13,27 +13,23 @@ public class AuthenticationService {
     }
 
     public boolean login(String username, String rawPassword) {
-        User user = userDAO.findByUsername(username);
+        String storedHash = userDAO.getStoredPassword(username);
 
-        if (user != null) {
-            String hashedInput = user.hashPassword(rawPassword);
-
-            if (hashedInput.equals(user.getPassword())) {
-                currentUser = user;
+        if (storedHash != null) {
+            if (currentUser.hashPassword(rawPassword).equals(storedHash)) {
+                this.currentUser = userDAO.findByUsername(username);
                 return true;
             }
         }
         return false;
     }
 
-    public boolean signUp(String name, String phone, String username, String password, int pin) {
+    public boolean signUp(String name, String phone, String username, String password) {
         User newUser = new User();
         newUser.setName(name);
         newUser.setPhone(phone);
         newUser.setUname(username);
-        newUser.setPassword(password);
-        newUser.setPin(pin);
-        return userDAO.register(newUser);
+        return userDAO.register(newUser, password);
     }
 
     public static void logout() {
