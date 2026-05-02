@@ -41,6 +41,9 @@ public class SignUpController extends Controller {
         if (!authService.signUp(name, phone, username, password)) {
             displayError("Username exists.");
         }
+        else{
+            backToLogin();
+        }
     }
 
     public void backToLogin() {
