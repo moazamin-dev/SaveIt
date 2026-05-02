@@ -1,0 +1,21 @@
+.nav-button {
+    -fx-background-color: transparent;
+    -fx-text-fill: #9ca3af;
+    -fx-padding: 10 15 10 15;
+    -fx-background-radius: 8;
+    -fx-cursor: hand;
+    -fx-font-size: 14px;
+}
+
+.nav-button:hover {
+    -fx-background-color: #1f2937;
+    -fx-text-fill: white;
+}
+
+/* Optional: Class for the active button */
+.nav-button-active {
+    -fx-background-color: #1f2937;
+    -fx-text-fill: white;
+    -fx-border-color: #10B981;
+    -fx-border-width: 0 0 0 4; /* Green indicator on the left */
+}

@@ -101,7 +101,7 @@
                     </children>
                 </HBox>
 
-                <Button mnemonicParsing="false" prefHeight="50.0" prefWidth="340.0" style="-fx-background-color: white; -fx-border-color: #E0E4E8; -fx-border-radius: 8; -fx-background-radius: 8; -fx-text-fill: #1A1F33;" text="Create an account">
+                <Button mnemonicParsing="false" onAction="#goToSignup" prefHeight="50.0" prefWidth="340.0" style="-fx-background-color: white; -fx-border-color: #E0E4E8; -fx-border-radius: 8; -fx-background-radius: 8; -fx-text-fill: #1A1F33;" text="Create an account">
                     <font>
                         <Font name="System Bold" size="13.0" />
                     </font>

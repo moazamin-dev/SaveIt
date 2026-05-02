@@ -12,6 +12,10 @@ public abstract class Controller {
     public abstract Node getViewNodes();
 
     public void setUser(User user) {
-        // TODO: implement
+        this.user = user;
+    }
+
+    public User getUser() {
+        return user;
     }
 }

@@ -3,10 +3,10 @@ package com.saveit.controller;
 import com.saveit.model.User;
 import com.saveit.service.AuthenticationService;
 import javafx.scene.Node;
+import javafx.scene.Parent;
 import javafx.scene.control.Label;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
-import javafx.scene.control.Alert;
 import javafx.fxml.FXML;
 
 public class LoginController extends Controller {
@@ -16,7 +16,8 @@ public class LoginController extends Controller {
     @FXML private Label errorLabel;
     private AuthenticationService authService;
 
-    public void handleLogin() {
+    @FXML
+    private void handleLogin() {
         errorLabel.setText("");
 
         String username = usernameField.getText();
@@ -30,14 +31,23 @@ public class LoginController extends Controller {
         boolean success = authService.login(username, password);
 
         if (success) {
-            System.out.println("Login Successful! Welcome " + AuthenticationService.getCurrentUser().getName());
+            User loggedInUser = AuthenticationService.getCurrentUser();
+            openMainDashboard(loggedInUser);
         } else {
             displayError("Invalid username or password.");
         }
     }
 
     private void openMainDashboard(User user) {
-        // TODO: implement
+        SceneController.getInstance().handleEvent("USER_UPDATED", user);
+
+        Parent dashboard = SceneController.getInstance().loadScene(ViewType.DASHBOARD);
+
+        if (dashboard != null) {
+            javafx.stage.Stage stage = (javafx.stage.Stage) usernameField.getScene().getWindow();
+            stage.setScene(new javafx.scene.Scene(dashboard));
+            stage.setTitle(ViewType.DASHBOARD.getTitle());
+        }
     }
 
     @Override
@@ -49,6 +59,17 @@ public class LoginController extends Controller {
     public Node getViewNodes() {
         // TODO: implement
         return null;
+    }
+
+    @FXML
+    private void goToSignup() {
+        Parent signupView = SceneController.getInstance().loadScene(ViewType.REGISTER);
+
+        if (signupView != null) {
+            javafx.stage.Stage stage = (javafx.stage.Stage) usernameField.getScene().getWindow();
+            stage.setScene(new javafx.scene.Scene(signupView));
+            stage.setTitle(ViewType.REGISTER.getTitle());
+        }
     }
 
     private void displayError(String message) {

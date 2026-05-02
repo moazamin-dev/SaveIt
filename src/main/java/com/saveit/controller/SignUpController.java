@@ -3,6 +3,7 @@ package com.saveit.controller;
 import com.saveit.service.AuthenticationService;
 import javafx.fxml.FXML;
 import javafx.scene.Node;
+import javafx.scene.Parent;
 import javafx.scene.control.Label;
 import javafx.scene.control.PasswordField;
 import javafx.scene.control.TextField;
@@ -43,7 +44,13 @@ public class SignUpController extends Controller {
     }
 
     public void backToLogin() {
-        // TODO: implement
+        Parent loginView = SceneController.getInstance().loadScene(ViewType.LOGIN);
+
+        if (loginView != null) {
+            javafx.stage.Stage stage = (javafx.stage.Stage) usernameField.getScene().getWindow();
+            stage.setScene(new javafx.scene.Scene(loginView));
+            stage.setTitle(ViewType.REGISTER.getTitle());
+        }
     }
 
     @Override
