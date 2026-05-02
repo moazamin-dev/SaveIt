@@ -16,6 +16,7 @@ public class App extends Application {
         Image icon = new Image("logo.png");
         stage.getIcons().add(icon);
         stage.setTitle("SaveIt");
+        stage.setMaximized(true);
         stage.show();
     }
 

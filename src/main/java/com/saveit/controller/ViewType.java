@@ -9,18 +9,13 @@ public enum ViewType {
     BUDGET_SETUP("/com/saveit/view/budget-setup-view.fxml", "SaveIt - Plan Budget");
 
     private final String fxmlFile;
-    private final String title;
 
     ViewType(String fxmlFile, String title) {
         this.fxmlFile = fxmlFile;
-        this.title = title;
     }
 
     public String getFxmlFile() {
         return fxmlFile;
     }
 
-    public String getTitle() {
-        return title;
-    }
 }

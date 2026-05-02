@@ -48,8 +48,7 @@ public class SignUpController extends Controller {
 
         if (loginView != null) {
             javafx.stage.Stage stage = (javafx.stage.Stage) usernameField.getScene().getWindow();
-            stage.setScene(new javafx.scene.Scene(loginView));
-            stage.setTitle(ViewType.REGISTER.getTitle());
+            stage.getScene().setRoot(loginView);
         }
     }
 

@@ -45,8 +45,7 @@ public class LoginController extends Controller {
 
         if (dashboard != null) {
             javafx.stage.Stage stage = (javafx.stage.Stage) usernameField.getScene().getWindow();
-            stage.setScene(new javafx.scene.Scene(dashboard));
-            stage.setTitle(ViewType.DASHBOARD.getTitle());
+            stage.getScene().setRoot(dashboard);
         }
     }
 
@@ -67,8 +66,7 @@ public class LoginController extends Controller {
 
         if (signupView != null) {
             javafx.stage.Stage stage = (javafx.stage.Stage) usernameField.getScene().getWindow();
-            stage.setScene(new javafx.scene.Scene(signupView));
-            stage.setTitle(ViewType.REGISTER.getTitle());
+            stage.getScene().setRoot(signupView);
         }
     }
 
