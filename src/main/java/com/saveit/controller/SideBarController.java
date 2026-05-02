@@ -25,7 +25,7 @@ public class SideBarController extends Controller {
         return null;
     }
 
-    public void navBtnClicked(String viewName) { // Make sure 'viewName' is defined here
+    public void navBtnClicked(String viewName) {
         try {
             ViewType targetView = ViewType.valueOf(viewName.toUpperCase());
 
@@ -42,7 +42,6 @@ public class SideBarController extends Controller {
 
     @FXML
     private void handleLogout() {
-        // Clear global session if necessary, then return to login
         Parent login = SceneController.getInstance().loadScene(ViewType.LOGIN);
         Stage stage = (Stage) usernameLabel.getScene().getWindow();
         stage.setScene(new Scene(login));
@@ -52,20 +51,16 @@ public class SideBarController extends Controller {
     private void handleNavigation(javafx.event.ActionEvent event) {
         javafx.scene.control.Button clickedBtn = (javafx.scene.control.Button) event.getSource();
 
-        // 1. Find the parent container (the VBox) to clear other buttons
         javafx.scene.layout.VBox parent = (javafx.scene.layout.VBox) clickedBtn.getParent();
 
-        // 2. Remove "active" from all buttons in the sidebar
         for (Node node : parent.getChildren()) {
             if (node instanceof javafx.scene.control.Button) {
                 node.getStyleClass().remove("active");
             }
         }
 
-        // 3. Add "active" to the one we just clicked
         clickedBtn.getStyleClass().add("active");
 
-        // 4. Run your existing navigation logic
         String viewName = clickedBtn.getId().replace("Btn", "").toUpperCase();
         navBtnClicked(viewName);
     }
