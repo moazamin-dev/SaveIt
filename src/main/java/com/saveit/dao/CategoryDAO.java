@@ -13,7 +13,7 @@ public class CategoryDAO implements DAO<Category> {
     }
 
     @Override
-    public List<Category> getAll() {
+    public List<Category> getAll(int id) {
         // TODO: implement
         return null;
     }

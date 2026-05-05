@@ -3,17 +3,22 @@ package com.saveit.model;
 public class Category {
 
     private int id;
-    private String category;
+    private String name;
 
-    public String getCategory() {
-        return category;
+    public Category() {}
+
+    public Category(String name) {
+        this.name = name;
     }
 
-    public void setCategory(String category) {
-        this.category = category;
+    public String getName() {
+        return name;
     }
 
-    public int getId() {
-        return id;
+    public void setName(String name) {
+        this.name = name;
     }
+
+    public int getId() { return id; }
+
 }
