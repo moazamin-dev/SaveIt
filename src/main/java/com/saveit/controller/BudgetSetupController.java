@@ -25,10 +25,4 @@ public class BudgetSetupController extends Controller {
     public void initialize() {
         // TODO: implement
     }
-
-    @Override
-    public Node getViewNodes() {
-        // TODO: implement
-        return null;
-    }
 }

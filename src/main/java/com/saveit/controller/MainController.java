@@ -12,13 +12,8 @@ import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.control.*;
 import javafx.scene.layout.BorderPane;
-
-import java.sql.PreparedStatement;
-import java.sql.ResultSet;
-import java.sql.SQLException;
 import java.time.LocalDate;
 import java.util.ArrayList;
-import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 
@@ -100,7 +95,7 @@ public class MainController extends Controller {
         spendingMap = manager.getSpendingByCategory();
         categoryList.setAll(spendingMap.entrySet());
     }
-    @FXML
+
     public void goToSetCycle() {
         Parent nextView = SceneController.getInstance().loadScene(ViewType.ADD_EXPENSE);
 
@@ -108,9 +103,5 @@ public class MainController extends Controller {
             javafx.stage.Stage stage = (javafx.stage.Stage) overviewLabel.getScene().getWindow();
             stage.getScene().setRoot(nextView);
         }
-    }
-    @Override
-    public Node getViewNodes() {
-        return DashBoard;
     }
 }

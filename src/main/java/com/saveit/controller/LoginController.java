@@ -54,12 +54,6 @@ public class LoginController extends Controller {
         authService = new AuthenticationService();
     }
 
-    @Override
-    public Node getViewNodes() {
-        // TODO: implement
-        return null;
-    }
-
     @FXML
     private void goToSignup() {
         Parent signupView = SceneController.getInstance().loadScene(ViewType.REGISTER);

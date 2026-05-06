@@ -12,8 +12,6 @@ import javafx.scene.control.TextFormatter;
 import javafx.scene.layout.BorderPane;
 import javafx.util.StringConverter;
 import javafx.util.converter.DoubleStringConverter;
-
-import java.util.Map;
 import java.util.function.UnaryOperator;
 
 public class AddExpenseController extends Controller {
@@ -59,7 +57,6 @@ public class AddExpenseController extends Controller {
     }
 
     public TextFormatter<Double> setupFormatter(){
-        // Use a converter that doesn't crash or reset on empty/partial input
         StringConverter<Double> converter = new StringConverter<Double>() {
             @Override
             public String toString(Double object) {
@@ -89,8 +86,4 @@ public class AddExpenseController extends Controller {
         return new TextFormatter<>(new DoubleStringConverter(),null,filter);
     }
 
-    @Override
-    public Node getViewNodes() {
-        return addExpense;
-    }
 }

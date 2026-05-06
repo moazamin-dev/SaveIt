@@ -55,12 +55,6 @@ public class SignUpController extends Controller {
         }
     }
 
-    @Override
-    public Node getViewNodes() {
-        // TODO: implement
-        return null;
-    }
-
     private void displayError(String message) {
         errorLabel.setText(message);
     }

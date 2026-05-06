@@ -9,8 +9,6 @@ public abstract class Controller {
 
     public abstract void initialize();
 
-    public abstract Node getViewNodes();
-
     public void setUser(User user) {
         this.user = user;
     }

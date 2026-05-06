@@ -93,16 +93,19 @@ public class ExpenseDAO implements DAO<Expense> {
         return expenses;
     }
 
-    public Map<String,Double> categorySpendingQuery(){
+    public Map<String,Double> categorySpendingQuery(int user_id){
         Map<String,Double> result = new HashMap<>();
         String Query = "SELECT c.category_name, SUM(e.amount) as total " +
-                    "FROM categories c " +
-                "JOIN expenses e ON c.id = e.category_id " +
+                "FROM categories c " +
+                "JOIN expenses e ON c.id = e.category_id AND e.user_id = ? " +
                 "GROUP BY c.category_name";
-        try(PreparedStatement pst = connection.prepareStatement(Query);
-            ResultSet rs = pst.executeQuery()){
-            while (rs.next()) {
-                result.put(rs.getString("category_name"), rs.getDouble("total"));
+        try(PreparedStatement pst = connection.prepareStatement(Query);) {
+            pst.setInt(1, user_id);
+
+            try (ResultSet rs = pst.executeQuery()) {
+                while (rs.next()) {
+                    result.put(rs.getString("category_name"), rs.getDouble("total"));
+                }
             }
         }
         catch (SQLException ex) {
