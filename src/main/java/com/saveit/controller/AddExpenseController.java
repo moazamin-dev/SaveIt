@@ -1,11 +1,7 @@
 package com.saveit.controller;
 
-import com.saveit.dao.ExpenseDAO;
-import com.saveit.model.Expense;
 import com.saveit.service.BudgetManager;
 import javafx.fxml.FXML;
-import javafx.scene.Node;
-import javafx.scene.control.Button;
 import javafx.scene.control.DatePicker;
 import javafx.scene.control.TextField;
 import javafx.scene.control.TextFormatter;

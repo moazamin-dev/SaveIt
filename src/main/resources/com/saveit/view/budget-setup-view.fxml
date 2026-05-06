@@ -1,14 +1,82 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
+<?import javafx.geometry.Insets?>
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
-<AnchorPane xmlns="http://javafx.com/javafx"
-            xmlns:fx="http://javafx.com/fxml"
-            fx:controller="CONTROLLER_NAME"
-            prefHeight="400.0" prefWidth="600.0">
+<HBox prefHeight="900.0" prefWidth="1300.0" style="-fx-background-color: #f8fafc;" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.saveit.controller.BudgetSetupController">
+    <children>
+        <fx:include source="sidebar-view.fxml" />
 
-</AnchorPane>
+        <ScrollPane fitToWidth="true" style="-fx-background-color: transparent; -fx-background: transparent;" HBox.hgrow="ALWAYS">
+            <content>
+                <VBox spacing="30.0">
+                    <padding>
+                        <Insets bottom="40.0" left="50.0" right="50.0" top="30.0" />
+                    </padding>
+                    <children>
+
+                        <VBox spacing="5.0">
+                            <children>
+                                <HBox spacing="10.0" alignment="CENTER_LEFT">
+                                    <Label text="ACCOUNT" textFill="#64748b" style="-fx-font-size: 11; -fx-font-weight: bold;" />
+                                    <Label text="›" textFill="#cbd5e1" />
+                                    <Label text="CONFIGURATIONS" textFill="#64748b" style="-fx-font-size: 11; -fx-font-weight: bold;" />
+                                </HBox>
+                                <Label text="Budget Cycle Setup" style="-fx-font-size: 28; -fx-font-weight: bold; -fx-text-fill: #0f172a;" />
+                                <Label text="Establish your financial boundaries and temporal range for the upcoming fiscal period." textFill="#64748b" />
+                            </children>
+                        </VBox>
+
+                        <VBox spacing="25.0" style="-fx-background-color: white; -fx-background-radius: 12; -fx-border-color: #e2e8f0; -fx-border-radius: 12;">
+                            <padding><Insets bottom="40" left="40" right="40" top="30" /></padding>
+                            <children>
+                                <HBox spacing="15.0" alignment="CENTER_LEFT">
+                                    <VBox alignment="CENTER" style="-fx-background-color: #0f172a; -fx-background-radius: 8;" prefWidth="40" prefHeight="40">
+                                        <Label text="📅" textFill="white" style="-fx-font-size: 18;"/>
+                                    </VBox>
+                                    <VBox>
+                                        <Label text="Core Parameters" style="-fx-font-size: 16; -fx-font-weight: bold;" />
+                                        <Label text="Define the foundational constraints of this budget cycle." textFill="#94a3b8" style="-fx-font-size: 12;" />
+                                    </VBox>
+                                </HBox>
+
+                                <VBox spacing="8.0">
+                                    <Label text="Monthly Expenditure Limit" textFill="#1e293b" style="-fx-font-weight: bold; -fx-font-size: 13;" />
+                                    <TextField fx:id="limitField" promptText="\$ 0.00" prefHeight="50.0"
+                                               style="-fx-background-color: white; -fx-border-color: #e2e8f0; -fx-border-radius: 6; -fx-padding: 0 15;"/>
+                                    <Label text="Total planned spending across all categories for 30 days." textFill="#94a3b8" style="-fx-font-size: 11;" />
+                                </VBox>
+
+                                <HBox spacing="20.0">
+                                    <VBox HBox.hgrow="ALWAYS" spacing="8.0">
+                                        <Label text="Start Date" textFill="#1e293b" style="-fx-font-weight: bold; -fx-font-size: 13;" />
+                                        <DatePicker fx:id="startDatePicker" prefHeight="45.0" maxWidth="Infinity" promptText="mm/dd/yyyy" />
+                                    </VBox>
+                                    <VBox HBox.hgrow="ALWAYS" spacing="8.0">
+                                        <Label text="End Date" textFill="#1e293b" style="-fx-font-weight: bold; -fx-font-size: 13;" />
+                                        <DatePicker fx:id="endDatePicker" prefHeight="45.0" maxWidth="Infinity" promptText="mm/dd/yyyy" />
+                                    </VBox>
+                                </HBox>
+
+                                <HBox spacing="15.0" alignment="CENTER_RIGHT">
+                                    <Button onAction="#handleStartCycle" text="Initialize Cycle" prefHeight="45.0" prefWidth="180.0"
+                                            style="-fx-background-color: #0f172a; -fx-text-fill: white; -fx-background-radius: 6; -fx-font-weight: bold;" />
+                                </HBox>
+                            </children>
+                        </VBox>
+
+                        <VBox spacing="20.0">
+                            <children>
+                                <HBox alignment="CENTER_LEFT">
+                                    <Label text="Allocation Distribution" style="-fx-font-size: 20; -fx-font-weight: bold;" />
+                                    <Region HBox.hgrow="ALWAYS" />
+                                </HBox>
+                            </children>
+                        </VBox>
+                    </children>
+                </VBox>
+            </content>
+        </ScrollPane>
+    </children>
+</HBox>

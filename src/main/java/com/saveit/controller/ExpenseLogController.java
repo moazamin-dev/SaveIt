@@ -98,7 +98,7 @@ public class ExpenseLogController extends Controller {
 
     private void populateTable() {
         expenseList.clear();
-        List<Expense> data = manager.getExpenseList();
+        List<Expense> data = manager.getAllExpenses();
         if (data != null) {
             expenseList.addAll(data);
         }

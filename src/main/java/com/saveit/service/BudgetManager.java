@@ -19,11 +19,10 @@ public class BudgetManager {
 
     public BudgetManager(User user) {
         this.user = user;
-        CycleDAO cycleDAO = new CycleDAO();
-        this.cycleManager    = new CycleManager(cycleDAO.getCycle(user.getId()));
+        this.cycleManager    = new CycleManager(user);
         this.expenseService  = new ExpenseService(user);
         this.budgetCalculator = new BudgetCalculator(cycleManager, expenseService);
-        this.budgetNotifier  = new BudgetNotifier(budgetCalculator, cycleManager);
+        this.budgetNotifier  = new BudgetNotifier(budgetCalculator, cycleManager, user);
         this.categoryService = new CategoryService(user);
     }
 
@@ -42,14 +41,19 @@ public class BudgetManager {
     public double sum_of_transactions(List<Expense> list) { return budgetCalculator.sum_of_transactions(list); }
     public boolean isOverBudget()                { return budgetNotifier.isOverBudget(); }
     public Map<String, Double> getSpendingByCategory() { return expenseService.getSpendingByCategory(); }
+    public List<Expense> getAllExpenses()        { return expenseService.getAllExpenses(); }
 
     public void addTransaction(double amount, String category, LocalDate date) {
         expenseService.addTransaction(amount, category, date);
         if (cycleManager.getCycle() != null && cycleManager.getCycle().isActive()) {
-            budgetCalculator.deduct(amount);
-            budgetNotifier.isOverBudget();
-        } else {
-            System.err.println("Warning: No active cycle. Expense recorded but not tracked against a budget.");
+            LocalDate start = cycleManager.getCycleStartDate();
+            LocalDate end = cycleManager.getCycleEndDate();
+            if (!date.isBefore(start) && !date.isAfter(end)) {
+                budgetCalculator.deduct(amount);
+                budgetNotifier.isOverBudget();
+            } else {
+                System.out.println("Expense saved, but excluded from current budget (Date outside cycle).");
+            }
         }
     }
 

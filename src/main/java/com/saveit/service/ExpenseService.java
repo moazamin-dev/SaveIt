@@ -19,8 +19,13 @@ public class ExpenseService {
     }
 
     public List<Expense> getExpenseList() {
-        return expenseDAO.getExpenseSinceDate(user.getId(),
-                new com.saveit.dao.CycleDAO().getCycle(user.getId()).getStartDate().toString());
+        com.saveit.model.Cycle currentCycle = new com.saveit.dao.CycleDAO().getCycle(user.getId());
+
+        if (currentCycle == null || currentCycle.getStartDate() == null) {
+            return new java.util.ArrayList<>();
+        }
+
+        return expenseDAO.getExpenseSinceDate(user.getId(), currentCycle.getStartDate().toString());
     }
 
     public void addTransaction(double amount, String category, LocalDate date) {
@@ -37,5 +42,9 @@ public class ExpenseService {
 
     public void deleteExpense(Expense e) {
         expenseDAO.delete(e.getId());
+    }
+
+    public List<Expense> getAllExpenses() {
+        return expenseDAO.getAll(user.getId());
     }
 }

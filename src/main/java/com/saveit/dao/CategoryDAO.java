@@ -19,7 +19,7 @@ public class CategoryDAO implements DAO<Category> {
 
     @Override
     public void save(Category c) {
-        String Query = "INSERT INTO categories(category_name,user_id) VALUES(?,?)";
+        String Query = "INSERT INTO Category(category_name,user_id) VALUES(?,?)";
         try(PreparedStatement save = connection.prepareStatement(Query)){
             save.setString(1, c.getName());
             save.setInt(2,c.getUser_id());
@@ -36,7 +36,7 @@ public class CategoryDAO implements DAO<Category> {
     @Override
     public List<Category> getAll(int id) {
         List<Category> categories = new ArrayList<>();
-        String sql = "SELECT * FROM categories " +
+        String sql = "SELECT * FROM Category " +
                      "WHERE user_id = ?";
 
         try (PreparedStatement getAll = connection.prepareStatement(sql)) {
@@ -60,7 +60,7 @@ public class CategoryDAO implements DAO<Category> {
 
     @Override
     public void delete(int id) {
-        String Query = "DELETE FROM categories WHERE id = ?";
+        String Query = "DELETE FROM Category WHERE id = ?";
         try(PreparedStatement delete = connection.prepareStatement(Query)){
 
             delete.setInt(1,id);
@@ -76,7 +76,7 @@ public class CategoryDAO implements DAO<Category> {
 
     public Category resolveID(int user_id , int categoryID){
         Category category = new Category();
-        String sql = "SELECT * FROM categories " +
+        String sql = "SELECT * FROM Category " +
                      "WHERE id = ? AND user_id = ?";
 
         try (PreparedStatement getAll = connection.prepareStatement(sql)) {
@@ -99,7 +99,7 @@ public class CategoryDAO implements DAO<Category> {
 
     public Category resolveName(int user_id , String Name){
         Category category = new Category();
-        String sql = "SELECT * FROM categories " +
+        String sql = "SELECT * FROM Category " +
                      "WHERE category_name = ? AND user_id = ?";
 
         try (PreparedStatement getAll = connection.prepareStatement(sql)) {
@@ -124,9 +124,4 @@ public class CategoryDAO implements DAO<Category> {
         }
         return category;
     }
-
-//    public List<Category> getCategoryList(Category category) {
-//         TODO: implement
-//        return null;
-//    }
 }

@@ -4,6 +4,7 @@ import java.time.LocalDate;
 import java.util.Objects;
 
 public class Cycle {
+    private int id;
     private double limit = 0;
     private LocalDate startDate = LocalDate.of(2000,1,1);
     private LocalDate endDate = LocalDate.of(2100,1,1);
@@ -18,6 +19,13 @@ public class Cycle {
         this.limit = limit;
         this.startDate = d1;
         this.endDate = d2;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+    public int getId(){
+        return id;
     }
 
     public void resetCycle(){

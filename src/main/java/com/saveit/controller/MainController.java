@@ -97,7 +97,7 @@ public class MainController extends Controller {
     }
 
     public void goToSetCycle() {
-        Parent nextView = SceneController.getInstance().loadScene(ViewType.ADD_EXPENSE);
+        Parent nextView = SceneController.getInstance().loadScene(ViewType.BUDGET_SETUP);
 
         if (nextView != null) {
             javafx.stage.Stage stage = (javafx.stage.Stage) overviewLabel.getScene().getWindow();

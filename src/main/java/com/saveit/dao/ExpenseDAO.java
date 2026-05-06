@@ -18,7 +18,7 @@ public class ExpenseDAO implements DAO<Expense> {
 
     @Override
     public void save(Expense e) {
-        String Query = "INSERT INTO expenses(amount,date,user_id,category_id) VALUES(?,?,?,?)";
+        String Query = "INSERT INTO Expense(amount,date,user_id,category_id) VALUES(?,?,?,?)";
         try(PreparedStatement save = connection.prepareStatement(Query)){
             save.setDouble(1, e.getAmount());
             save.setString(2,e.getDate().toString());
@@ -37,8 +37,8 @@ public class ExpenseDAO implements DAO<Expense> {
     @Override
     public List<Expense> getAll(int id) {
         List<Expense> expenses = new ArrayList<>();
-        String sql = "SELECT e.*, c.category_name AS category_name FROM expenses e " +
-                     "JOIN categories c ON e.category_id = c.id " +
+        String sql = "SELECT e.*, c.category_name AS category_name FROM Expense e " +
+                     "JOIN Category c ON e.category_id = c.id " +
                      "WHERE e.user_id = ?";
 
         try (PreparedStatement getAll = connection.prepareStatement(sql)) {
@@ -67,8 +67,8 @@ public class ExpenseDAO implements DAO<Expense> {
 
     public List<Expense> getExpenseSinceDate(int user_id, String date) { // Added userId for security
         List<Expense> expenses = new ArrayList<>();
-        String query = "SELECT e.*,c.category_name AS category_name FROM expenses e " +
-                        "JOIN categories c ON e.category_id = c.id " +
+        String query = "SELECT e.*,c.category_name AS category_name FROM Expense e " +
+                        "JOIN Category c ON e.category_id = c.id " +
                         "WHERE e.user_id = ? AND e.date >= ?";
 
         try (PreparedStatement ps = connection.prepareStatement(query)) {
@@ -96,8 +96,8 @@ public class ExpenseDAO implements DAO<Expense> {
     public Map<String,Double> categorySpendingQuery(int user_id){
         Map<String,Double> result = new HashMap<>();
         String Query = "SELECT c.category_name, SUM(e.amount) as total " +
-                "FROM categories c " +
-                "JOIN expenses e ON c.id = e.category_id AND e.user_id = ? " +
+                "FROM Category c " +
+                "JOIN Expense e ON c.id = e.category_id AND e.user_id = ? " +
                 "GROUP BY c.category_name";
         try(PreparedStatement pst = connection.prepareStatement(Query);) {
             pst.setInt(1, user_id);
@@ -117,7 +117,7 @@ public class ExpenseDAO implements DAO<Expense> {
 
     @Override
     public void delete(int id) {
-        String Query = "DELETE FROM expenses WHERE id = ?";
+        String Query = "DELETE FROM Expense WHERE id = ?";
         try(PreparedStatement delete = connection.prepareStatement(Query)){
 
             delete.setInt(1,id);

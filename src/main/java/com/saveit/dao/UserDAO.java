@@ -14,7 +14,7 @@ public class UserDAO {
     }
 
     public boolean register(User u, String plainPassword) {
-        String sql = "INSERT INTO users (name, phone, username, password) VALUES (?, ?, ?, ?)";
+        String sql = "INSERT INTO User (name, phone, username, password) VALUES (?, ?, ?, ?)";
         try (PreparedStatement pstmt = connection.prepareStatement(sql)){
             pstmt.setString(1, u.getName());
             pstmt.setString(2, u.getPhone());
@@ -33,7 +33,7 @@ public class UserDAO {
     }
 
     public User findByUsername(String username) {
-        String sql = "SELECT * FROM users WHERE username = ?";
+        String sql = "SELECT * FROM User WHERE username = ?";
         try (PreparedStatement pstmt = connection.prepareStatement(sql)){
             pstmt.setString(1, username);
             ResultSet rs = pstmt.executeQuery();
@@ -53,7 +53,7 @@ public class UserDAO {
     }
 
     public String getStoredPassword(String username) {
-        String sql = "SELECT password FROM users WHERE username = ?";
+        String sql = "SELECT password FROM User WHERE username = ?";
         try (PreparedStatement pstmt = connection.prepareStatement(sql)){
             pstmt.setString(1, username);
             ResultSet rs = pstmt.executeQuery();
