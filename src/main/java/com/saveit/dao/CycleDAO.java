@@ -1,17 +1,70 @@
 package com.saveit.dao;
 
+import com.saveit.model.Cycle;
+
 import java.sql.Connection;
+import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+import java.sql.SQLException;
+import java.time.LocalDate;
 import java.util.Date;
 
 public class CycleDAO {
 
     private Connection connection;
+    public CycleDAO(){this.connection = DatabaseConnection.getInstance().getConnection();}
+    public void save(int user_id,double limit, Date d1, Date d2) {
+        String Query = "INSERT INTO cycles(user_id, monthly_limit, start_date, end_date) VALUES(?,?,?,?)";
+        try(PreparedStatement save = connection.prepareStatement(Query)){
+            save.setInt(1, user_id);
+            save.setDouble(2, limit);
+            save.setString(3, d1.toString());
+            save.setString(4,d2.toString());
 
-    public void save(int limit, Date d1, Date d2) {
-        // TODO: implement
+            save.executeUpdate();
+            System.out.println("cycle added successfully.");
+
+        } catch (SQLException ex) {
+            System.err.println("Database Error while saving cycles: " + ex.getMessage());
+        }
+    }
+
+    public Cycle getCycle(int User_id){
+        Cycle cycle = new Cycle();
+        String Query = "SELECT * FROM cycles WHERE user_id = ?";
+        try(PreparedStatement getCycle = connection.prepareStatement(Query)) {
+            getCycle.setInt(1, User_id);
+            try (ResultSet rs = getCycle.executeQuery()){
+                if (rs.next()) {
+
+                    String startDateStr = rs.getString("start_date");
+                    String endDateStr = rs.getString("end_date");
+                    cycle.setCycle(rs.getDouble("monthly_limit"),
+                            startDateStr != null ? LocalDate.parse(startDateStr) : null,
+                            endDateStr != null ? LocalDate.parse(endDateStr) : null);
+
+                    return cycle;
+                }
+            }
+        }
+        catch (SQLException ex){
+            System.err.println("Database Error while finding cycle: " + ex.getMessage());
+        }
+        return cycle;
     }
 
     public void delete(int id) {
-        // TODO: implement
+        String Query = "DELETE FROM cycles WHERE id = ?";
+        try(PreparedStatement delete = connection.prepareStatement(Query)){
+
+            delete.setInt(1,id);
+
+            delete.executeUpdate();
+            System.out.println("cycle deleted successfully.");
+
+        } catch (SQLException ex) {
+            System.err.println("Database Error when deleting: " + ex.getMessage());
+
+        }
     }
 }

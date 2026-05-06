@@ -1,14 +1,71 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
-<?import java.lang.*?>
-<?import java.util.*?>
-<?import javafx.scene.*?>
-<?import javafx.scene.control.*?>
-<?import javafx.scene.layout.*?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.effect.DropShadow?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.text.Font?>
 
-<AnchorPane xmlns="http://javafx.com/javafx"
-            xmlns:fx="http://javafx.com/fxml"
-            fx:controller="CONTROLLER_NAME"
-            prefHeight="400.0" prefWidth="600.0">
+<BorderPane fx:id="addExpense" style="-fx-background-color: #f4f7f6;" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.saveit.controller.AddExpenseController">
+    <left>
+        <fx:include source="sidebar-view.fxml" />
+    </left>
+    <center>
+        <ScrollPane fitToHeight="true" fitToWidth="true" hbarPolicy="NEVER" style="-fx-background-color: transparent; -fx-background: transparent;" vbarPolicy="AS_NEEDED">
+            <content>
+                <VBox alignment="TOP_CENTER" spacing="30" style="-fx-padding: 40;">
+                    <VBox alignment="CENTER" spacing="8">
+                        <Label style="-fx-font-size: 28px; -fx-font-weight: bold; -fx-text-fill: #2d3436;" text="Record New Expense" />
+                        <Label maxWidth="500" style="-fx-font-size: 14px; -fx-text-fill: #636e72;" text="Input your spending details accurately to maintain your budget integrity." textAlignment="CENTER" wrapText="true" />
+                    </VBox>
+                    <VBox maxWidth="550" spacing="25" style="-fx-background-color: white; -fx-padding: 40; -fx-background-radius: 15;">
+                        <effect>
+                            <DropShadow blurType="GAUSSIAN" height="15" radius="7" width="15">
+                                <color><Color opacity="0.1" /></color>
+                            </DropShadow>
+                        </effect>
+                        <VBox spacing="10">
+                            <Label style="-fx-font-weight: bold; -fx-text-fill: #2d3436; -fx-font-size: 14px;" text="Transaction Amount" />
+                            <TextField fx:id="amountField"
+                                       maxWidth="550"
+                                       minHeight="90"
+                                       prefHeight="90"
+                                       alignment="CENTER_LEFT"
+                                       promptText="\$ 0.00"
+                                       style="-fx-background-color: #f9f9f9; -fx-border-color: #dfe6e9; -fx-border-radius: 8; -fx-background-radius: 8; -fx-text-fill: #0984e3; -fx-font-weight: bold; -fx-font-size: 32px;">
+                                <font>
+                                    <Font size="32.0" />
+                                </font>
+                            </TextField>
+                        </VBox>
+                        <VBox spacing="10">
+                            <Label style="-fx-font-weight: bold; -fx-text-fill: #2d3436; -fx-font-size: 14px;" text="Expense Category" />
+                            <TextField fx:id="categoryField" promptText="e.g. Groceries, Rent, Entertainment" style="-fx-background-color: #f9f9f9; -fx-border-color: #dfe6e9; -fx-border-radius: 8; -fx-background-radius: 8; -fx-padding: 12; -fx-font-size: 16px;" />
+                        </VBox>
 
-</AnchorPane>
+                        <VBox spacing="10">
+                            <Label style="-fx-font-weight: bold; -fx-text-fill: #2d3436; -fx-font-size: 14px;" text="Date of Transaction" />
+                            <DatePicker fx:id="datePicker" maxWidth="Infinity" prefHeight="45.0" promptText="yyyy/mm/dd" style="-fx-background-color: #f9f9f9; -fx-border-color: #dfe6e9; -fx-border-radius: 8; -fx-background-radius: 8;" />
+                        </VBox>
+
+                        <VBox prefHeight="10" />
+
+                        <Button fx:id="saveButton" maxWidth="Infinity" onAction="#handleSave" prefHeight="50.0" style="-fx-background-color: #0984e3; -fx-text-fill: white; -fx-font-weight: bold; -fx-font-size: 16px; -fx-background-radius: 10; -fx-cursor: hand;" text="Save Expense">
+                            <effect>
+                                <DropShadow blurType="GAUSSIAN" height="10" radius="4" width="10">
+                                    <color><Color opacity="0.2" /></color>
+                                </DropShadow>
+                            </effect>
+                        </Button>
+                    </VBox>
+
+                </VBox>
+            </content>
+        </ScrollPane>
+    </center>
+</BorderPane>
