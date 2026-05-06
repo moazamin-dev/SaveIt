@@ -41,7 +41,7 @@ public class LoginController extends Controller {
     private void openMainDashboard(User user) {
         SceneController.getInstance().handleEvent("USER_UPDATED", user);
 
-        Parent dashboard = SceneController.getInstance().loadScene(ViewType.DASHBOARD);
+        Parent dashboard = SceneController.getInstance().loadScene(ViewType.BUDGET_SETUP);
 
         if (dashboard != null) {
             javafx.stage.Stage stage = (javafx.stage.Stage) usernameField.getScene().getWindow();

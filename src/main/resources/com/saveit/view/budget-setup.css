@@ -1,0 +1,267 @@
+/* ── Screen ─────────────────────────────────────────────────── */
+.screen-bg {
+    -fx-background-color: #EFEFEB;
+}
+
+/* ── Card ───────────────────────────────────────────────────── */
+.card {
+    -fx-background-color: white;
+    -fx-border-color: #DDDBD4;
+    -fx-border-width: 0.5;
+    -fx-border-radius: 16;
+    -fx-background-radius: 16;
+}
+
+.card-top {
+    -fx-padding: 32 36 28 36;
+}
+
+.form-section {
+    -fx-padding: 26 36 22 36;
+}
+
+.card-footer {
+    -fx-padding: 18 36 30 36;
+}
+
+/* ── Typography ─────────────────────────────────────────────── */
+.eyebrow {
+    -fx-font-size: 11px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #9A9890;
+    -fx-letter-spacing: 0.07em;
+}
+
+.badge {
+    -fx-background-color: #E1F5EE;
+    -fx-text-fill: #085041;
+    -fx-font-size: 11px;
+    -fx-font-weight: bold;
+    -fx-padding: 2 8 2 8;
+    -fx-background-radius: 99;
+    -fx-label-padding: 0 0 0 10;
+}
+
+.card-title {
+    -fx-font-size: 22px;
+    -fx-font-weight: 500;
+    -fx-text-fill: #1A1A18;
+}
+
+.card-subtitle {
+    -fx-font-size: 13px;
+    -fx-text-fill: #6B6A65;
+    -fx-line-spacing: 2;
+}
+
+.field-label {
+    -fx-font-size: 11px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #9A9890;
+    -fx-letter-spacing: 0.06em;
+}
+
+/* ── Dividers ───────────────────────────────────────────────── */
+.h-divider {
+    -fx-background-color: #DDDBD4;
+    -fx-pref-height: 0.5;
+    -fx-max-height: 0.5;
+    -fx-min-height: 0.5;
+}
+
+.sep-line {
+    -fx-background-color: #DDDBD4;
+    -fx-pref-height: 0.5;
+    -fx-max-height: 0.5;
+    -fx-min-height: 0.5;
+}
+
+.sep-label {
+    -fx-font-size: 11px;
+    -fx-font-weight: bold;
+    -fx-text-fill: #B4B2A9;
+    -fx-letter-spacing: 0.06em;
+}
+
+/* ── Inputs ─────────────────────────────────────────────────── */
+.input-group {
+    -fx-border-color: #CCCAC4;
+    -fx-border-width: 0.5;
+    -fx-border-radius: 10;
+    -fx-background-color: white;
+    -fx-background-radius: 10;
+    -fx-pref-height: 42;
+}
+
+.input-prefix {
+    -fx-padding: 0 12 0 14;
+    -fx-text-fill: #9A9890;
+    -fx-font-size: 14px;
+    -fx-border-color: transparent #DDDBD4 transparent transparent;
+    -fx-border-width: 0 0.5 0 0;
+    -fx-background-color: #F7F6F2;
+    -fx-background-radius: 10 0 0 10;
+    -fx-pref-height: 42;
+}
+
+.input-inline {
+    -fx-background-color: transparent;
+    -fx-border-color: transparent;
+    -fx-font-size: 14px;
+    -fx-text-fill: #1A1A18;
+    -fx-padding: 0 14 0 12;
+    -fx-pref-height: 42;
+}
+
+.date-picker {
+    -fx-pref-height: 42;
+    -fx-font-size: 13px;
+}
+
+.date-picker .text-field {
+    -fx-background-color: white;
+    -fx-border-color: #CCCAC4;
+    -fx-border-width: 0.5;
+    -fx-border-radius: 10;
+    -fx-background-radius: 10;
+    -fx-padding: 0 12;
+    -fx-font-size: 13px;
+    -fx-pref-height: 42;
+}
+
+/* ── Error ──────────────────────────────────────────────────── */
+.error-label {
+    -fx-text-fill: #A32D2D;
+    -fx-font-size: 12px;
+}
+
+/* ── Stat cards ─────────────────────────────────────────────── */
+.stat-card {
+    -fx-background-color: #F7F6F2;
+    -fx-background-radius: 10;
+    -fx-padding: 14 16 14 16;
+    -fx-spacing: 4;
+}
+
+.stat-label {
+    -fx-font-size: 11px;
+    -fx-text-fill: #9A9890;
+}
+
+.stat-val {
+    -fx-font-size: 18px;
+    -fx-font-weight: 500;
+    -fx-text-fill: #1A1A18;
+}
+
+.stat-val-green {
+    -fx-font-size: 18px;
+    -fx-font-weight: 500;
+    -fx-text-fill: #0F6E56;
+}
+
+.stat-val-amber {
+    -fx-font-size: 18px;
+    -fx-font-weight: 500;
+    -fx-text-fill: #854F0B;
+}
+
+/* ── Progress ───────────────────────────────────────────────── */
+.progress-title {
+    -fx-font-size: 13px;
+    -fx-font-weight: 500;
+    -fx-text-fill: #1A1A18;
+}
+
+.progress-amount {
+    -fx-font-size: 13px;
+    -fx-text-fill: #6B6A65;
+}
+
+.budget-progress {
+    -fx-pref-height: 6;
+    -fx-background-radius: 99;
+    -fx-border-radius: 99;
+}
+
+.budget-progress .track {
+    -fx-background-color: #EFEFEB;
+    -fx-background-radius: 99;
+    -fx-border-color: #DDDBD4;
+    -fx-border-width: 0.5;
+    -fx-border-radius: 99;
+}
+
+.budget-progress .bar {
+    -fx-background-color: #1D9E75;
+    -fx-background-radius: 99;
+    -fx-background-insets: 0;
+}
+
+.budget-progress-warn .bar   { -fx-background-color: #EF9F27; }
+.budget-progress-danger .bar { -fx-background-color: #E24B4A; }
+
+.progress-foot-status {
+    -fx-font-size: 12px;
+    -fx-text-fill: #0F6E56;
+}
+
+.progress-foot-days {
+    -fx-font-size: 12px;
+    -fx-text-fill: #9A9890;
+}
+
+/* ── Notification pill ──────────────────────────────────────── */
+.notif-pill {
+    -fx-background-color: #F7F6F2;
+    -fx-border-color: #DDDBD4;
+    -fx-border-width: 0.5;
+    -fx-border-radius: 10;
+    -fx-background-radius: 10;
+    -fx-padding: 14 16 14 16;
+}
+
+.dot-neutral { -fx-fill: #B4B2A9; }
+.dot-success { -fx-fill: #1D9E75; }
+.dot-warn    { -fx-fill: #EF9F27; }
+.dot-danger  { -fx-fill: #E24B4A; }
+
+.notif-title {
+    -fx-font-size: 13px;
+    -fx-font-weight: 500;
+    -fx-text-fill: #1A1A18;
+}
+
+.notif-body {
+    -fx-font-size: 12px;
+    -fx-text-fill: #6B6A65;
+    -fx-line-spacing: 2;
+}
+
+/* ── Buttons ────────────────────────────────────────────────── */
+.btn-primary {
+    -fx-background-color: #1D9E75;
+    -fx-text-fill: #04342C;
+    -fx-font-size: 14px;
+    -fx-font-weight: 500;
+    -fx-background-radius: 10;
+    -fx-pref-height: 44;
+    -fx-cursor: hand;
+}
+
+.btn-primary:hover   { -fx-background-color: #18896A; }
+.btn-primary:-moz-suppressed { -fx-background-color: #0F6E56; }
+
+.btn-ghost {
+    -fx-background-color: transparent;
+    -fx-border-color: #CCCAC4;
+    -fx-border-width: 0.5;
+    -fx-border-radius: 10;
+    -fx-background-radius: 10;
+    -fx-text-fill: #6B6A65;
+    -fx-font-size: 14px;
+    -fx-pref-height: 44;
+    -fx-cursor: hand;
+}
+
+.btn-ghost:hover { -fx-background-color: #F7F6F2; }

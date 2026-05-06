@@ -1,5 +1,7 @@
 package com.saveit.model;
 
+import com.saveit.dao.CategoryDAO;
+
 import java.time.LocalDate;
 
 public class Expense{
@@ -10,6 +12,18 @@ public class Expense{
     private LocalDate date;
     private Category category;
 
+    public Expense(int user_id){
+        this.user_id = user_id;
+    }
+
+    public int getId() {
+        return id;
+    }
+
+    public void setId(int id) {
+        this.id = id;
+    }
+
     public double getAmount() {
         return amount;
     }
@@ -18,7 +32,7 @@ public class Expense{
         this.amount = amount;
     }
 
-    public void setUser_Id(int user_id) {
+    public void setUser_id(int user_id) {
         this.user_id = user_id;
     }
 
@@ -31,12 +45,13 @@ public class Expense{
     }
 
     public int getCategoryID(){
-        return category.getId();
+        return category.getCategoryID();
     }
     public String getCategoryName(){return category.getName();}
 
     public void setCategory(String c) {
-        category = new Category(c);
+        CategoryDAO categoryDAO = new CategoryDAO();
+        this.category = categoryDAO.resolveName(this.user_id, c);
     }
 
     public LocalDate getDate() {
@@ -48,7 +63,5 @@ public class Expense{
         this.date = date;
     }
 
-    public int getId() {
-        return id;
-    }
+
 }
