@@ -1,0 +1,133 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.chart.BarChart?>
+<?import javafx.scene.chart.CategoryAxis?>
+<?import javafx.scene.chart.LineChart?>
+<?import javafx.scene.chart.NumberAxis?>
+<?import javafx.scene.chart.PieChart?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<BorderPane prefHeight="850.0" prefWidth="1100.0" style="-fx-background-color: #f4f4f4;" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.saveit.controller.ChartController">
+
+    <left>
+        <fx:include source="sidebar-view.fxml" />
+    </left>
+
+    <center>
+        <ScrollPane fitToWidth="true" style="-fx-background-color: transparent; -fx-background: #f4f4f4;">
+            <content>
+                <VBox spacing="30.0">
+                    <padding>
+                        <Insets bottom="30.0" left="30.0" right="30.0" top="30.0" />
+                    </padding>
+
+                    <children>
+                        <VBox spacing="5.0">
+                            <children>
+                                <Label text="Financial Reports" textFill="#2c3e50">
+                                    <font>
+                                        <Font name="System Bold" size="28.0" />
+                                    </font>
+                                </Label>
+                                <Label text="Analysis of your spending habits and budget goals" textFill="#7f8c8d" />
+                            </children>
+                        </VBox>
+
+                        <HBox spacing="20.0">
+                            <children>
+                                <VBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="280.0" style="-fx-background-color: white; -fx-background-radius: 15; -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.1), 10, 0, 0, 5);">
+                                    <padding>
+                                        <Insets left="20.0" />
+                                    </padding>
+                                    <children>
+                                        <Label text="Total Savings" textFill="#7f8c8d">
+                                            <font><Font size="14.0" /></font>
+                                        </Label>
+                                        <Label fx:id="totalSavingsLabel" text="\$0.00" textFill="#27ae60">
+                                            <font><Font name="System Bold" size="24.0" /></font>
+                                        </Label>
+                                    </children>
+                                </VBox>
+
+                                <VBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="280.0" style="-fx-background-color: white; -fx-background-radius: 15; -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.1), 10, 0, 0, 5);">
+                                    <padding>
+                                        <Insets left="20.0" />
+                                    </padding>
+                                    <children>
+                                        <Label text="Monthly Spending" textFill="#7f8c8d">
+                                            <font><Font size="14.0" /></font>
+                                        </Label>
+                                        <Label fx:id="monthlySpendingLabel" text="\$0.00" textFill="#e67e22">
+                                            <font><Font name="System Bold" size="24.0" /></font>
+                                        </Label>
+                                    </children>
+                                </VBox>
+
+                                <VBox alignment="CENTER_LEFT" prefHeight="100.0" prefWidth="280.0" style="-fx-background-color: white; -fx-background-radius: 15; -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.1), 10, 0, 0, 5);">
+                                    <padding>
+                                        <Insets left="20.0" />
+                                    </padding>
+                                    <children>
+                                        <Label text="Budget Usage" textFill="#7f8c8d">
+                                            <font><Font size="14.0" /></font>
+                                        </Label>
+                                        <Label fx:id="budgetProgressLabel" text="0%" textFill="#2980b9">
+                                            <font><Font name="System Bold" size="24.0" /></font>
+                                        </Label>
+                                    </children>
+                                </VBox>
+                            </children>
+                        </HBox>
+
+                        <HBox spacing="30.0">
+                            <children>
+                                <VBox prefHeight="400.0" prefWidth="400.0" style="-fx-background-color: white; -fx-background-radius: 15; -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.1), 10, 0, 0, 5);" HBox.hgrow="SOMETIMES">
+                                    <children>
+                                        <Label text="Spending Distribution">
+                                            <font><Font name="System Bold" size="16.0" /></font>
+                                            <VBox.margin><Insets left="20.0" top="15.0" /></VBox.margin>
+                                        </Label>
+                                        <PieChart fx:id="categoryPieChart" legendSide="BOTTOM" VBox.vgrow="ALWAYS" />
+                                    </children>
+                                </VBox>
+
+                                <VBox prefHeight="400.0" prefWidth="500.0" style="-fx-background-color: white; -fx-background-radius: 15; -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.1), 10, 0, 0, 5);" HBox.hgrow="ALWAYS">
+                                    <children>
+                                        <Label text="Weekly Trend">
+                                            <font><Font name="System Bold" size="16.0" /></font>
+                                            <VBox.margin><Insets left="20.0" top="15.0" /></VBox.margin>
+                                        </Label>
+                                        <BarChart fx:id="weeklyBarChart" legendVisible="false" VBox.vgrow="ALWAYS">
+                                            <xAxis><CategoryAxis label="Day" side="BOTTOM" /></xAxis>
+                                            <yAxis><NumberAxis label="Amount ($)" side="LEFT" /></yAxis>
+                                        </BarChart>
+                                    </children>
+                                </VBox>
+                            </children>
+                        </HBox>
+
+                        <VBox prefHeight="350.0" style="-fx-background-color: white; -fx-background-radius: 15; -fx-effect: dropshadow(three-pass-box, rgba(0,0,0,0.1), 10, 0, 0, 5);">
+                            <children>
+                                <Label text="Monthly Spending Trend (Last 30 Days)">
+                                    <font><Font name="System Bold" size="16.0" /></font>
+                                    <VBox.margin><Insets left="20.0" top="15.0" /></VBox.margin>
+                                </Label>
+                                <LineChart fx:id="monthlyLineChart" createSymbols="false" legendVisible="false" VBox.vgrow="ALWAYS">
+                                    <xAxis><CategoryAxis label="Date" side="BOTTOM" /></xAxis>
+                                    <yAxis><NumberAxis label="Amount ($)" side="LEFT" /></yAxis>
+                                </LineChart>
+                            </children>
+                        </VBox>
+
+                    </children>
+                </VBox>
+            </content>
+        </ScrollPane>
+    </center>
+</BorderPane>
