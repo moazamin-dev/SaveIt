@@ -4,7 +4,13 @@
 <?import javafx.scene.control.*?>
 <?import javafx.scene.layout.*?>
 
+<?import java.net.URL?>
 <HBox prefHeight="900.0" prefWidth="1300.0" style="-fx-background-color: #f8fafc;" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.saveit.controller.BudgetSetupController">
+
+    <stylesheets>
+        <URL value="@datepicker.css" />
+    </stylesheets>
+
     <children>
         <fx:include source="sidebar-view.fxml" />
 

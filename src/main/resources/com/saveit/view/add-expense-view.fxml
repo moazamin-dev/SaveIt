@@ -11,7 +11,13 @@
 <?import javafx.scene.paint.Color?>
 <?import javafx.scene.text.Font?>
 
+<?import java.net.URL?>
 <BorderPane fx:id="addExpense" style="-fx-background-color: #f4f7f6;" xmlns="http://javafx.com/javafx/26" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.saveit.controller.AddExpenseController">
+
+    <stylesheets>
+        <URL value="@datepicker.css" />
+    </stylesheets>
+
     <left>
         <fx:include source="sidebar-view.fxml" />
     </left>

@@ -1,0 +1,159 @@
+\doxysection{com.\+saveit.\+service.\+Cycle\+Manager Class Reference}
+\hypertarget{classcom_1_1saveit_1_1service_1_1_cycle_manager}{}\label{classcom_1_1saveit_1_1service_1_1_cycle_manager}\index{com.saveit.service.CycleManager@{com.saveit.service.CycleManager}}
+
+
+Service class responsible for managing the lifecycle of financial cycles.  
+
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classcom_1_1saveit_1_1service_1_1_cycle_manager_a533a0d178536f4139e274fc4276bbf68}{Cycle\+Manager}} (\mbox{\hyperlink{classcom_1_1saveit_1_1model_1_1_user}{User}} user)
+\begin{DoxyCompactList}\small\item\em Constructs a \doxylink{classcom_1_1saveit_1_1service_1_1_cycle_manager}{Cycle\+Manager} and loads the latest cycle for the user. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classcom_1_1saveit_1_1model_1_1_cycle}{Cycle}} \mbox{\hyperlink{classcom_1_1saveit_1_1service_1_1_cycle_manager_a80c48aac6231d7e3afe4f059791d22d5}{get\+Cycle}} ()
+\begin{DoxyCompactList}\small\item\em Retrieves the current cycle object. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{classcom_1_1saveit_1_1service_1_1_cycle_manager_a37f1706f79ae7c7a968f3a6a5b57f886}{get\+Cycle\+Limit}} ()
+\begin{DoxyCompactList}\small\item\em Retrieves the budget limit of the current cycle. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classcom_1_1saveit_1_1service_1_1_cycle_manager_a5943e5ce245464d465ced53a321655d7}{start\+Cycle}} (double limit, Local\+Date d1, Local\+Date d2)
+\begin{DoxyCompactList}\small\item\em Initiates a new cycle for the user. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classcom_1_1saveit_1_1service_1_1_cycle_manager_a6d91f7f8720a06fc71c3365913f2b976}{cancel\+Cycle}} ()
+\begin{DoxyCompactList}\small\item\em Cancels the current cycle and removes it from the database. \end{DoxyCompactList}\item 
+boolean \mbox{\hyperlink{classcom_1_1saveit_1_1service_1_1_cycle_manager_ad4967f865be231543bf51204c080a9ba}{check\+Cycle\+Finish}} ()
+\begin{DoxyCompactList}\small\item\em Checks if the current cycle has reached its conclusion. \end{DoxyCompactList}\item 
+Local\+Date \mbox{\hyperlink{classcom_1_1saveit_1_1service_1_1_cycle_manager_a3478af09bd9bc2af63ebf40ed0d4d59a}{get\+Cycle\+Start\+Date}} ()
+\begin{DoxyCompactList}\small\item\em Gets the start date of the current cycle. \end{DoxyCompactList}\item 
+Local\+Date \mbox{\hyperlink{classcom_1_1saveit_1_1service_1_1_cycle_manager_a7021bf8fa8278251b793fd825c7f2a5a}{get\+Cycle\+End\+Date}} ()
+\begin{DoxyCompactList}\small\item\em Gets the end date of the current cycle. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Service class responsible for managing the lifecycle of financial cycles. 
+
+This class handles the logic for starting, canceling, and checking the status of budget cycles. It acts as an intermediary between the \doxylink{classcom_1_1saveit_1_1model_1_1_cycle}{Cycle} model and the \doxylink{classcom_1_1saveit_1_1dao_1_1_cycle_d_a_o}{Cycle\+DAO} database operations. 
+
+\label{doc-constructors}
+\Hypertarget{classcom_1_1saveit_1_1service_1_1_cycle_manager_doc-constructors}
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classcom_1_1saveit_1_1service_1_1_cycle_manager_a533a0d178536f4139e274fc4276bbf68}\index{com.saveit.service.CycleManager@{com.saveit.service.CycleManager}!CycleManager@{CycleManager}}
+\index{CycleManager@{CycleManager}!com.saveit.service.CycleManager@{com.saveit.service.CycleManager}}
+\doxysubsubsection{\texorpdfstring{CycleManager()}{CycleManager()}}
+{\footnotesize\ttfamily \label{classcom_1_1saveit_1_1service_1_1_cycle_manager_a533a0d178536f4139e274fc4276bbf68} 
+com.\+saveit.\+service.\+Cycle\+Manager.\+Cycle\+Manager (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classcom_1_1saveit_1_1model_1_1_user}{User}}}]{user}{}\end{DoxyParamCaption})}
+
+
+
+Constructs a \doxylink{classcom_1_1saveit_1_1service_1_1_cycle_manager}{Cycle\+Manager} and loads the latest cycle for the user. 
+
+If no cycle is found in the database, a new default \doxylink{classcom_1_1saveit_1_1model_1_1_cycle}{Cycle} instance is created.
+
+
+\begin{DoxyParams}{Parameters}
+{\em user} & The \doxylink{classcom_1_1saveit_1_1model_1_1_user}{User} object owning the cycles. \\
+\hline
+\end{DoxyParams}
+
+
+\label{doc-func-members}
+\Hypertarget{classcom_1_1saveit_1_1service_1_1_cycle_manager_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classcom_1_1saveit_1_1service_1_1_cycle_manager_a6d91f7f8720a06fc71c3365913f2b976}\index{com.saveit.service.CycleManager@{com.saveit.service.CycleManager}!cancelCycle@{cancelCycle}}
+\index{cancelCycle@{cancelCycle}!com.saveit.service.CycleManager@{com.saveit.service.CycleManager}}
+\doxysubsubsection{\texorpdfstring{cancelCycle()}{cancelCycle()}}
+{\footnotesize\ttfamily \label{classcom_1_1saveit_1_1service_1_1_cycle_manager_a6d91f7f8720a06fc71c3365913f2b976} 
+void com.\+saveit.\+service.\+Cycle\+Manager.\+cancel\+Cycle (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Cancels the current cycle and removes it from the database. 
+
+The internal cycle object is reset to its default uninitialized state. \Hypertarget{classcom_1_1saveit_1_1service_1_1_cycle_manager_ad4967f865be231543bf51204c080a9ba}\index{com.saveit.service.CycleManager@{com.saveit.service.CycleManager}!checkCycleFinish@{checkCycleFinish}}
+\index{checkCycleFinish@{checkCycleFinish}!com.saveit.service.CycleManager@{com.saveit.service.CycleManager}}
+\doxysubsubsection{\texorpdfstring{checkCycleFinish()}{checkCycleFinish()}}
+{\footnotesize\ttfamily \label{classcom_1_1saveit_1_1service_1_1_cycle_manager_ad4967f865be231543bf51204c080a9ba} 
+boolean com.\+saveit.\+service.\+Cycle\+Manager.\+check\+Cycle\+Finish (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Checks if the current cycle has reached its conclusion. 
+
+\begin{DoxyReturn}{Returns}
+boolean True if today\textquotesingle{}s date is after the cycle\textquotesingle{}s end date, false otherwise. 
+\end{DoxyReturn}
+\Hypertarget{classcom_1_1saveit_1_1service_1_1_cycle_manager_a80c48aac6231d7e3afe4f059791d22d5}\index{com.saveit.service.CycleManager@{com.saveit.service.CycleManager}!getCycle@{getCycle}}
+\index{getCycle@{getCycle}!com.saveit.service.CycleManager@{com.saveit.service.CycleManager}}
+\doxysubsubsection{\texorpdfstring{getCycle()}{getCycle()}}
+{\footnotesize\ttfamily \label{classcom_1_1saveit_1_1service_1_1_cycle_manager_a80c48aac6231d7e3afe4f059791d22d5} 
+\mbox{\hyperlink{classcom_1_1saveit_1_1model_1_1_cycle}{Cycle}} com.\+saveit.\+service.\+Cycle\+Manager.\+get\+Cycle (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Retrieves the current cycle object. 
+
+\begin{DoxyReturn}{Returns}
+\doxylink{classcom_1_1saveit_1_1model_1_1_cycle}{Cycle} The current cycle. 
+\end{DoxyReturn}
+\Hypertarget{classcom_1_1saveit_1_1service_1_1_cycle_manager_a7021bf8fa8278251b793fd825c7f2a5a}\index{com.saveit.service.CycleManager@{com.saveit.service.CycleManager}!getCycleEndDate@{getCycleEndDate}}
+\index{getCycleEndDate@{getCycleEndDate}!com.saveit.service.CycleManager@{com.saveit.service.CycleManager}}
+\doxysubsubsection{\texorpdfstring{getCycleEndDate()}{getCycleEndDate()}}
+{\footnotesize\ttfamily \label{classcom_1_1saveit_1_1service_1_1_cycle_manager_a7021bf8fa8278251b793fd825c7f2a5a} 
+Local\+Date com.\+saveit.\+service.\+Cycle\+Manager.\+get\+Cycle\+End\+Date (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Gets the end date of the current cycle. 
+
+\begin{DoxyReturn}{Returns}
+Local\+Date The end date, or null if no cycle is loaded. 
+\end{DoxyReturn}
+\Hypertarget{classcom_1_1saveit_1_1service_1_1_cycle_manager_a37f1706f79ae7c7a968f3a6a5b57f886}\index{com.saveit.service.CycleManager@{com.saveit.service.CycleManager}!getCycleLimit@{getCycleLimit}}
+\index{getCycleLimit@{getCycleLimit}!com.saveit.service.CycleManager@{com.saveit.service.CycleManager}}
+\doxysubsubsection{\texorpdfstring{getCycleLimit()}{getCycleLimit()}}
+{\footnotesize\ttfamily \label{classcom_1_1saveit_1_1service_1_1_cycle_manager_a37f1706f79ae7c7a968f3a6a5b57f886} 
+double com.\+saveit.\+service.\+Cycle\+Manager.\+get\+Cycle\+Limit (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Retrieves the budget limit of the current cycle. 
+
+\begin{DoxyReturn}{Returns}
+double The cycle limit, or 0.\+0 if no cycle exists. 
+\end{DoxyReturn}
+\Hypertarget{classcom_1_1saveit_1_1service_1_1_cycle_manager_a3478af09bd9bc2af63ebf40ed0d4d59a}\index{com.saveit.service.CycleManager@{com.saveit.service.CycleManager}!getCycleStartDate@{getCycleStartDate}}
+\index{getCycleStartDate@{getCycleStartDate}!com.saveit.service.CycleManager@{com.saveit.service.CycleManager}}
+\doxysubsubsection{\texorpdfstring{getCycleStartDate()}{getCycleStartDate()}}
+{\footnotesize\ttfamily \label{classcom_1_1saveit_1_1service_1_1_cycle_manager_a3478af09bd9bc2af63ebf40ed0d4d59a} 
+Local\+Date com.\+saveit.\+service.\+Cycle\+Manager.\+get\+Cycle\+Start\+Date (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Gets the start date of the current cycle. 
+
+\begin{DoxyReturn}{Returns}
+Local\+Date The start date, or null if no cycle is loaded. 
+\end{DoxyReturn}
+\Hypertarget{classcom_1_1saveit_1_1service_1_1_cycle_manager_a5943e5ce245464d465ced53a321655d7}\index{com.saveit.service.CycleManager@{com.saveit.service.CycleManager}!startCycle@{startCycle}}
+\index{startCycle@{startCycle}!com.saveit.service.CycleManager@{com.saveit.service.CycleManager}}
+\doxysubsubsection{\texorpdfstring{startCycle()}{startCycle()}}
+{\footnotesize\ttfamily \label{classcom_1_1saveit_1_1service_1_1_cycle_manager_a5943e5ce245464d465ced53a321655d7} 
+void com.\+saveit.\+service.\+Cycle\+Manager.\+start\+Cycle (\begin{DoxyParamCaption}\item[{double}]{limit}{, }\item[{Local\+Date}]{d1}{, }\item[{Local\+Date}]{d2}{}\end{DoxyParamCaption})}
+
+
+
+Initiates a new cycle for the user. 
+
+This method cancels any existing cycle before setting the new limit and date range, then persists the new cycle to the database.
+
+
+\begin{DoxyParams}{Parameters}
+{\em limit} & The maximum spending amount for the cycle. \\
+\hline
+{\em d1} & The start date of the cycle. \\
+\hline
+{\em d2} & The end date of the cycle. \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/main/java/com/saveit/service/Cycle\+Manager.\+java\end{DoxyCompactItemize}

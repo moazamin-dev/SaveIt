@@ -4,12 +4,30 @@ import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.SQLException;
 import java.sql.Statement;
+
+/**
+ * @brief Singleton class to manage the database connection and schema initialization.
+ *
+ * This class ensures a single connection to the SQLite database is maintained throughout
+ * the application's lifecycle and handles the creation of necessary tables.
+ */
 public class DatabaseConnection {
 
+    /** @var DatabaseConnection instance The single static instance of this class */
     private static DatabaseConnection instance;
+
+    /** @var Connection connection The active JDBC connection object */
     private Connection connection;
+
+    /** @var String url The JDBC connection URL for the SQLite database file */
     private String url = "jdbc:sqlite:saveit_app.db";
 
+    /**
+     * @brief Private constructor to prevent external instantiation.
+     *
+     * Initializes the database connection and triggers the creation of tables
+     * if they do not already exist.
+     */
     private DatabaseConnection() {
         try{
             this.connection = DriverManager.getConnection(url);
@@ -19,6 +37,13 @@ public class DatabaseConnection {
         }
     }
 
+    /**
+     * @brief Provides global access to the DatabaseConnection instance.
+     *
+     * Implements the Singleton pattern to ensure only one database connection is opened.
+     *
+     * @return DatabaseConnection The singleton instance.
+     */
     public static DatabaseConnection getInstance() {
         if (instance == null) {
             instance = new DatabaseConnection();
@@ -26,10 +51,20 @@ public class DatabaseConnection {
         return instance;
     }
 
+    /**
+     * @brief Gets the active SQL connection.
+     * @return Connection The current JDBC connection.
+     */
     public Connection getConnection() {
         return connection;
     }
 
+    /**
+     * @brief Creates the database schema if it does not exist.
+     *
+     * Defines and executes SQL statements to create the User, Category, Expense,
+     * and Cycle tables. It also enables foreign key constraints for the connection.
+     */
     public void initializeDatabase() {
         String userTable = "CREATE TABLE IF NOT EXISTS User (" +
                 "id INTEGER PRIMARY KEY AUTOINCREMENT, " +

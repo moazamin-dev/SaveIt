@@ -1,0 +1,132 @@
+\doxysection{com.\+saveit.\+service.\+Expense\+Service Class Reference}
+\hypertarget{classcom_1_1saveit_1_1service_1_1_expense_service}{}\label{classcom_1_1saveit_1_1service_1_1_expense_service}\index{com.saveit.service.ExpenseService@{com.saveit.service.ExpenseService}}
+
+
+Service class managing business logic for expense operations.  
+
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classcom_1_1saveit_1_1service_1_1_expense_service_a0c199d231f5836bcc774499391f7dc48}{Expense\+Service}} (\mbox{\hyperlink{classcom_1_1saveit_1_1model_1_1_user}{User}} user)
+\begin{DoxyCompactList}\small\item\em Constructs an \doxylink{classcom_1_1saveit_1_1service_1_1_expense_service}{Expense\+Service} for a specific user. \end{DoxyCompactList}\item 
+List$<$ \mbox{\hyperlink{classcom_1_1saveit_1_1model_1_1_expense}{Expense}} $>$ \mbox{\hyperlink{classcom_1_1saveit_1_1service_1_1_expense_service_afbf9ce2be3596654c8a49fdaaa33ec11}{get\+Expense\+List}} ()
+\begin{DoxyCompactList}\small\item\em Retrieves a list of expenses relevant to the current active cycle. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classcom_1_1saveit_1_1service_1_1_expense_service_acacfe07a948f5260e6e200f11be35993}{add\+Transaction}} (double amount, String category, Local\+Date date)
+\begin{DoxyCompactList}\small\item\em Creates and saves a new transaction (expense). \end{DoxyCompactList}\item 
+Map$<$ String, Double $>$ \mbox{\hyperlink{classcom_1_1saveit_1_1service_1_1_expense_service_ad5293e5b830a0a28b66e0d918ea38119}{get\+Spending\+By\+Category}} ()
+\begin{DoxyCompactList}\small\item\em Retrieves the total spending grouped by category name. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classcom_1_1saveit_1_1service_1_1_expense_service_ad84285cec3cea3d06f2eb0cce9d97a0a}{delete\+Expense}} (\mbox{\hyperlink{classcom_1_1saveit_1_1model_1_1_expense}{Expense}} e)
+\begin{DoxyCompactList}\small\item\em Deletes a specific expense record. \end{DoxyCompactList}\item 
+List$<$ \mbox{\hyperlink{classcom_1_1saveit_1_1model_1_1_expense}{Expense}} $>$ \mbox{\hyperlink{classcom_1_1saveit_1_1service_1_1_expense_service_a79998668ca08a6a79fce8dc381273471}{get\+All\+Expenses}} ()
+\begin{DoxyCompactList}\small\item\em Retrieves every expense record associated with the user. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Service class managing business logic for expense operations. 
+
+This class coordinates the creation, retrieval, and deletion of expenses by interacting with the \doxylink{classcom_1_1saveit_1_1dao_1_1_expense_d_a_o}{Expense\+DAO} and filtering data based on the user\textquotesingle{}s current financial cycle. 
+
+\label{doc-constructors}
+\Hypertarget{classcom_1_1saveit_1_1service_1_1_expense_service_doc-constructors}
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classcom_1_1saveit_1_1service_1_1_expense_service_a0c199d231f5836bcc774499391f7dc48}\index{com.saveit.service.ExpenseService@{com.saveit.service.ExpenseService}!ExpenseService@{ExpenseService}}
+\index{ExpenseService@{ExpenseService}!com.saveit.service.ExpenseService@{com.saveit.service.ExpenseService}}
+\doxysubsubsection{\texorpdfstring{ExpenseService()}{ExpenseService()}}
+{\footnotesize\ttfamily \label{classcom_1_1saveit_1_1service_1_1_expense_service_a0c199d231f5836bcc774499391f7dc48} 
+com.\+saveit.\+service.\+Expense\+Service.\+Expense\+Service (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classcom_1_1saveit_1_1model_1_1_user}{User}}}]{user}{}\end{DoxyParamCaption})}
+
+
+
+Constructs an \doxylink{classcom_1_1saveit_1_1service_1_1_expense_service}{Expense\+Service} for a specific user. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em user} & The \doxylink{classcom_1_1saveit_1_1model_1_1_user}{User} object owning the expenses. \\
+\hline
+\end{DoxyParams}
+
+
+\label{doc-func-members}
+\Hypertarget{classcom_1_1saveit_1_1service_1_1_expense_service_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classcom_1_1saveit_1_1service_1_1_expense_service_acacfe07a948f5260e6e200f11be35993}\index{com.saveit.service.ExpenseService@{com.saveit.service.ExpenseService}!addTransaction@{addTransaction}}
+\index{addTransaction@{addTransaction}!com.saveit.service.ExpenseService@{com.saveit.service.ExpenseService}}
+\doxysubsubsection{\texorpdfstring{addTransaction()}{addTransaction()}}
+{\footnotesize\ttfamily \label{classcom_1_1saveit_1_1service_1_1_expense_service_acacfe07a948f5260e6e200f11be35993} 
+void com.\+saveit.\+service.\+Expense\+Service.\+add\+Transaction (\begin{DoxyParamCaption}\item[{double}]{amount}{, }\item[{String}]{category}{, }\item[{Local\+Date}]{date}{}\end{DoxyParamCaption})}
+
+
+
+Creates and saves a new transaction (expense). 
+
+
+\begin{DoxyParams}{Parameters}
+{\em amount} & The monetary value of the transaction. \\
+\hline
+{\em category} & The name of the category to resolve and assign. \\
+\hline
+{\em date} & The date the transaction occurred. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classcom_1_1saveit_1_1service_1_1_expense_service_ad84285cec3cea3d06f2eb0cce9d97a0a}\index{com.saveit.service.ExpenseService@{com.saveit.service.ExpenseService}!deleteExpense@{deleteExpense}}
+\index{deleteExpense@{deleteExpense}!com.saveit.service.ExpenseService@{com.saveit.service.ExpenseService}}
+\doxysubsubsection{\texorpdfstring{deleteExpense()}{deleteExpense()}}
+{\footnotesize\ttfamily \label{classcom_1_1saveit_1_1service_1_1_expense_service_ad84285cec3cea3d06f2eb0cce9d97a0a} 
+void com.\+saveit.\+service.\+Expense\+Service.\+delete\+Expense (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classcom_1_1saveit_1_1model_1_1_expense}{Expense}}}]{e}{}\end{DoxyParamCaption})}
+
+
+
+Deletes a specific expense record. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em e} & The \doxylink{classcom_1_1saveit_1_1model_1_1_expense}{Expense} object to be removed from the database. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classcom_1_1saveit_1_1service_1_1_expense_service_a79998668ca08a6a79fce8dc381273471}\index{com.saveit.service.ExpenseService@{com.saveit.service.ExpenseService}!getAllExpenses@{getAllExpenses}}
+\index{getAllExpenses@{getAllExpenses}!com.saveit.service.ExpenseService@{com.saveit.service.ExpenseService}}
+\doxysubsubsection{\texorpdfstring{getAllExpenses()}{getAllExpenses()}}
+{\footnotesize\ttfamily \label{classcom_1_1saveit_1_1service_1_1_expense_service_a79998668ca08a6a79fce8dc381273471} 
+List$<$ \mbox{\hyperlink{classcom_1_1saveit_1_1model_1_1_expense}{Expense}} $>$ com.\+saveit.\+service.\+Expense\+Service.\+get\+All\+Expenses (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Retrieves every expense record associated with the user. 
+
+\begin{DoxyReturn}{Returns}
+List$<$\+Expense$>$ The full history of expenses. 
+\end{DoxyReturn}
+\Hypertarget{classcom_1_1saveit_1_1service_1_1_expense_service_afbf9ce2be3596654c8a49fdaaa33ec11}\index{com.saveit.service.ExpenseService@{com.saveit.service.ExpenseService}!getExpenseList@{getExpenseList}}
+\index{getExpenseList@{getExpenseList}!com.saveit.service.ExpenseService@{com.saveit.service.ExpenseService}}
+\doxysubsubsection{\texorpdfstring{getExpenseList()}{getExpenseList()}}
+{\footnotesize\ttfamily \label{classcom_1_1saveit_1_1service_1_1_expense_service_afbf9ce2be3596654c8a49fdaaa33ec11} 
+List$<$ \mbox{\hyperlink{classcom_1_1saveit_1_1model_1_1_expense}{Expense}} $>$ com.\+saveit.\+service.\+Expense\+Service.\+get\+Expense\+List (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Retrieves a list of expenses relevant to the current active cycle. 
+
+If an active cycle exists, it returns expenses starting from the cycle\textquotesingle{}s start date. Otherwise, it returns all expenses for the user.
+
+\begin{DoxyReturn}{Returns}
+List$<$\+Expense$>$ A list of filtered or total expenses. 
+\end{DoxyReturn}
+\Hypertarget{classcom_1_1saveit_1_1service_1_1_expense_service_ad5293e5b830a0a28b66e0d918ea38119}\index{com.saveit.service.ExpenseService@{com.saveit.service.ExpenseService}!getSpendingByCategory@{getSpendingByCategory}}
+\index{getSpendingByCategory@{getSpendingByCategory}!com.saveit.service.ExpenseService@{com.saveit.service.ExpenseService}}
+\doxysubsubsection{\texorpdfstring{getSpendingByCategory()}{getSpendingByCategory()}}
+{\footnotesize\ttfamily \label{classcom_1_1saveit_1_1service_1_1_expense_service_ad5293e5b830a0a28b66e0d918ea38119} 
+Map$<$ String, Double $>$ com.\+saveit.\+service.\+Expense\+Service.\+get\+Spending\+By\+Category (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Retrieves the total spending grouped by category name. 
+
+\begin{DoxyReturn}{Returns}
+Map$<$\+String, Double$>$ A map of category names to their total spent amounts. 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/main/java/com/saveit/service/Expense\+Service.\+java\end{DoxyCompactItemize}

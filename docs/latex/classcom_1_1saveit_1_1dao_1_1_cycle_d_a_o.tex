@@ -1,0 +1,100 @@
+\doxysection{com.\+saveit.\+dao.\+Cycle\+DAO Class Reference}
+\hypertarget{classcom_1_1saveit_1_1dao_1_1_cycle_d_a_o}{}\label{classcom_1_1saveit_1_1dao_1_1_cycle_d_a_o}\index{com.saveit.dao.CycleDAO@{com.saveit.dao.CycleDAO}}
+
+
+Data Access Object for \doxylink{classcom_1_1saveit_1_1model_1_1_cycle}{Cycle} entities.  
+
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classcom_1_1saveit_1_1dao_1_1_cycle_d_a_o_aa1f7d22479f7de0ed31d37276c8c299c}{Cycle\+DAO}} ()
+\begin{DoxyCompactList}\small\item\em Constructor for \doxylink{classcom_1_1saveit_1_1dao_1_1_cycle_d_a_o}{Cycle\+DAO}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classcom_1_1saveit_1_1dao_1_1_cycle_d_a_o_aef26663a50f7a2e25ef94824ef66e2f9}{save}} (int user\+\_\+id, \mbox{\hyperlink{classcom_1_1saveit_1_1model_1_1_cycle}{Cycle}} cycle)
+\begin{DoxyCompactList}\small\item\em Saves a new \doxylink{classcom_1_1saveit_1_1model_1_1_cycle}{Cycle} record for a specific user. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classcom_1_1saveit_1_1model_1_1_cycle}{Cycle}} \mbox{\hyperlink{classcom_1_1saveit_1_1dao_1_1_cycle_d_a_o_a21514e3f0cc14a335e074532b9ea2908}{get\+Cycle}} (int User\+\_\+id)
+\begin{DoxyCompactList}\small\item\em Retrieves the most recent cycle for a specific user. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classcom_1_1saveit_1_1dao_1_1_cycle_d_a_o_ae1645f345546d17d95ab6a36dca4d329}{delete}} (int id)
+\begin{DoxyCompactList}\small\item\em Deletes a specific cycle record by its unique ID. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Data Access Object for \doxylink{classcom_1_1saveit_1_1model_1_1_cycle}{Cycle} entities. 
+
+This class handles all database interactions related to financial cycles, allowing the application to persist, retrieve, and delete budget periods for specific users. 
+
+\label{doc-constructors}
+\Hypertarget{classcom_1_1saveit_1_1dao_1_1_cycle_d_a_o_doc-constructors}
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classcom_1_1saveit_1_1dao_1_1_cycle_d_a_o_aa1f7d22479f7de0ed31d37276c8c299c}\index{com.saveit.dao.CycleDAO@{com.saveit.dao.CycleDAO}!CycleDAO@{CycleDAO}}
+\index{CycleDAO@{CycleDAO}!com.saveit.dao.CycleDAO@{com.saveit.dao.CycleDAO}}
+\doxysubsubsection{\texorpdfstring{CycleDAO()}{CycleDAO()}}
+{\footnotesize\ttfamily \label{classcom_1_1saveit_1_1dao_1_1_cycle_d_a_o_aa1f7d22479f7de0ed31d37276c8c299c} 
+com.\+saveit.\+dao.\+Cycle\+DAO.\+Cycle\+DAO (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Constructor for \doxylink{classcom_1_1saveit_1_1dao_1_1_cycle_d_a_o}{Cycle\+DAO}. 
+
+Initializes the database connection using the \doxylink{classcom_1_1saveit_1_1dao_1_1_database_connection}{Database\+Connection} singleton. 
+
+\label{doc-func-members}
+\Hypertarget{classcom_1_1saveit_1_1dao_1_1_cycle_d_a_o_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classcom_1_1saveit_1_1dao_1_1_cycle_d_a_o_ae1645f345546d17d95ab6a36dca4d329}\index{com.saveit.dao.CycleDAO@{com.saveit.dao.CycleDAO}!delete@{delete}}
+\index{delete@{delete}!com.saveit.dao.CycleDAO@{com.saveit.dao.CycleDAO}}
+\doxysubsubsection{\texorpdfstring{delete()}{delete()}}
+{\footnotesize\ttfamily \label{classcom_1_1saveit_1_1dao_1_1_cycle_d_a_o_ae1645f345546d17d95ab6a36dca4d329} 
+void com.\+saveit.\+dao.\+Cycle\+DAO.\+delete (\begin{DoxyParamCaption}\item[{int}]{id}{}\end{DoxyParamCaption})}
+
+
+
+Deletes a specific cycle record by its unique ID. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em id} & The unique ID of the cycle to remove. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classcom_1_1saveit_1_1dao_1_1_cycle_d_a_o_a21514e3f0cc14a335e074532b9ea2908}\index{com.saveit.dao.CycleDAO@{com.saveit.dao.CycleDAO}!getCycle@{getCycle}}
+\index{getCycle@{getCycle}!com.saveit.dao.CycleDAO@{com.saveit.dao.CycleDAO}}
+\doxysubsubsection{\texorpdfstring{getCycle()}{getCycle()}}
+{\footnotesize\ttfamily \label{classcom_1_1saveit_1_1dao_1_1_cycle_d_a_o_a21514e3f0cc14a335e074532b9ea2908} 
+\mbox{\hyperlink{classcom_1_1saveit_1_1model_1_1_cycle}{Cycle}} com.\+saveit.\+dao.\+Cycle\+DAO.\+get\+Cycle (\begin{DoxyParamCaption}\item[{int}]{User\+\_\+id}{}\end{DoxyParamCaption})}
+
+
+
+Retrieves the most recent cycle for a specific user. 
+
+Fetches the latest cycle entry from the database based on the user ID, ordering by ID descending to ensure the current/newest cycle is returned.
+
+
+\begin{DoxyParams}{Parameters}
+{\em User\+\_\+id} & The ID of the user. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\doxylink{classcom_1_1saveit_1_1model_1_1_cycle}{Cycle} The latest \doxylink{classcom_1_1saveit_1_1model_1_1_cycle}{Cycle} object found, or null if no cycle exists for the user. 
+\end{DoxyReturn}
+\Hypertarget{classcom_1_1saveit_1_1dao_1_1_cycle_d_a_o_aef26663a50f7a2e25ef94824ef66e2f9}\index{com.saveit.dao.CycleDAO@{com.saveit.dao.CycleDAO}!save@{save}}
+\index{save@{save}!com.saveit.dao.CycleDAO@{com.saveit.dao.CycleDAO}}
+\doxysubsubsection{\texorpdfstring{save()}{save()}}
+{\footnotesize\ttfamily \label{classcom_1_1saveit_1_1dao_1_1_cycle_d_a_o_aef26663a50f7a2e25ef94824ef66e2f9} 
+void com.\+saveit.\+dao.\+Cycle\+DAO.\+save (\begin{DoxyParamCaption}\item[{int}]{user\+\_\+id}{, }\item[{\mbox{\hyperlink{classcom_1_1saveit_1_1model_1_1_cycle}{Cycle}}}]{cycle}{}\end{DoxyParamCaption})}
+
+
+
+Saves a new \doxylink{classcom_1_1saveit_1_1model_1_1_cycle}{Cycle} record for a specific user. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em user\+\_\+id} & The ID of the user owning this cycle. \\
+\hline
+{\em cycle} & The \doxylink{classcom_1_1saveit_1_1model_1_1_cycle}{Cycle} object containing the limit and date range. \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/main/java/com/saveit/dao/Cycle\+DAO.\+java\end{DoxyCompactItemize}

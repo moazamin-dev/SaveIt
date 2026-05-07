@@ -1,0 +1,79 @@
+\doxysection{com.\+saveit.\+controller.\+Controller Class Reference}
+\hypertarget{classcom_1_1saveit_1_1controller_1_1_controller}{}\label{classcom_1_1saveit_1_1controller_1_1_controller}\index{com.saveit.controller.Controller@{com.saveit.controller.Controller}}
+
+
+Base abstract class for all UI controllers in the application.  
+
+
+Inheritance diagram for com.\+saveit.\+controller.\+Controller\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=9.000000cm]{classcom_1_1saveit_1_1controller_1_1_controller}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+abstract void \mbox{\hyperlink{classcom_1_1saveit_1_1controller_1_1_controller_a4793a6bf0c34b92ef84eb9f61cec19f6}{initialize}} ()
+\begin{DoxyCompactList}\small\item\em Abstract method to be implemented by subclasses for view initialization. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classcom_1_1saveit_1_1controller_1_1_controller_a486b65e3a40563400404b07492a8a02e}{set\+User}} (\mbox{\hyperlink{classcom_1_1saveit_1_1model_1_1_user}{User}} user)
+\begin{DoxyCompactList}\small\item\em Sets the user for this controller. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classcom_1_1saveit_1_1model_1_1_user}{User}} \mbox{\hyperlink{classcom_1_1saveit_1_1controller_1_1_controller_a1eca6a41e7bc053fa003851f9d5cd5e7}{get\+User}} ()
+\begin{DoxyCompactList}\small\item\em Retrieves the user associated with this controller. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Base abstract class for all UI controllers in the application. 
+
+This class provides a common foundation for controllers, ensuring they have access to the currently authenticated \doxylink{classcom_1_1saveit_1_1model_1_1_user}{User} and a standardized initialization mechanism. 
+
+\label{doc-func-members}
+\Hypertarget{classcom_1_1saveit_1_1controller_1_1_controller_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classcom_1_1saveit_1_1controller_1_1_controller_a1eca6a41e7bc053fa003851f9d5cd5e7}\index{com.saveit.controller.Controller@{com.saveit.controller.Controller}!getUser@{getUser}}
+\index{getUser@{getUser}!com.saveit.controller.Controller@{com.saveit.controller.Controller}}
+\doxysubsubsection{\texorpdfstring{getUser()}{getUser()}}
+{\footnotesize\ttfamily \label{classcom_1_1saveit_1_1controller_1_1_controller_a1eca6a41e7bc053fa003851f9d5cd5e7} 
+\mbox{\hyperlink{classcom_1_1saveit_1_1model_1_1_user}{User}} com.\+saveit.\+controller.\+Controller.\+get\+User (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Retrieves the user associated with this controller. 
+
+\begin{DoxyReturn}{Returns}
+\doxylink{classcom_1_1saveit_1_1model_1_1_user}{User} The current user instance. 
+\end{DoxyReturn}
+\Hypertarget{classcom_1_1saveit_1_1controller_1_1_controller_a4793a6bf0c34b92ef84eb9f61cec19f6}\index{com.saveit.controller.Controller@{com.saveit.controller.Controller}!initialize@{initialize}}
+\index{initialize@{initialize}!com.saveit.controller.Controller@{com.saveit.controller.Controller}}
+\doxysubsubsection{\texorpdfstring{initialize()}{initialize()}}
+{\footnotesize\ttfamily \label{classcom_1_1saveit_1_1controller_1_1_controller_a4793a6bf0c34b92ef84eb9f61cec19f6} 
+abstract void com.\+saveit.\+controller.\+Controller.\+initialize (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [abstract]}}
+
+
+
+Abstract method to be implemented by subclasses for view initialization. 
+
+This method is typically called after the FXML has been loaded or when the view needs to be refreshed. 
+
+Reimplemented in \mbox{\hyperlink{classcom_1_1saveit_1_1controller_1_1_add_expense_controller_a05e313735636e948a72dba114feb2098}{com.\+saveit.\+controller.\+Add\+Expense\+Controller}}, \mbox{\hyperlink{classcom_1_1saveit_1_1controller_1_1_budget_setup_controller_afd0e91da4f4f4f3782071a2e5d413400}{com.\+saveit.\+controller.\+Budget\+Setup\+Controller}}, \mbox{\hyperlink{classcom_1_1saveit_1_1controller_1_1_chart_controller_ad492c28db44884b09bc1bc917a6a00cb}{com.\+saveit.\+controller.\+Chart\+Controller}}, \mbox{\hyperlink{classcom_1_1saveit_1_1controller_1_1_expense_log_controller_a52153339781a312d80be133f9a8d067f}{com.\+saveit.\+controller.\+Expense\+Log\+Controller}}, \mbox{\hyperlink{classcom_1_1saveit_1_1controller_1_1_login_controller_a8ab2132df7baec85ea8013ab432dc4c6}{com.\+saveit.\+controller.\+Login\+Controller}}, \mbox{\hyperlink{classcom_1_1saveit_1_1controller_1_1_main_controller_a8fd9ce811dfd2fff51e600977668ebf8}{com.\+saveit.\+controller.\+Main\+Controller}}, \mbox{\hyperlink{classcom_1_1saveit_1_1controller_1_1_side_bar_controller_ad874f853f512ff60d626416541a2bbb9}{com.\+saveit.\+controller.\+Side\+Bar\+Controller}}, and \mbox{\hyperlink{classcom_1_1saveit_1_1controller_1_1_sign_up_controller_aac322b4f6a572016978886f89713388a}{com.\+saveit.\+controller.\+Sign\+Up\+Controller}}.
+
+\Hypertarget{classcom_1_1saveit_1_1controller_1_1_controller_a486b65e3a40563400404b07492a8a02e}\index{com.saveit.controller.Controller@{com.saveit.controller.Controller}!setUser@{setUser}}
+\index{setUser@{setUser}!com.saveit.controller.Controller@{com.saveit.controller.Controller}}
+\doxysubsubsection{\texorpdfstring{setUser()}{setUser()}}
+{\footnotesize\ttfamily \label{classcom_1_1saveit_1_1controller_1_1_controller_a486b65e3a40563400404b07492a8a02e} 
+void com.\+saveit.\+controller.\+Controller.\+set\+User (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classcom_1_1saveit_1_1model_1_1_user}{User}}}]{user}{}\end{DoxyParamCaption})}
+
+
+
+Sets the user for this controller. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em user} & The \doxylink{classcom_1_1saveit_1_1model_1_1_user}{User} object representing the currently logged-\/in user. \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/main/java/com/saveit/controller/Controller.\+java\end{DoxyCompactItemize}

@@ -1,0 +1,155 @@
+\doxysection{com.\+saveit.\+dao.\+Expense\+DAO Class Reference}
+\hypertarget{classcom_1_1saveit_1_1dao_1_1_expense_d_a_o}{}\label{classcom_1_1saveit_1_1dao_1_1_expense_d_a_o}\index{com.saveit.dao.ExpenseDAO@{com.saveit.dao.ExpenseDAO}}
+
+
+Data Access Object for \doxylink{classcom_1_1saveit_1_1model_1_1_expense}{Expense} entities.  
+
+
+Inheritance diagram for com.\+saveit.\+dao.\+Expense\+DAO\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classcom_1_1saveit_1_1dao_1_1_expense_d_a_o}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classcom_1_1saveit_1_1dao_1_1_expense_d_a_o_a38b8c2d1c242ed76dc0fd4e27cb022aa}{Expense\+DAO}} ()
+\begin{DoxyCompactList}\small\item\em Constructor for \doxylink{classcom_1_1saveit_1_1dao_1_1_expense_d_a_o}{Expense\+DAO}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classcom_1_1saveit_1_1dao_1_1_expense_d_a_o_a16fa70fb98087a5b0c89105b4c329398}{save}} (\mbox{\hyperlink{classcom_1_1saveit_1_1model_1_1_expense}{Expense}} e)
+\begin{DoxyCompactList}\small\item\em Saves a new \doxylink{classcom_1_1saveit_1_1model_1_1_expense}{Expense} record to the database. \end{DoxyCompactList}\item 
+List$<$ \mbox{\hyperlink{classcom_1_1saveit_1_1model_1_1_expense}{Expense}} $>$ \mbox{\hyperlink{classcom_1_1saveit_1_1dao_1_1_expense_d_a_o_a319a965843fd7e20a89034a15680bb9a}{get\+All}} (int id)
+\begin{DoxyCompactList}\small\item\em Retrieves all expenses associated with a specific user. \end{DoxyCompactList}\item 
+List$<$ \mbox{\hyperlink{classcom_1_1saveit_1_1model_1_1_expense}{Expense}} $>$ \mbox{\hyperlink{classcom_1_1saveit_1_1dao_1_1_expense_d_a_o_a6ee1b91957a76e2b44d1d4d62b6bf66b}{get\+Expense\+Since\+Date}} (int user\+\_\+id, String date)
+\begin{DoxyCompactList}\small\item\em Retrieves expenses for a specific user that occurred on or after a given date. \end{DoxyCompactList}\item 
+Map$<$ String, Double $>$ \mbox{\hyperlink{classcom_1_1saveit_1_1dao_1_1_expense_d_a_o_a327713b14cc504fd3496b8db58351256}{category\+Spending\+Query}} (int user\+\_\+id)
+\begin{DoxyCompactList}\small\item\em Calculates total spending grouped by category for a specific user. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classcom_1_1saveit_1_1dao_1_1_expense_d_a_o_a32ec4de167a265395e62e2b3c4f98e82}{delete}} (int id)
+\begin{DoxyCompactList}\small\item\em Deletes a specific expense record by its unique ID. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{interfacecom_1_1saveit_1_1dao_1_1_d_a_o}{com.\+saveit.\+dao.\+DAO$<$ Expense $>$}}}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{interfacecom_1_1saveit_1_1dao_1_1_d_a_o_a58c39a5e37f6d6195f4800ea7b0fedd5}{save}} (T entity)
+\begin{DoxyCompactList}\small\item\em Persists the given entity to the data source. \end{DoxyCompactList}\item 
+List$<$ T $>$ \mbox{\hyperlink{interfacecom_1_1saveit_1_1dao_1_1_d_a_o_a6100efeb85551059b2f8a6b34e569fbb}{get\+All}} (int id)
+\begin{DoxyCompactList}\small\item\em Retrieves all entities associated with a specific identifier. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{interfacecom_1_1saveit_1_1dao_1_1_d_a_o_aa447afe03679ed6b4d430ad1f02c2fad}{delete}} (int id)
+\begin{DoxyCompactList}\small\item\em Deletes an entity from the data source by its unique identifier. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Data Access Object for \doxylink{classcom_1_1saveit_1_1model_1_1_expense}{Expense} entities. 
+
+This class provides implementation for managing \doxylink{classcom_1_1saveit_1_1model_1_1_expense}{Expense} records in the database, including methods to create, retrieve, filter, and delete expense entries. 
+
+\label{doc-constructors}
+\Hypertarget{classcom_1_1saveit_1_1dao_1_1_expense_d_a_o_doc-constructors}
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classcom_1_1saveit_1_1dao_1_1_expense_d_a_o_a38b8c2d1c242ed76dc0fd4e27cb022aa}\index{com.saveit.dao.ExpenseDAO@{com.saveit.dao.ExpenseDAO}!ExpenseDAO@{ExpenseDAO}}
+\index{ExpenseDAO@{ExpenseDAO}!com.saveit.dao.ExpenseDAO@{com.saveit.dao.ExpenseDAO}}
+\doxysubsubsection{\texorpdfstring{ExpenseDAO()}{ExpenseDAO()}}
+{\footnotesize\ttfamily \label{classcom_1_1saveit_1_1dao_1_1_expense_d_a_o_a38b8c2d1c242ed76dc0fd4e27cb022aa} 
+com.\+saveit.\+dao.\+Expense\+DAO.\+Expense\+DAO (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Constructor for \doxylink{classcom_1_1saveit_1_1dao_1_1_expense_d_a_o}{Expense\+DAO}. 
+
+Initializes the database connection using the \doxylink{classcom_1_1saveit_1_1dao_1_1_database_connection}{Database\+Connection} singleton. 
+
+\label{doc-func-members}
+\Hypertarget{classcom_1_1saveit_1_1dao_1_1_expense_d_a_o_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classcom_1_1saveit_1_1dao_1_1_expense_d_a_o_a327713b14cc504fd3496b8db58351256}\index{com.saveit.dao.ExpenseDAO@{com.saveit.dao.ExpenseDAO}!categorySpendingQuery@{categorySpendingQuery}}
+\index{categorySpendingQuery@{categorySpendingQuery}!com.saveit.dao.ExpenseDAO@{com.saveit.dao.ExpenseDAO}}
+\doxysubsubsection{\texorpdfstring{categorySpendingQuery()}{categorySpendingQuery()}}
+{\footnotesize\ttfamily \label{classcom_1_1saveit_1_1dao_1_1_expense_d_a_o_a327713b14cc504fd3496b8db58351256} 
+Map$<$ String, Double $>$ com.\+saveit.\+dao.\+Expense\+DAO.\+category\+Spending\+Query (\begin{DoxyParamCaption}\item[{int}]{user\+\_\+id}{}\end{DoxyParamCaption})}
+
+
+
+Calculates total spending grouped by category for a specific user. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em user\+\_\+id} & The ID of the user. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Map$<$\+String, Double$>$ A map where keys are category names and values are the sum of expenses. 
+\end{DoxyReturn}
+\Hypertarget{classcom_1_1saveit_1_1dao_1_1_expense_d_a_o_a32ec4de167a265395e62e2b3c4f98e82}\index{com.saveit.dao.ExpenseDAO@{com.saveit.dao.ExpenseDAO}!delete@{delete}}
+\index{delete@{delete}!com.saveit.dao.ExpenseDAO@{com.saveit.dao.ExpenseDAO}}
+\doxysubsubsection{\texorpdfstring{delete()}{delete()}}
+{\footnotesize\ttfamily \label{classcom_1_1saveit_1_1dao_1_1_expense_d_a_o_a32ec4de167a265395e62e2b3c4f98e82} 
+void com.\+saveit.\+dao.\+Expense\+DAO.\+delete (\begin{DoxyParamCaption}\item[{int}]{id}{}\end{DoxyParamCaption})}
+
+
+
+Deletes a specific expense record by its unique ID. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em id} & The unique ID of the expense to delete. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classcom_1_1saveit_1_1dao_1_1_expense_d_a_o_a319a965843fd7e20a89034a15680bb9a}\index{com.saveit.dao.ExpenseDAO@{com.saveit.dao.ExpenseDAO}!getAll@{getAll}}
+\index{getAll@{getAll}!com.saveit.dao.ExpenseDAO@{com.saveit.dao.ExpenseDAO}}
+\doxysubsubsection{\texorpdfstring{getAll()}{getAll()}}
+{\footnotesize\ttfamily \label{classcom_1_1saveit_1_1dao_1_1_expense_d_a_o_a319a965843fd7e20a89034a15680bb9a} 
+List$<$ \mbox{\hyperlink{classcom_1_1saveit_1_1model_1_1_expense}{Expense}} $>$ com.\+saveit.\+dao.\+Expense\+DAO.\+get\+All (\begin{DoxyParamCaption}\item[{int}]{id}{}\end{DoxyParamCaption})}
+
+
+
+Retrieves all expenses associated with a specific user. 
+
+Joins with the \doxylink{classcom_1_1saveit_1_1model_1_1_category}{Category} table to resolve category names for each expense.
+
+
+\begin{DoxyParams}{Parameters}
+{\em id} & The ID of the user whose expenses are being retrieved. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+List$<$\+Expense$>$ A list of \doxylink{classcom_1_1saveit_1_1model_1_1_expense}{Expense} objects. 
+\end{DoxyReturn}
+\Hypertarget{classcom_1_1saveit_1_1dao_1_1_expense_d_a_o_a6ee1b91957a76e2b44d1d4d62b6bf66b}\index{com.saveit.dao.ExpenseDAO@{com.saveit.dao.ExpenseDAO}!getExpenseSinceDate@{getExpenseSinceDate}}
+\index{getExpenseSinceDate@{getExpenseSinceDate}!com.saveit.dao.ExpenseDAO@{com.saveit.dao.ExpenseDAO}}
+\doxysubsubsection{\texorpdfstring{getExpenseSinceDate()}{getExpenseSinceDate()}}
+{\footnotesize\ttfamily \label{classcom_1_1saveit_1_1dao_1_1_expense_d_a_o_a6ee1b91957a76e2b44d1d4d62b6bf66b} 
+List$<$ \mbox{\hyperlink{classcom_1_1saveit_1_1model_1_1_expense}{Expense}} $>$ com.\+saveit.\+dao.\+Expense\+DAO.\+get\+Expense\+Since\+Date (\begin{DoxyParamCaption}\item[{int}]{user\+\_\+id}{, }\item[{String}]{date}{}\end{DoxyParamCaption})}
+
+
+
+Retrieves expenses for a specific user that occurred on or after a given date. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em user\+\_\+id} & The ID of the user. \\
+\hline
+{\em date} & The ISO-\/8601 date string (YYYY-\/\+MM-\/\+DD) representing the starting threshold. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+List$<$\+Expense$>$ A filtered list of \doxylink{classcom_1_1saveit_1_1model_1_1_expense}{Expense} objects. 
+\end{DoxyReturn}
+\Hypertarget{classcom_1_1saveit_1_1dao_1_1_expense_d_a_o_a16fa70fb98087a5b0c89105b4c329398}\index{com.saveit.dao.ExpenseDAO@{com.saveit.dao.ExpenseDAO}!save@{save}}
+\index{save@{save}!com.saveit.dao.ExpenseDAO@{com.saveit.dao.ExpenseDAO}}
+\doxysubsubsection{\texorpdfstring{save()}{save()}}
+{\footnotesize\ttfamily \label{classcom_1_1saveit_1_1dao_1_1_expense_d_a_o_a16fa70fb98087a5b0c89105b4c329398} 
+void com.\+saveit.\+dao.\+Expense\+DAO.\+save (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classcom_1_1saveit_1_1model_1_1_expense}{Expense}}}]{e}{}\end{DoxyParamCaption})}
+
+
+
+Saves a new \doxylink{classcom_1_1saveit_1_1model_1_1_expense}{Expense} record to the database. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em e} & The \doxylink{classcom_1_1saveit_1_1model_1_1_expense}{Expense} object containing the details to be persisted. \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/main/java/com/saveit/dao/Expense\+DAO.\+java\end{DoxyCompactItemize}

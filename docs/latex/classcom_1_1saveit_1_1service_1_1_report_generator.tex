@@ -1,0 +1,143 @@
+\doxysection{com.\+saveit.\+service.\+Report\+Generator Class Reference}
+\hypertarget{classcom_1_1saveit_1_1service_1_1_report_generator}{}\label{classcom_1_1saveit_1_1service_1_1_report_generator}\index{com.saveit.service.ReportGenerator@{com.saveit.service.ReportGenerator}}
+
+
+Service class responsible for generating analytical reports and spending trends.  
+
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classcom_1_1saveit_1_1service_1_1_report_generator_ad394f796b916dcfaa1f05a26e4652eca}{Report\+Generator}} (\mbox{\hyperlink{classcom_1_1saveit_1_1service_1_1_budget_manager}{Budget\+Manager}} budget\+Manager)
+\begin{DoxyCompactList}\small\item\em Constructs a \doxylink{classcom_1_1saveit_1_1service_1_1_report_generator}{Report\+Generator} with a reference to the \doxylink{classcom_1_1saveit_1_1service_1_1_budget_manager}{Budget\+Manager}. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{classcom_1_1saveit_1_1service_1_1_report_generator_a6abb4ecfdaa4082a70104a7f7d9ca8a6}{get\+Total\+Spending}} ()
+\begin{DoxyCompactList}\small\item\em Calculates the total spending for the current active cycle. \end{DoxyCompactList}\item 
+Map$<$ Local\+Date, Double $>$ \mbox{\hyperlink{classcom_1_1saveit_1_1service_1_1_report_generator_ae462d206be1f0b010bef22a8871ccbd9}{get\+Monthly\+Spending\+Trend}} ()
+\begin{DoxyCompactList}\small\item\em Generates a trend of spending over the last 30 days. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{classcom_1_1saveit_1_1service_1_1_report_generator_a6ab25f0a1f649c4c90d6ae186306a3a9}{get\+Savings}} ()
+\begin{DoxyCompactList}\small\item\em Calculates the estimated savings based on the current cycle limit. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{classcom_1_1saveit_1_1service_1_1_report_generator_a3bdca8ebcb63d26ae458227b5870a4f5}{get\+Budget\+Usage\+Percentage}} ()
+\begin{DoxyCompactList}\small\item\em Calculates the percentage of the budget used in the last 30 days. \end{DoxyCompactList}\item 
+Map$<$ String, Double $>$ \mbox{\hyperlink{classcom_1_1saveit_1_1service_1_1_report_generator_ac5541fbf92d138f530c3e6cfdbce642e}{get\+Category\+Distribution}} ()
+\begin{DoxyCompactList}\small\item\em Provides a breakdown of spending by category for the current cycle. \end{DoxyCompactList}\item 
+Map$<$ Local\+Date, Double $>$ \mbox{\hyperlink{classcom_1_1saveit_1_1service_1_1_report_generator_af4e648e90f62ed20c8d28e90f92e0a23}{get\+Weekly\+Spending\+Trend}} ()
+\begin{DoxyCompactList}\small\item\em Generates a trend of spending over the last 7 days. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Service class responsible for generating analytical reports and spending trends. 
+
+This class processes expense data from the \doxylink{classcom_1_1saveit_1_1service_1_1_budget_manager}{Budget\+Manager} to provide high-\/level insights such as total spending, daily trends (weekly/monthly), budget usage percentages, and category distributions. 
+
+\label{doc-constructors}
+\Hypertarget{classcom_1_1saveit_1_1service_1_1_report_generator_doc-constructors}
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classcom_1_1saveit_1_1service_1_1_report_generator_ad394f796b916dcfaa1f05a26e4652eca}\index{com.saveit.service.ReportGenerator@{com.saveit.service.ReportGenerator}!ReportGenerator@{ReportGenerator}}
+\index{ReportGenerator@{ReportGenerator}!com.saveit.service.ReportGenerator@{com.saveit.service.ReportGenerator}}
+\doxysubsubsection{\texorpdfstring{ReportGenerator()}{ReportGenerator()}}
+{\footnotesize\ttfamily \label{classcom_1_1saveit_1_1service_1_1_report_generator_ad394f796b916dcfaa1f05a26e4652eca} 
+com.\+saveit.\+service.\+Report\+Generator.\+Report\+Generator (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classcom_1_1saveit_1_1service_1_1_budget_manager}{Budget\+Manager}}}]{budget\+Manager}{}\end{DoxyParamCaption})}
+
+
+
+Constructs a \doxylink{classcom_1_1saveit_1_1service_1_1_report_generator}{Report\+Generator} with a reference to the \doxylink{classcom_1_1saveit_1_1service_1_1_budget_manager}{Budget\+Manager}. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em budget\+Manager} & The \doxylink{classcom_1_1saveit_1_1service_1_1_budget_manager}{Budget\+Manager} instance providing the source data. \\
+\hline
+\end{DoxyParams}
+
+
+\label{doc-func-members}
+\Hypertarget{classcom_1_1saveit_1_1service_1_1_report_generator_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classcom_1_1saveit_1_1service_1_1_report_generator_a3bdca8ebcb63d26ae458227b5870a4f5}\index{com.saveit.service.ReportGenerator@{com.saveit.service.ReportGenerator}!getBudgetUsagePercentage@{getBudgetUsagePercentage}}
+\index{getBudgetUsagePercentage@{getBudgetUsagePercentage}!com.saveit.service.ReportGenerator@{com.saveit.service.ReportGenerator}}
+\doxysubsubsection{\texorpdfstring{getBudgetUsagePercentage()}{getBudgetUsagePercentage()}}
+{\footnotesize\ttfamily \label{classcom_1_1saveit_1_1service_1_1_report_generator_a3bdca8ebcb63d26ae458227b5870a4f5} 
+double com.\+saveit.\+service.\+Report\+Generator.\+get\+Budget\+Usage\+Percentage (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Calculates the percentage of the budget used in the last 30 days. 
+
+\begin{DoxyReturn}{Returns}
+double The percentage (0-\/100), or 0 if no limit is set. 
+\end{DoxyReturn}
+\Hypertarget{classcom_1_1saveit_1_1service_1_1_report_generator_ac5541fbf92d138f530c3e6cfdbce642e}\index{com.saveit.service.ReportGenerator@{com.saveit.service.ReportGenerator}!getCategoryDistribution@{getCategoryDistribution}}
+\index{getCategoryDistribution@{getCategoryDistribution}!com.saveit.service.ReportGenerator@{com.saveit.service.ReportGenerator}}
+\doxysubsubsection{\texorpdfstring{getCategoryDistribution()}{getCategoryDistribution()}}
+{\footnotesize\ttfamily \label{classcom_1_1saveit_1_1service_1_1_report_generator_ac5541fbf92d138f530c3e6cfdbce642e} 
+Map$<$ String, Double $>$ com.\+saveit.\+service.\+Report\+Generator.\+get\+Category\+Distribution (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Provides a breakdown of spending by category for the current cycle. 
+
+Groups current cycle expenses by their category name and sums the totals.
+
+\begin{DoxyReturn}{Returns}
+Map$<$\+String, Double$>$ A map of category names to total spent amounts. 
+\end{DoxyReturn}
+\Hypertarget{classcom_1_1saveit_1_1service_1_1_report_generator_ae462d206be1f0b010bef22a8871ccbd9}\index{com.saveit.service.ReportGenerator@{com.saveit.service.ReportGenerator}!getMonthlySpendingTrend@{getMonthlySpendingTrend}}
+\index{getMonthlySpendingTrend@{getMonthlySpendingTrend}!com.saveit.service.ReportGenerator@{com.saveit.service.ReportGenerator}}
+\doxysubsubsection{\texorpdfstring{getMonthlySpendingTrend()}{getMonthlySpendingTrend()}}
+{\footnotesize\ttfamily \label{classcom_1_1saveit_1_1service_1_1_report_generator_ae462d206be1f0b010bef22a8871ccbd9} 
+Map$<$ Local\+Date, Double $>$ com.\+saveit.\+service.\+Report\+Generator.\+get\+Monthly\+Spending\+Trend (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Generates a trend of spending over the last 30 days. 
+
+Groups expenses by their date and sums the amounts for each specific day within the 30-\/day window.
+
+\begin{DoxyReturn}{Returns}
+Map$<$\+Local\+Date, Double$>$ A map where keys are dates and values are the total spent on those dates. 
+\end{DoxyReturn}
+\Hypertarget{classcom_1_1saveit_1_1service_1_1_report_generator_a6ab25f0a1f649c4c90d6ae186306a3a9}\index{com.saveit.service.ReportGenerator@{com.saveit.service.ReportGenerator}!getSavings@{getSavings}}
+\index{getSavings@{getSavings}!com.saveit.service.ReportGenerator@{com.saveit.service.ReportGenerator}}
+\doxysubsubsection{\texorpdfstring{getSavings()}{getSavings()}}
+{\footnotesize\ttfamily \label{classcom_1_1saveit_1_1service_1_1_report_generator_a6ab25f0a1f649c4c90d6ae186306a3a9} 
+double com.\+saveit.\+service.\+Report\+Generator.\+get\+Savings (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Calculates the estimated savings based on the current cycle limit. 
+
+Subtracts the total spending of the last 30 days from the current cycle limit.
+
+\begin{DoxyReturn}{Returns}
+double The difference (savings), or 0 if spending exceeds the limit. 
+\end{DoxyReturn}
+\Hypertarget{classcom_1_1saveit_1_1service_1_1_report_generator_a6abb4ecfdaa4082a70104a7f7d9ca8a6}\index{com.saveit.service.ReportGenerator@{com.saveit.service.ReportGenerator}!getTotalSpending@{getTotalSpending}}
+\index{getTotalSpending@{getTotalSpending}!com.saveit.service.ReportGenerator@{com.saveit.service.ReportGenerator}}
+\doxysubsubsection{\texorpdfstring{getTotalSpending()}{getTotalSpending()}}
+{\footnotesize\ttfamily \label{classcom_1_1saveit_1_1service_1_1_report_generator_a6abb4ecfdaa4082a70104a7f7d9ca8a6} 
+double com.\+saveit.\+service.\+Report\+Generator.\+get\+Total\+Spending (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Calculates the total spending for the current active cycle. 
+
+\begin{DoxyReturn}{Returns}
+double The sum of all expenses in the current cycle. 
+\end{DoxyReturn}
+\Hypertarget{classcom_1_1saveit_1_1service_1_1_report_generator_af4e648e90f62ed20c8d28e90f92e0a23}\index{com.saveit.service.ReportGenerator@{com.saveit.service.ReportGenerator}!getWeeklySpendingTrend@{getWeeklySpendingTrend}}
+\index{getWeeklySpendingTrend@{getWeeklySpendingTrend}!com.saveit.service.ReportGenerator@{com.saveit.service.ReportGenerator}}
+\doxysubsubsection{\texorpdfstring{getWeeklySpendingTrend()}{getWeeklySpendingTrend()}}
+{\footnotesize\ttfamily \label{classcom_1_1saveit_1_1service_1_1_report_generator_af4e648e90f62ed20c8d28e90f92e0a23} 
+Map$<$ Local\+Date, Double $>$ com.\+saveit.\+service.\+Report\+Generator.\+get\+Weekly\+Spending\+Trend (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Generates a trend of spending over the last 7 days. 
+
+\begin{DoxyReturn}{Returns}
+Map$<$\+Local\+Date, Double$>$ A map where keys are dates and values are the daily spending totals. 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/main/java/com/saveit/service/Report\+Generator.\+java\end{DoxyCompactItemize}

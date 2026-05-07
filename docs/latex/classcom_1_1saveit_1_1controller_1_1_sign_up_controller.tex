@@ -1,0 +1,78 @@
+\doxysection{com.\+saveit.\+controller.\+Sign\+Up\+Controller Class Reference}
+\hypertarget{classcom_1_1saveit_1_1controller_1_1_sign_up_controller}{}\label{classcom_1_1saveit_1_1controller_1_1_sign_up_controller}\index{com.saveit.controller.SignUpController@{com.saveit.controller.SignUpController}}
+
+
+\doxylink{classcom_1_1saveit_1_1controller_1_1_controller}{Controller} responsible for managing user registration (Sign Up).  
+
+
+Inheritance diagram for com.\+saveit.\+controller.\+Sign\+Up\+Controller\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classcom_1_1saveit_1_1controller_1_1_sign_up_controller}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classcom_1_1saveit_1_1controller_1_1_sign_up_controller_aac322b4f6a572016978886f89713388a}{initialize}} ()
+\begin{DoxyCompactList}\small\item\em Initializes the controller by instantiating the \doxylink{classcom_1_1saveit_1_1service_1_1_authentication_service}{Authentication\+Service}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classcom_1_1saveit_1_1controller_1_1_sign_up_controller_a74b4cf7ac60450106844e350b708ea65}{handle\+Register}} ()
+\begin{DoxyCompactList}\small\item\em Processes the registration form data. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classcom_1_1saveit_1_1controller_1_1_sign_up_controller_a54b1cf9a462f591a9d5f79af94072b77}{back\+To\+Login}} ()
+\begin{DoxyCompactList}\small\item\em Navigates the UI back to the Login view. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{classcom_1_1saveit_1_1controller_1_1_controller}{com.\+saveit.\+controller.\+Controller}}}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classcom_1_1saveit_1_1controller_1_1_controller_a486b65e3a40563400404b07492a8a02e}{set\+User}} (\mbox{\hyperlink{classcom_1_1saveit_1_1model_1_1_user}{User}} user)
+\begin{DoxyCompactList}\small\item\em Sets the user for this controller. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classcom_1_1saveit_1_1model_1_1_user}{User}} \mbox{\hyperlink{classcom_1_1saveit_1_1controller_1_1_controller_a1eca6a41e7bc053fa003851f9d5cd5e7}{get\+User}} ()
+\begin{DoxyCompactList}\small\item\em Retrieves the user associated with this controller. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\doxylink{classcom_1_1saveit_1_1controller_1_1_controller}{Controller} responsible for managing user registration (Sign Up). 
+
+This class handles the logic for creating a new user account. it validates that all fields are filled, checks if the password and confirmation password match, and communicates with the \doxylink{classcom_1_1saveit_1_1service_1_1_authentication_service}{Authentication\+Service} to persist the new user data. 
+
+\label{doc-func-members}
+\Hypertarget{classcom_1_1saveit_1_1controller_1_1_sign_up_controller_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classcom_1_1saveit_1_1controller_1_1_sign_up_controller_a54b1cf9a462f591a9d5f79af94072b77}\index{com.saveit.controller.SignUpController@{com.saveit.controller.SignUpController}!backToLogin@{backToLogin}}
+\index{backToLogin@{backToLogin}!com.saveit.controller.SignUpController@{com.saveit.controller.SignUpController}}
+\doxysubsubsection{\texorpdfstring{backToLogin()}{backToLogin()}}
+{\footnotesize\ttfamily \label{classcom_1_1saveit_1_1controller_1_1_sign_up_controller_a54b1cf9a462f591a9d5f79af94072b77} 
+void com.\+saveit.\+controller.\+Sign\+Up\+Controller.\+back\+To\+Login (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Navigates the UI back to the Login view. 
+
+This is called either manually by the user or automatically after a successful registration. \Hypertarget{classcom_1_1saveit_1_1controller_1_1_sign_up_controller_a74b4cf7ac60450106844e350b708ea65}\index{com.saveit.controller.SignUpController@{com.saveit.controller.SignUpController}!handleRegister@{handleRegister}}
+\index{handleRegister@{handleRegister}!com.saveit.controller.SignUpController@{com.saveit.controller.SignUpController}}
+\doxysubsubsection{\texorpdfstring{handleRegister()}{handleRegister()}}
+{\footnotesize\ttfamily \label{classcom_1_1saveit_1_1controller_1_1_sign_up_controller_a74b4cf7ac60450106844e350b708ea65} 
+void com.\+saveit.\+controller.\+Sign\+Up\+Controller.\+handle\+Register (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Processes the registration form data. 
+
+Validates that all fields are populated and that passwords match. If validation passes, it attempts to register the user via auth\+Service. On success, it redirects to the login screen; otherwise, it displays an error. \Hypertarget{classcom_1_1saveit_1_1controller_1_1_sign_up_controller_aac322b4f6a572016978886f89713388a}\index{com.saveit.controller.SignUpController@{com.saveit.controller.SignUpController}!initialize@{initialize}}
+\index{initialize@{initialize}!com.saveit.controller.SignUpController@{com.saveit.controller.SignUpController}}
+\doxysubsubsection{\texorpdfstring{initialize()}{initialize()}}
+{\footnotesize\ttfamily \label{classcom_1_1saveit_1_1controller_1_1_sign_up_controller_aac322b4f6a572016978886f89713388a} 
+void com.\+saveit.\+controller.\+Sign\+Up\+Controller.\+initialize (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Initializes the controller by instantiating the \doxylink{classcom_1_1saveit_1_1service_1_1_authentication_service}{Authentication\+Service}. 
+
+This method is automatically called after the FXML file has been loaded. 
+
+Reimplemented from \mbox{\hyperlink{classcom_1_1saveit_1_1controller_1_1_controller_a4793a6bf0c34b92ef84eb9f61cec19f6}{com.\+saveit.\+controller.\+Controller}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/main/java/com/saveit/controller/Sign\+Up\+Controller.\+java\end{DoxyCompactItemize}

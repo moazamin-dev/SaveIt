@@ -1,0 +1,68 @@
+\doxysection{com.\+saveit.\+service.\+Budget\+Notifier Class Reference}
+\hypertarget{classcom_1_1saveit_1_1service_1_1_budget_notifier}{}\label{classcom_1_1saveit_1_1service_1_1_budget_notifier}\index{com.saveit.service.BudgetNotifier@{com.saveit.service.BudgetNotifier}}
+
+
+Service responsible for monitoring budget status and triggering notifications.  
+
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classcom_1_1saveit_1_1service_1_1_budget_notifier_a975614b764a23bed3ca9d0016465462d}{Budget\+Notifier}} (\mbox{\hyperlink{classcom_1_1saveit_1_1service_1_1_budget_calculator}{Budget\+Calculator}} budget\+Calculator, \mbox{\hyperlink{classcom_1_1saveit_1_1service_1_1_cycle_manager}{Cycle\+Manager}} cycle\+Manager, \mbox{\hyperlink{classcom_1_1saveit_1_1model_1_1_user}{User}} user)
+\begin{DoxyCompactList}\small\item\em Constructs a \doxylink{classcom_1_1saveit_1_1service_1_1_budget_notifier}{Budget\+Notifier} with necessary dependencies. \end{DoxyCompactList}\item 
+boolean \mbox{\hyperlink{classcom_1_1saveit_1_1service_1_1_budget_notifier_a11d52b620af655e36d2a2aac91dd4d4b}{is\+Over\+Budget}} ()
+\begin{DoxyCompactList}\small\item\em Checks if the user has exceeded their budget and triggers notifications. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Service responsible for monitoring budget status and triggering notifications. 
+
+This class evaluates the current spending against the set limits of a financial cycle and utilizes the \doxylink{classcom_1_1saveit_1_1service_1_1_notification_service}{Notification\+Service} to alert the user when thresholds are met or exceeded. 
+
+\label{doc-constructors}
+\Hypertarget{classcom_1_1saveit_1_1service_1_1_budget_notifier_doc-constructors}
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classcom_1_1saveit_1_1service_1_1_budget_notifier_a975614b764a23bed3ca9d0016465462d}\index{com.saveit.service.BudgetNotifier@{com.saveit.service.BudgetNotifier}!BudgetNotifier@{BudgetNotifier}}
+\index{BudgetNotifier@{BudgetNotifier}!com.saveit.service.BudgetNotifier@{com.saveit.service.BudgetNotifier}}
+\doxysubsubsection{\texorpdfstring{BudgetNotifier()}{BudgetNotifier()}}
+{\footnotesize\ttfamily \label{classcom_1_1saveit_1_1service_1_1_budget_notifier_a975614b764a23bed3ca9d0016465462d} 
+com.\+saveit.\+service.\+Budget\+Notifier.\+Budget\+Notifier (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classcom_1_1saveit_1_1service_1_1_budget_calculator}{Budget\+Calculator}}}]{budget\+Calculator}{, }\item[{\mbox{\hyperlink{classcom_1_1saveit_1_1service_1_1_cycle_manager}{Cycle\+Manager}}}]{cycle\+Manager}{, }\item[{\mbox{\hyperlink{classcom_1_1saveit_1_1model_1_1_user}{User}}}]{user}{}\end{DoxyParamCaption})}
+
+
+
+Constructs a \doxylink{classcom_1_1saveit_1_1service_1_1_budget_notifier}{Budget\+Notifier} with necessary dependencies. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em budget\+Calculator} & The calculator used to fetch remaining budget. \\
+\hline
+{\em cycle\+Manager} & The manager used to fetch cycle limits. \\
+\hline
+{\em user} & The \doxylink{classcom_1_1saveit_1_1model_1_1_user}{User} object being monitored. \\
+\hline
+\end{DoxyParams}
+
+
+\label{doc-func-members}
+\Hypertarget{classcom_1_1saveit_1_1service_1_1_budget_notifier_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classcom_1_1saveit_1_1service_1_1_budget_notifier_a11d52b620af655e36d2a2aac91dd4d4b}\index{com.saveit.service.BudgetNotifier@{com.saveit.service.BudgetNotifier}!isOverBudget@{isOverBudget}}
+\index{isOverBudget@{isOverBudget}!com.saveit.service.BudgetNotifier@{com.saveit.service.BudgetNotifier}}
+\doxysubsubsection{\texorpdfstring{isOverBudget()}{isOverBudget()}}
+{\footnotesize\ttfamily \label{classcom_1_1saveit_1_1service_1_1_budget_notifier_a11d52b620af655e36d2a2aac91dd4d4b} 
+boolean com.\+saveit.\+service.\+Budget\+Notifier.\+is\+Over\+Budget (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Checks if the user has exceeded their budget and triggers notifications. 
+
+This method calculates total spent amount, checks for percentage-\/based milestones (via \doxylink{classcom_1_1saveit_1_1service_1_1_notification_service}{Notification\+Service}), and displays a popup alert if the remaining limit reaches zero or less.
+
+\begin{DoxyReturn}{Returns}
+boolean True if the budget limit has been exceeded, false otherwise. 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/main/java/com/saveit/service/Budget\+Notifier.\+java\end{DoxyCompactItemize}

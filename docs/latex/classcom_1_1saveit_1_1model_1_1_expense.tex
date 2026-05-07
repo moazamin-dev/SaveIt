@@ -1,0 +1,239 @@
+\doxysection{com.\+saveit.\+model.\+Expense Class Reference}
+\hypertarget{classcom_1_1saveit_1_1model_1_1_expense}{}\label{classcom_1_1saveit_1_1model_1_1_expense}\index{com.saveit.model.Expense@{com.saveit.model.Expense}}
+
+
+Represents an individual expense record within the system.  
+
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classcom_1_1saveit_1_1model_1_1_expense_aa6601b1ca1ff0e16c4c717090d4b5a90}{Expense}} (int user\+\_\+id)
+\begin{DoxyCompactList}\small\item\em Constructor that initializes an expense for a specific user. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classcom_1_1saveit_1_1model_1_1_expense_a1c61431bcc45fb42d11e4763bf874a15}{get\+Id}} ()
+\begin{DoxyCompactList}\small\item\em Gets the unique ID of the expense. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classcom_1_1saveit_1_1model_1_1_expense_a9a078481c1cab4d1f7358ce0af0869b1}{set\+Id}} (int id)
+\begin{DoxyCompactList}\small\item\em Sets the unique ID of the expense. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{classcom_1_1saveit_1_1model_1_1_expense_adec6c76830276b83933a5bede8d97ab0}{get\+Amount}} ()
+\begin{DoxyCompactList}\small\item\em Gets the monetary amount of the expense. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classcom_1_1saveit_1_1model_1_1_expense_a67fc0b14ef29bd95274edefa46002e1e}{set\+Amount}} (double amount)
+\begin{DoxyCompactList}\small\item\em Sets the monetary amount of the expense. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classcom_1_1saveit_1_1model_1_1_expense_a6adf5b3ba22e1b3b296b37029f425b46}{set\+User\+\_\+id}} (int user\+\_\+id)
+\begin{DoxyCompactList}\small\item\em Sets the user ID associated with this expense. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classcom_1_1saveit_1_1model_1_1_expense_a7cfbe0cf32f7a72a1549a15de35137ec}{get\+User\+\_\+id}} ()
+\begin{DoxyCompactList}\small\item\em Gets the user ID associated with this expense. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classcom_1_1saveit_1_1model_1_1_category}{Category}} \mbox{\hyperlink{classcom_1_1saveit_1_1model_1_1_expense_adc02789034ea01262222633f0062cd04}{get\+Category}} ()
+\begin{DoxyCompactList}\small\item\em Gets the \doxylink{classcom_1_1saveit_1_1model_1_1_category}{Category} object assigned to this expense. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classcom_1_1saveit_1_1model_1_1_expense_ae8014faabb88a2c078f2d30e5ccf4e5d}{get\+Category\+ID}} ()
+\begin{DoxyCompactList}\small\item\em Gets the ID of the category assigned to this expense. \end{DoxyCompactList}\item 
+String \mbox{\hyperlink{classcom_1_1saveit_1_1model_1_1_expense_af35a078ab5fb59c48c68303c2973a5f5}{get\+Category\+Name}} ()
+\begin{DoxyCompactList}\small\item\em Gets the name of the category assigned to this expense. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classcom_1_1saveit_1_1model_1_1_expense_a433dd4cb095b9abe8a84852dd2f6e9b7}{set\+Category}} (String c)
+\begin{DoxyCompactList}\small\item\em Resolves and sets the category for the expense based on a name string. \end{DoxyCompactList}\item 
+Local\+Date \mbox{\hyperlink{classcom_1_1saveit_1_1model_1_1_expense_adecaefe68363b51ca9b5e8b204b95f63}{get\+Date}} ()
+\begin{DoxyCompactList}\small\item\em Gets the date of the expense. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classcom_1_1saveit_1_1model_1_1_expense_ac914c1b16ccd5225f5d2cdc5f58601b2}{set\+Date}} (Local\+Date date)
+\begin{DoxyCompactList}\small\item\em Sets the date of the expense. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Represents an individual expense record within the system. 
+
+This class stores details about a specific financial expenditure, including the amount, date, and the category it belongs to, linked to a specific user. 
+
+\label{doc-constructors}
+\Hypertarget{classcom_1_1saveit_1_1model_1_1_expense_doc-constructors}
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classcom_1_1saveit_1_1model_1_1_expense_aa6601b1ca1ff0e16c4c717090d4b5a90}\index{com.saveit.model.Expense@{com.saveit.model.Expense}!Expense@{Expense}}
+\index{Expense@{Expense}!com.saveit.model.Expense@{com.saveit.model.Expense}}
+\doxysubsubsection{\texorpdfstring{Expense()}{Expense()}}
+{\footnotesize\ttfamily \label{classcom_1_1saveit_1_1model_1_1_expense_aa6601b1ca1ff0e16c4c717090d4b5a90} 
+com.\+saveit.\+model.\+Expense.\+Expense (\begin{DoxyParamCaption}\item[{int}]{user\+\_\+id}{}\end{DoxyParamCaption})}
+
+
+
+Constructor that initializes an expense for a specific user. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em user\+\_\+id} & The ID of the user to whom this expense belongs. \\
+\hline
+\end{DoxyParams}
+
+
+\label{doc-func-members}
+\Hypertarget{classcom_1_1saveit_1_1model_1_1_expense_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classcom_1_1saveit_1_1model_1_1_expense_adec6c76830276b83933a5bede8d97ab0}\index{com.saveit.model.Expense@{com.saveit.model.Expense}!getAmount@{getAmount}}
+\index{getAmount@{getAmount}!com.saveit.model.Expense@{com.saveit.model.Expense}}
+\doxysubsubsection{\texorpdfstring{getAmount()}{getAmount()}}
+{\footnotesize\ttfamily \label{classcom_1_1saveit_1_1model_1_1_expense_adec6c76830276b83933a5bede8d97ab0} 
+double com.\+saveit.\+model.\+Expense.\+get\+Amount (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Gets the monetary amount of the expense. 
+
+\begin{DoxyReturn}{Returns}
+double The expense amount. 
+\end{DoxyReturn}
+\Hypertarget{classcom_1_1saveit_1_1model_1_1_expense_adc02789034ea01262222633f0062cd04}\index{com.saveit.model.Expense@{com.saveit.model.Expense}!getCategory@{getCategory}}
+\index{getCategory@{getCategory}!com.saveit.model.Expense@{com.saveit.model.Expense}}
+\doxysubsubsection{\texorpdfstring{getCategory()}{getCategory()}}
+{\footnotesize\ttfamily \label{classcom_1_1saveit_1_1model_1_1_expense_adc02789034ea01262222633f0062cd04} 
+\mbox{\hyperlink{classcom_1_1saveit_1_1model_1_1_category}{Category}} com.\+saveit.\+model.\+Expense.\+get\+Category (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Gets the \doxylink{classcom_1_1saveit_1_1model_1_1_category}{Category} object assigned to this expense. 
+
+\begin{DoxyReturn}{Returns}
+\doxylink{classcom_1_1saveit_1_1model_1_1_category}{Category} The category object. 
+\end{DoxyReturn}
+\Hypertarget{classcom_1_1saveit_1_1model_1_1_expense_ae8014faabb88a2c078f2d30e5ccf4e5d}\index{com.saveit.model.Expense@{com.saveit.model.Expense}!getCategoryID@{getCategoryID}}
+\index{getCategoryID@{getCategoryID}!com.saveit.model.Expense@{com.saveit.model.Expense}}
+\doxysubsubsection{\texorpdfstring{getCategoryID()}{getCategoryID()}}
+{\footnotesize\ttfamily \label{classcom_1_1saveit_1_1model_1_1_expense_ae8014faabb88a2c078f2d30e5ccf4e5d} 
+int com.\+saveit.\+model.\+Expense.\+get\+Category\+ID (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Gets the ID of the category assigned to this expense. 
+
+\begin{DoxyReturn}{Returns}
+int The category ID. 
+\end{DoxyReturn}
+\Hypertarget{classcom_1_1saveit_1_1model_1_1_expense_af35a078ab5fb59c48c68303c2973a5f5}\index{com.saveit.model.Expense@{com.saveit.model.Expense}!getCategoryName@{getCategoryName}}
+\index{getCategoryName@{getCategoryName}!com.saveit.model.Expense@{com.saveit.model.Expense}}
+\doxysubsubsection{\texorpdfstring{getCategoryName()}{getCategoryName()}}
+{\footnotesize\ttfamily \label{classcom_1_1saveit_1_1model_1_1_expense_af35a078ab5fb59c48c68303c2973a5f5} 
+String com.\+saveit.\+model.\+Expense.\+get\+Category\+Name (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Gets the name of the category assigned to this expense. 
+
+\begin{DoxyReturn}{Returns}
+String The category name. 
+\end{DoxyReturn}
+\Hypertarget{classcom_1_1saveit_1_1model_1_1_expense_adecaefe68363b51ca9b5e8b204b95f63}\index{com.saveit.model.Expense@{com.saveit.model.Expense}!getDate@{getDate}}
+\index{getDate@{getDate}!com.saveit.model.Expense@{com.saveit.model.Expense}}
+\doxysubsubsection{\texorpdfstring{getDate()}{getDate()}}
+{\footnotesize\ttfamily \label{classcom_1_1saveit_1_1model_1_1_expense_adecaefe68363b51ca9b5e8b204b95f63} 
+Local\+Date com.\+saveit.\+model.\+Expense.\+get\+Date (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Gets the date of the expense. 
+
+\begin{DoxyReturn}{Returns}
+Local\+Date The date of the record. 
+\end{DoxyReturn}
+\Hypertarget{classcom_1_1saveit_1_1model_1_1_expense_a1c61431bcc45fb42d11e4763bf874a15}\index{com.saveit.model.Expense@{com.saveit.model.Expense}!getId@{getId}}
+\index{getId@{getId}!com.saveit.model.Expense@{com.saveit.model.Expense}}
+\doxysubsubsection{\texorpdfstring{getId()}{getId()}}
+{\footnotesize\ttfamily \label{classcom_1_1saveit_1_1model_1_1_expense_a1c61431bcc45fb42d11e4763bf874a15} 
+int com.\+saveit.\+model.\+Expense.\+get\+Id (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Gets the unique ID of the expense. 
+
+\begin{DoxyReturn}{Returns}
+int The expense ID. 
+\end{DoxyReturn}
+\Hypertarget{classcom_1_1saveit_1_1model_1_1_expense_a7cfbe0cf32f7a72a1549a15de35137ec}\index{com.saveit.model.Expense@{com.saveit.model.Expense}!getUser\_id@{getUser\_id}}
+\index{getUser\_id@{getUser\_id}!com.saveit.model.Expense@{com.saveit.model.Expense}}
+\doxysubsubsection{\texorpdfstring{getUser\_id()}{getUser\_id()}}
+{\footnotesize\ttfamily \label{classcom_1_1saveit_1_1model_1_1_expense_a7cfbe0cf32f7a72a1549a15de35137ec} 
+int com.\+saveit.\+model.\+Expense.\+get\+User\+\_\+id (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Gets the user ID associated with this expense. 
+
+\begin{DoxyReturn}{Returns}
+int The user ID. 
+\end{DoxyReturn}
+\Hypertarget{classcom_1_1saveit_1_1model_1_1_expense_a67fc0b14ef29bd95274edefa46002e1e}\index{com.saveit.model.Expense@{com.saveit.model.Expense}!setAmount@{setAmount}}
+\index{setAmount@{setAmount}!com.saveit.model.Expense@{com.saveit.model.Expense}}
+\doxysubsubsection{\texorpdfstring{setAmount()}{setAmount()}}
+{\footnotesize\ttfamily \label{classcom_1_1saveit_1_1model_1_1_expense_a67fc0b14ef29bd95274edefa46002e1e} 
+void com.\+saveit.\+model.\+Expense.\+set\+Amount (\begin{DoxyParamCaption}\item[{double}]{amount}{}\end{DoxyParamCaption})}
+
+
+
+Sets the monetary amount of the expense. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em amount} & The amount to set. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classcom_1_1saveit_1_1model_1_1_expense_a433dd4cb095b9abe8a84852dd2f6e9b7}\index{com.saveit.model.Expense@{com.saveit.model.Expense}!setCategory@{setCategory}}
+\index{setCategory@{setCategory}!com.saveit.model.Expense@{com.saveit.model.Expense}}
+\doxysubsubsection{\texorpdfstring{setCategory()}{setCategory()}}
+{\footnotesize\ttfamily \label{classcom_1_1saveit_1_1model_1_1_expense_a433dd4cb095b9abe8a84852dd2f6e9b7} 
+void com.\+saveit.\+model.\+Expense.\+set\+Category (\begin{DoxyParamCaption}\item[{String}]{c}{}\end{DoxyParamCaption})}
+
+
+
+Resolves and sets the category for the expense based on a name string. 
+
+Uses the \doxylink{classcom_1_1saveit_1_1dao_1_1_category_d_a_o}{Category\+DAO} to look up the existing category for the user and assigns the resulting \doxylink{classcom_1_1saveit_1_1model_1_1_category}{Category} object to this expense.
+
+
+\begin{DoxyParams}{Parameters}
+{\em c} & The name of the category to resolve. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classcom_1_1saveit_1_1model_1_1_expense_ac914c1b16ccd5225f5d2cdc5f58601b2}\index{com.saveit.model.Expense@{com.saveit.model.Expense}!setDate@{setDate}}
+\index{setDate@{setDate}!com.saveit.model.Expense@{com.saveit.model.Expense}}
+\doxysubsubsection{\texorpdfstring{setDate()}{setDate()}}
+{\footnotesize\ttfamily \label{classcom_1_1saveit_1_1model_1_1_expense_ac914c1b16ccd5225f5d2cdc5f58601b2} 
+void com.\+saveit.\+model.\+Expense.\+set\+Date (\begin{DoxyParamCaption}\item[{Local\+Date}]{date}{}\end{DoxyParamCaption})}
+
+
+
+Sets the date of the expense. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em date} & The Local\+Date to set. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classcom_1_1saveit_1_1model_1_1_expense_a9a078481c1cab4d1f7358ce0af0869b1}\index{com.saveit.model.Expense@{com.saveit.model.Expense}!setId@{setId}}
+\index{setId@{setId}!com.saveit.model.Expense@{com.saveit.model.Expense}}
+\doxysubsubsection{\texorpdfstring{setId()}{setId()}}
+{\footnotesize\ttfamily \label{classcom_1_1saveit_1_1model_1_1_expense_a9a078481c1cab4d1f7358ce0af0869b1} 
+void com.\+saveit.\+model.\+Expense.\+set\+Id (\begin{DoxyParamCaption}\item[{int}]{id}{}\end{DoxyParamCaption})}
+
+
+
+Sets the unique ID of the expense. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em id} & The expense ID to set. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classcom_1_1saveit_1_1model_1_1_expense_a6adf5b3ba22e1b3b296b37029f425b46}\index{com.saveit.model.Expense@{com.saveit.model.Expense}!setUser\_id@{setUser\_id}}
+\index{setUser\_id@{setUser\_id}!com.saveit.model.Expense@{com.saveit.model.Expense}}
+\doxysubsubsection{\texorpdfstring{setUser\_id()}{setUser\_id()}}
+{\footnotesize\ttfamily \label{classcom_1_1saveit_1_1model_1_1_expense_a6adf5b3ba22e1b3b296b37029f425b46} 
+void com.\+saveit.\+model.\+Expense.\+set\+User\+\_\+id (\begin{DoxyParamCaption}\item[{int}]{user\+\_\+id}{}\end{DoxyParamCaption})}
+
+
+
+Sets the user ID associated with this expense. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em user\+\_\+id} & The user ID to set. \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/main/java/com/saveit/model/Expense.\+java\end{DoxyCompactItemize}

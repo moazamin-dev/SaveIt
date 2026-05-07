@@ -1,0 +1,146 @@
+\doxysection{com.\+saveit.\+model.\+Cycle Class Reference}
+\hypertarget{classcom_1_1saveit_1_1model_1_1_cycle}{}\label{classcom_1_1saveit_1_1model_1_1_cycle}\index{com.saveit.model.Cycle@{com.saveit.model.Cycle}}
+
+
+Represents a financial or temporal cycle with a specific budget limit and date range.  
+
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{classcom_1_1saveit_1_1model_1_1_cycle_a9b1705c1e16de1802858910b0f70c4c3}\label{classcom_1_1saveit_1_1model_1_1_cycle_a9b1705c1e16de1802858910b0f70c4c3} 
+{\bfseries Cycle} ()
+\begin{DoxyCompactList}\small\item\em Default constructor initializing the cycle with default values. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classcom_1_1saveit_1_1model_1_1_cycle_a8f3d37a6c2fd28d546ee0cc6be93ebd7}{set\+Cycle}} (double limit, Local\+Date d1, Local\+Date d2)
+\begin{DoxyCompactList}\small\item\em Sets the cycle parameters in a single call. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classcom_1_1saveit_1_1model_1_1_cycle_a669451fc4015a3b60d46b9e4e14166a7}{set\+Id}} (int id)
+\begin{DoxyCompactList}\small\item\em Sets the unique identifier for the cycle. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classcom_1_1saveit_1_1model_1_1_cycle_a474a6cf02b0d20ce3010f88963ad6dfa}{get\+Id}} ()
+\begin{DoxyCompactList}\small\item\em Gets the unique identifier of the cycle. \end{DoxyCompactList}\item 
+\Hypertarget{classcom_1_1saveit_1_1model_1_1_cycle_a7327e26d3b5843ef01760509437db71a}\label{classcom_1_1saveit_1_1model_1_1_cycle_a7327e26d3b5843ef01760509437db71a} 
+void {\bfseries reset\+Cycle} ()
+\begin{DoxyCompactList}\small\item\em Resets the cycle to its default uninitialized state. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{classcom_1_1saveit_1_1model_1_1_cycle_a83ab93e33c6783a84c3cafc1e20863ae}{get\+Limit}} ()
+\begin{DoxyCompactList}\small\item\em Gets the current limit of the cycle. \end{DoxyCompactList}\item 
+Local\+Date \mbox{\hyperlink{classcom_1_1saveit_1_1model_1_1_cycle_ad471d609821031bb75425ff208f553b7}{get\+Start\+Date}} ()
+\begin{DoxyCompactList}\small\item\em Gets the start date of the cycle. \end{DoxyCompactList}\item 
+Local\+Date \mbox{\hyperlink{classcom_1_1saveit_1_1model_1_1_cycle_a1a50e1f4217714222029638c8196bb75}{get\+End\+Date}} ()
+\begin{DoxyCompactList}\small\item\em Gets the end date of the cycle. \end{DoxyCompactList}\item 
+boolean \mbox{\hyperlink{classcom_1_1saveit_1_1model_1_1_cycle_af5b3378bd2ead1211c4cd93f22a30971}{is\+Active}} ()
+\begin{DoxyCompactList}\small\item\em Checks if the cycle is currently active. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Represents a financial or temporal cycle with a specific budget limit and date range. 
+
+This class manages the lifecycle of a cycle, including its active status, period boundaries, and associated spending limits. 
+
+\label{doc-func-members}
+\Hypertarget{classcom_1_1saveit_1_1model_1_1_cycle_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classcom_1_1saveit_1_1model_1_1_cycle_a1a50e1f4217714222029638c8196bb75}\index{com.saveit.model.Cycle@{com.saveit.model.Cycle}!getEndDate@{getEndDate}}
+\index{getEndDate@{getEndDate}!com.saveit.model.Cycle@{com.saveit.model.Cycle}}
+\doxysubsubsection{\texorpdfstring{getEndDate()}{getEndDate()}}
+{\footnotesize\ttfamily \label{classcom_1_1saveit_1_1model_1_1_cycle_a1a50e1f4217714222029638c8196bb75} 
+Local\+Date com.\+saveit.\+model.\+Cycle.\+get\+End\+Date (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Gets the end date of the cycle. 
+
+\begin{DoxyReturn}{Returns}
+Local\+Date The end date. 
+\end{DoxyReturn}
+\Hypertarget{classcom_1_1saveit_1_1model_1_1_cycle_a474a6cf02b0d20ce3010f88963ad6dfa}\index{com.saveit.model.Cycle@{com.saveit.model.Cycle}!getId@{getId}}
+\index{getId@{getId}!com.saveit.model.Cycle@{com.saveit.model.Cycle}}
+\doxysubsubsection{\texorpdfstring{getId()}{getId()}}
+{\footnotesize\ttfamily \label{classcom_1_1saveit_1_1model_1_1_cycle_a474a6cf02b0d20ce3010f88963ad6dfa} 
+int com.\+saveit.\+model.\+Cycle.\+get\+Id (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Gets the unique identifier of the cycle. 
+
+\begin{DoxyReturn}{Returns}
+int The cycle ID. 
+\end{DoxyReturn}
+\Hypertarget{classcom_1_1saveit_1_1model_1_1_cycle_a83ab93e33c6783a84c3cafc1e20863ae}\index{com.saveit.model.Cycle@{com.saveit.model.Cycle}!getLimit@{getLimit}}
+\index{getLimit@{getLimit}!com.saveit.model.Cycle@{com.saveit.model.Cycle}}
+\doxysubsubsection{\texorpdfstring{getLimit()}{getLimit()}}
+{\footnotesize\ttfamily \label{classcom_1_1saveit_1_1model_1_1_cycle_a83ab93e33c6783a84c3cafc1e20863ae} 
+double com.\+saveit.\+model.\+Cycle.\+get\+Limit (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Gets the current limit of the cycle. 
+
+\begin{DoxyReturn}{Returns}
+double The limit value. 
+\end{DoxyReturn}
+\Hypertarget{classcom_1_1saveit_1_1model_1_1_cycle_ad471d609821031bb75425ff208f553b7}\index{com.saveit.model.Cycle@{com.saveit.model.Cycle}!getStartDate@{getStartDate}}
+\index{getStartDate@{getStartDate}!com.saveit.model.Cycle@{com.saveit.model.Cycle}}
+\doxysubsubsection{\texorpdfstring{getStartDate()}{getStartDate()}}
+{\footnotesize\ttfamily \label{classcom_1_1saveit_1_1model_1_1_cycle_ad471d609821031bb75425ff208f553b7} 
+Local\+Date com.\+saveit.\+model.\+Cycle.\+get\+Start\+Date (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Gets the start date of the cycle. 
+
+\begin{DoxyReturn}{Returns}
+Local\+Date The start date. 
+\end{DoxyReturn}
+\Hypertarget{classcom_1_1saveit_1_1model_1_1_cycle_af5b3378bd2ead1211c4cd93f22a30971}\index{com.saveit.model.Cycle@{com.saveit.model.Cycle}!isActive@{isActive}}
+\index{isActive@{isActive}!com.saveit.model.Cycle@{com.saveit.model.Cycle}}
+\doxysubsubsection{\texorpdfstring{isActive()}{isActive()}}
+{\footnotesize\ttfamily \label{classcom_1_1saveit_1_1model_1_1_cycle_af5b3378bd2ead1211c4cd93f22a30971} 
+boolean com.\+saveit.\+model.\+Cycle.\+is\+Active (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Checks if the cycle is currently active. 
+
+A cycle is considered active if the limit is greater than 0 and the start date has been modified from its default value.
+
+\begin{DoxyReturn}{Returns}
+boolean True if active, false otherwise. 
+\end{DoxyReturn}
+\Hypertarget{classcom_1_1saveit_1_1model_1_1_cycle_a8f3d37a6c2fd28d546ee0cc6be93ebd7}\index{com.saveit.model.Cycle@{com.saveit.model.Cycle}!setCycle@{setCycle}}
+\index{setCycle@{setCycle}!com.saveit.model.Cycle@{com.saveit.model.Cycle}}
+\doxysubsubsection{\texorpdfstring{setCycle()}{setCycle()}}
+{\footnotesize\ttfamily \label{classcom_1_1saveit_1_1model_1_1_cycle_a8f3d37a6c2fd28d546ee0cc6be93ebd7} 
+void com.\+saveit.\+model.\+Cycle.\+set\+Cycle (\begin{DoxyParamCaption}\item[{double}]{limit}{, }\item[{Local\+Date}]{d1}{, }\item[{Local\+Date}]{d2}{}\end{DoxyParamCaption})}
+
+
+
+Sets the cycle parameters in a single call. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em limit} & The maximum limit for the cycle. \\
+\hline
+{\em d1} & The start date of the cycle. \\
+\hline
+{\em d2} & The end date of the cycle. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classcom_1_1saveit_1_1model_1_1_cycle_a669451fc4015a3b60d46b9e4e14166a7}\index{com.saveit.model.Cycle@{com.saveit.model.Cycle}!setId@{setId}}
+\index{setId@{setId}!com.saveit.model.Cycle@{com.saveit.model.Cycle}}
+\doxysubsubsection{\texorpdfstring{setId()}{setId()}}
+{\footnotesize\ttfamily \label{classcom_1_1saveit_1_1model_1_1_cycle_a669451fc4015a3b60d46b9e4e14166a7} 
+void com.\+saveit.\+model.\+Cycle.\+set\+Id (\begin{DoxyParamCaption}\item[{int}]{id}{}\end{DoxyParamCaption})}
+
+
+
+Sets the unique identifier for the cycle. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em id} & The ID to assign. \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/main/java/com/saveit/model/Cycle.\+java\end{DoxyCompactItemize}

@@ -1,0 +1,157 @@
+\doxysection{com.\+saveit.\+dao.\+Category\+DAO Class Reference}
+\hypertarget{classcom_1_1saveit_1_1dao_1_1_category_d_a_o}{}\label{classcom_1_1saveit_1_1dao_1_1_category_d_a_o}\index{com.saveit.dao.CategoryDAO@{com.saveit.dao.CategoryDAO}}
+
+
+Data Access Object for \doxylink{classcom_1_1saveit_1_1model_1_1_category}{Category} entities.  
+
+
+Inheritance diagram for com.\+saveit.\+dao.\+Category\+DAO\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classcom_1_1saveit_1_1dao_1_1_category_d_a_o}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classcom_1_1saveit_1_1dao_1_1_category_d_a_o_a4cf46aebc8bf50ed662afbd37a8ca5a2}{Category\+DAO}} ()
+\begin{DoxyCompactList}\small\item\em Constructor for \doxylink{classcom_1_1saveit_1_1dao_1_1_category_d_a_o}{Category\+DAO}. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classcom_1_1saveit_1_1dao_1_1_category_d_a_o_a0732e2ac34008faf00de0a9de3fdb0ab}{save}} (\mbox{\hyperlink{classcom_1_1saveit_1_1model_1_1_category}{Category}} c)
+\begin{DoxyCompactList}\small\item\em Persists a new \doxylink{classcom_1_1saveit_1_1model_1_1_category}{Category} object to the database. \end{DoxyCompactList}\item 
+List$<$ \mbox{\hyperlink{classcom_1_1saveit_1_1model_1_1_category}{Category}} $>$ \mbox{\hyperlink{classcom_1_1saveit_1_1dao_1_1_category_d_a_o_a1e2a8d8d85c1ee8da0a889469c21c646}{get\+All}} (int id)
+\begin{DoxyCompactList}\small\item\em Retrieves all categories belonging to a specific user. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classcom_1_1saveit_1_1dao_1_1_category_d_a_o_a40181941c4e3d9af02717affea50a8b8}{delete}} (int id)
+\begin{DoxyCompactList}\small\item\em Deletes a category record from the database by its unique identifier. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classcom_1_1saveit_1_1model_1_1_category}{Category}} \mbox{\hyperlink{classcom_1_1saveit_1_1dao_1_1_category_d_a_o_a36f702a1e8b20ae587f0d677a7e141aa}{resolve\+ID}} (int user\+\_\+id, int category\+ID)
+\begin{DoxyCompactList}\small\item\em Finds a specific \doxylink{classcom_1_1saveit_1_1model_1_1_category}{Category} object based on the category ID and user ID. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classcom_1_1saveit_1_1model_1_1_category}{Category}} \mbox{\hyperlink{classcom_1_1saveit_1_1dao_1_1_category_d_a_o_abcbb7873628d1059e4c75806c27c1831}{resolve\+Name}} (int user\+\_\+id, String Name)
+\begin{DoxyCompactList}\small\item\em Resolves a category by its name for a specific user. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{interfacecom_1_1saveit_1_1dao_1_1_d_a_o}{com.\+saveit.\+dao.\+DAO$<$ Category $>$}}}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{interfacecom_1_1saveit_1_1dao_1_1_d_a_o_a58c39a5e37f6d6195f4800ea7b0fedd5}{save}} (T entity)
+\begin{DoxyCompactList}\small\item\em Persists the given entity to the data source. \end{DoxyCompactList}\item 
+List$<$ T $>$ \mbox{\hyperlink{interfacecom_1_1saveit_1_1dao_1_1_d_a_o_a6100efeb85551059b2f8a6b34e569fbb}{get\+All}} (int id)
+\begin{DoxyCompactList}\small\item\em Retrieves all entities associated with a specific identifier. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{interfacecom_1_1saveit_1_1dao_1_1_d_a_o_aa447afe03679ed6b4d430ad1f02c2fad}{delete}} (int id)
+\begin{DoxyCompactList}\small\item\em Deletes an entity from the data source by its unique identifier. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Data Access Object for \doxylink{classcom_1_1saveit_1_1model_1_1_category}{Category} entities. 
+
+This class provides implementation for managing \doxylink{classcom_1_1saveit_1_1model_1_1_category}{Category} records in the database, allowing for creation, retrieval, deletion, and resolution of categories based on names or IDs for specific users. 
+
+\label{doc-constructors}
+\Hypertarget{classcom_1_1saveit_1_1dao_1_1_category_d_a_o_doc-constructors}
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classcom_1_1saveit_1_1dao_1_1_category_d_a_o_a4cf46aebc8bf50ed662afbd37a8ca5a2}\index{com.saveit.dao.CategoryDAO@{com.saveit.dao.CategoryDAO}!CategoryDAO@{CategoryDAO}}
+\index{CategoryDAO@{CategoryDAO}!com.saveit.dao.CategoryDAO@{com.saveit.dao.CategoryDAO}}
+\doxysubsubsection{\texorpdfstring{CategoryDAO()}{CategoryDAO()}}
+{\footnotesize\ttfamily \label{classcom_1_1saveit_1_1dao_1_1_category_d_a_o_a4cf46aebc8bf50ed662afbd37a8ca5a2} 
+com.\+saveit.\+dao.\+Category\+DAO.\+Category\+DAO (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Constructor for \doxylink{classcom_1_1saveit_1_1dao_1_1_category_d_a_o}{Category\+DAO}. 
+
+Initializes the database connection using the \doxylink{classcom_1_1saveit_1_1dao_1_1_database_connection}{Database\+Connection} singleton. 
+
+\label{doc-func-members}
+\Hypertarget{classcom_1_1saveit_1_1dao_1_1_category_d_a_o_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classcom_1_1saveit_1_1dao_1_1_category_d_a_o_a40181941c4e3d9af02717affea50a8b8}\index{com.saveit.dao.CategoryDAO@{com.saveit.dao.CategoryDAO}!delete@{delete}}
+\index{delete@{delete}!com.saveit.dao.CategoryDAO@{com.saveit.dao.CategoryDAO}}
+\doxysubsubsection{\texorpdfstring{delete()}{delete()}}
+{\footnotesize\ttfamily \label{classcom_1_1saveit_1_1dao_1_1_category_d_a_o_a40181941c4e3d9af02717affea50a8b8} 
+void com.\+saveit.\+dao.\+Category\+DAO.\+delete (\begin{DoxyParamCaption}\item[{int}]{id}{}\end{DoxyParamCaption})}
+
+
+
+Deletes a category record from the database by its unique identifier. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em id} & The unique ID of the category to be removed. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classcom_1_1saveit_1_1dao_1_1_category_d_a_o_a1e2a8d8d85c1ee8da0a889469c21c646}\index{com.saveit.dao.CategoryDAO@{com.saveit.dao.CategoryDAO}!getAll@{getAll}}
+\index{getAll@{getAll}!com.saveit.dao.CategoryDAO@{com.saveit.dao.CategoryDAO}}
+\doxysubsubsection{\texorpdfstring{getAll()}{getAll()}}
+{\footnotesize\ttfamily \label{classcom_1_1saveit_1_1dao_1_1_category_d_a_o_a1e2a8d8d85c1ee8da0a889469c21c646} 
+List$<$ \mbox{\hyperlink{classcom_1_1saveit_1_1model_1_1_category}{Category}} $>$ com.\+saveit.\+dao.\+Category\+DAO.\+get\+All (\begin{DoxyParamCaption}\item[{int}]{id}{}\end{DoxyParamCaption})}
+
+
+
+Retrieves all categories belonging to a specific user. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em id} & The ID of the user whose categories are being fetched. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+List$<$\+Category$>$ A list of \doxylink{classcom_1_1saveit_1_1model_1_1_category}{Category} objects associated with the user. 
+\end{DoxyReturn}
+\Hypertarget{classcom_1_1saveit_1_1dao_1_1_category_d_a_o_a36f702a1e8b20ae587f0d677a7e141aa}\index{com.saveit.dao.CategoryDAO@{com.saveit.dao.CategoryDAO}!resolveID@{resolveID}}
+\index{resolveID@{resolveID}!com.saveit.dao.CategoryDAO@{com.saveit.dao.CategoryDAO}}
+\doxysubsubsection{\texorpdfstring{resolveID()}{resolveID()}}
+{\footnotesize\ttfamily \label{classcom_1_1saveit_1_1dao_1_1_category_d_a_o_a36f702a1e8b20ae587f0d677a7e141aa} 
+\mbox{\hyperlink{classcom_1_1saveit_1_1model_1_1_category}{Category}} com.\+saveit.\+dao.\+Category\+DAO.\+resolve\+ID (\begin{DoxyParamCaption}\item[{int}]{user\+\_\+id}{, }\item[{int}]{category\+ID}{}\end{DoxyParamCaption})}
+
+
+
+Finds a specific \doxylink{classcom_1_1saveit_1_1model_1_1_category}{Category} object based on the category ID and user ID. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em user\+\_\+id} & The ID of the user who owns the category. \\
+\hline
+{\em category\+ID} & The unique ID of the category. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\doxylink{classcom_1_1saveit_1_1model_1_1_category}{Category} The populated \doxylink{classcom_1_1saveit_1_1model_1_1_category}{Category} object, or an empty \doxylink{classcom_1_1saveit_1_1model_1_1_category}{Category} object if not found. 
+\end{DoxyReturn}
+\Hypertarget{classcom_1_1saveit_1_1dao_1_1_category_d_a_o_abcbb7873628d1059e4c75806c27c1831}\index{com.saveit.dao.CategoryDAO@{com.saveit.dao.CategoryDAO}!resolveName@{resolveName}}
+\index{resolveName@{resolveName}!com.saveit.dao.CategoryDAO@{com.saveit.dao.CategoryDAO}}
+\doxysubsubsection{\texorpdfstring{resolveName()}{resolveName()}}
+{\footnotesize\ttfamily \label{classcom_1_1saveit_1_1dao_1_1_category_d_a_o_abcbb7873628d1059e4c75806c27c1831} 
+\mbox{\hyperlink{classcom_1_1saveit_1_1model_1_1_category}{Category}} com.\+saveit.\+dao.\+Category\+DAO.\+resolve\+Name (\begin{DoxyParamCaption}\item[{int}]{user\+\_\+id}{, }\item[{String}]{Name}{}\end{DoxyParamCaption})}
+
+
+
+Resolves a category by its name for a specific user. 
+
+If the category name does not exist for the specified user, it automatically creates and saves a new category with that name and returns it.
+
+
+\begin{DoxyParams}{Parameters}
+{\em user\+\_\+id} & The ID of the user. \\
+\hline
+{\em Name} & The name of the category to find or create. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\doxylink{classcom_1_1saveit_1_1model_1_1_category}{Category} The found or newly created \doxylink{classcom_1_1saveit_1_1model_1_1_category}{Category} object. 
+\end{DoxyReturn}
+\Hypertarget{classcom_1_1saveit_1_1dao_1_1_category_d_a_o_a0732e2ac34008faf00de0a9de3fdb0ab}\index{com.saveit.dao.CategoryDAO@{com.saveit.dao.CategoryDAO}!save@{save}}
+\index{save@{save}!com.saveit.dao.CategoryDAO@{com.saveit.dao.CategoryDAO}}
+\doxysubsubsection{\texorpdfstring{save()}{save()}}
+{\footnotesize\ttfamily \label{classcom_1_1saveit_1_1dao_1_1_category_d_a_o_a0732e2ac34008faf00de0a9de3fdb0ab} 
+void com.\+saveit.\+dao.\+Category\+DAO.\+save (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classcom_1_1saveit_1_1model_1_1_category}{Category}}}]{c}{}\end{DoxyParamCaption})}
+
+
+
+Persists a new \doxylink{classcom_1_1saveit_1_1model_1_1_category}{Category} object to the database. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em c} & The \doxylink{classcom_1_1saveit_1_1model_1_1_category}{Category} object to be saved. \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/main/java/com/saveit/dao/Category\+DAO.\+java\end{DoxyCompactItemize}

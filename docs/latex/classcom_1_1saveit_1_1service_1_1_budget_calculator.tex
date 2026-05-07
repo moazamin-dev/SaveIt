@@ -1,0 +1,137 @@
+\doxysection{com.\+saveit.\+service.\+Budget\+Calculator Class Reference}
+\hypertarget{classcom_1_1saveit_1_1service_1_1_budget_calculator}{}\label{classcom_1_1saveit_1_1service_1_1_budget_calculator}\index{com.saveit.service.BudgetCalculator@{com.saveit.service.BudgetCalculator}}
+
+
+Service class responsible for calculating and managing budget-\/related metrics.  
+
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classcom_1_1saveit_1_1service_1_1_budget_calculator_ab1c668863988a0ec64840423e18a2343}{Budget\+Calculator}} (\mbox{\hyperlink{classcom_1_1saveit_1_1service_1_1_cycle_manager}{Cycle\+Manager}} cycle\+Manager, \mbox{\hyperlink{classcom_1_1saveit_1_1service_1_1_expense_service}{Expense\+Service}} expense\+Service)
+\begin{DoxyCompactList}\small\item\em Constructor for \doxylink{classcom_1_1saveit_1_1service_1_1_budget_calculator}{Budget\+Calculator}. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{classcom_1_1saveit_1_1service_1_1_budget_calculator_aab578985ecbcaefc499cc4dc5bd8fa4c}{get\+Remaining\+Limit}} ()
+\begin{DoxyCompactList}\small\item\em Gets the current remaining limit. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classcom_1_1saveit_1_1service_1_1_budget_calculator_a95ddf13f093e0e744fe9f087628f0e66}{deduct}} (double amount)
+\begin{DoxyCompactList}\small\item\em Manually deducts an amount from the current remaining balance. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classcom_1_1saveit_1_1service_1_1_budget_calculator_a710a60bbbab202bc9295e47efab57cde}{reset\+Remaining}} (double limit)
+\begin{DoxyCompactList}\small\item\em Resets the remaining balance to a specific value. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{classcom_1_1saveit_1_1service_1_1_budget_calculator_a71945c3f8eb38c9d71569d17136854b6}{calculate\+Daily\+Limit}} ()
+\begin{DoxyCompactList}\small\item\em Calculates the suggested daily spending limit. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{classcom_1_1saveit_1_1service_1_1_budget_calculator_a91d368c1cef96b29202e3896f8ca86b1}{sum\+\_\+of\+\_\+transactions}} (List$<$ \mbox{\hyperlink{classcom_1_1saveit_1_1model_1_1_expense}{Expense}} $>$ list)
+\begin{DoxyCompactList}\small\item\em Helper method to calculate the total sum of a list of expenses. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Service class responsible for calculating and managing budget-\/related metrics. 
+
+This class computes the remaining balance for a financial cycle and determines the recommended daily spending limit based on the time remaining until the cycle ends. 
+
+\label{doc-constructors}
+\Hypertarget{classcom_1_1saveit_1_1service_1_1_budget_calculator_doc-constructors}
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classcom_1_1saveit_1_1service_1_1_budget_calculator_ab1c668863988a0ec64840423e18a2343}\index{com.saveit.service.BudgetCalculator@{com.saveit.service.BudgetCalculator}!BudgetCalculator@{BudgetCalculator}}
+\index{BudgetCalculator@{BudgetCalculator}!com.saveit.service.BudgetCalculator@{com.saveit.service.BudgetCalculator}}
+\doxysubsubsection{\texorpdfstring{BudgetCalculator()}{BudgetCalculator()}}
+{\footnotesize\ttfamily \label{classcom_1_1saveit_1_1service_1_1_budget_calculator_ab1c668863988a0ec64840423e18a2343} 
+com.\+saveit.\+service.\+Budget\+Calculator.\+Budget\+Calculator (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classcom_1_1saveit_1_1service_1_1_cycle_manager}{Cycle\+Manager}}}]{cycle\+Manager}{, }\item[{\mbox{\hyperlink{classcom_1_1saveit_1_1service_1_1_expense_service}{Expense\+Service}}}]{expense\+Service}{}\end{DoxyParamCaption})}
+
+
+
+Constructor for \doxylink{classcom_1_1saveit_1_1service_1_1_budget_calculator}{Budget\+Calculator}. 
+
+Initializes the calculator by assessing the current cycle\textquotesingle{}s status. If an active cycle exists, it calculates the remaining budget by subtracting the sum of existing transactions from the cycle limit.
+
+
+\begin{DoxyParams}{Parameters}
+{\em cycle\+Manager} & The manager providing cycle dates and limits. \\
+\hline
+{\em expense\+Service} & The service providing the list of expenses to sum. \\
+\hline
+\end{DoxyParams}
+
+
+\label{doc-func-members}
+\Hypertarget{classcom_1_1saveit_1_1service_1_1_budget_calculator_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classcom_1_1saveit_1_1service_1_1_budget_calculator_a71945c3f8eb38c9d71569d17136854b6}\index{com.saveit.service.BudgetCalculator@{com.saveit.service.BudgetCalculator}!calculateDailyLimit@{calculateDailyLimit}}
+\index{calculateDailyLimit@{calculateDailyLimit}!com.saveit.service.BudgetCalculator@{com.saveit.service.BudgetCalculator}}
+\doxysubsubsection{\texorpdfstring{calculateDailyLimit()}{calculateDailyLimit()}}
+{\footnotesize\ttfamily \label{classcom_1_1saveit_1_1service_1_1_budget_calculator_a71945c3f8eb38c9d71569d17136854b6} 
+double com.\+saveit.\+service.\+Budget\+Calculator.\+calculate\+Daily\+Limit (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Calculates the suggested daily spending limit. 
+
+Determines the number of days remaining until the cycle\textquotesingle{}s end date (inclusive of today) and divides the remaining budget by that count.
+
+\begin{DoxyReturn}{Returns}
+double The calculated daily limit, or 0.\+0 if no cycle or end date is defined. 
+\end{DoxyReturn}
+\Hypertarget{classcom_1_1saveit_1_1service_1_1_budget_calculator_a95ddf13f093e0e744fe9f087628f0e66}\index{com.saveit.service.BudgetCalculator@{com.saveit.service.BudgetCalculator}!deduct@{deduct}}
+\index{deduct@{deduct}!com.saveit.service.BudgetCalculator@{com.saveit.service.BudgetCalculator}}
+\doxysubsubsection{\texorpdfstring{deduct()}{deduct()}}
+{\footnotesize\ttfamily \label{classcom_1_1saveit_1_1service_1_1_budget_calculator_a95ddf13f093e0e744fe9f087628f0e66} 
+void com.\+saveit.\+service.\+Budget\+Calculator.\+deduct (\begin{DoxyParamCaption}\item[{double}]{amount}{}\end{DoxyParamCaption})}
+
+
+
+Manually deducts an amount from the current remaining balance. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em amount} & The value to subtract from the budget. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classcom_1_1saveit_1_1service_1_1_budget_calculator_aab578985ecbcaefc499cc4dc5bd8fa4c}\index{com.saveit.service.BudgetCalculator@{com.saveit.service.BudgetCalculator}!getRemainingLimit@{getRemainingLimit}}
+\index{getRemainingLimit@{getRemainingLimit}!com.saveit.service.BudgetCalculator@{com.saveit.service.BudgetCalculator}}
+\doxysubsubsection{\texorpdfstring{getRemainingLimit()}{getRemainingLimit()}}
+{\footnotesize\ttfamily \label{classcom_1_1saveit_1_1service_1_1_budget_calculator_aab578985ecbcaefc499cc4dc5bd8fa4c} 
+double com.\+saveit.\+service.\+Budget\+Calculator.\+get\+Remaining\+Limit (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Gets the current remaining limit. 
+
+\begin{DoxyReturn}{Returns}
+double The remaining budget value. 
+\end{DoxyReturn}
+\Hypertarget{classcom_1_1saveit_1_1service_1_1_budget_calculator_a710a60bbbab202bc9295e47efab57cde}\index{com.saveit.service.BudgetCalculator@{com.saveit.service.BudgetCalculator}!resetRemaining@{resetRemaining}}
+\index{resetRemaining@{resetRemaining}!com.saveit.service.BudgetCalculator@{com.saveit.service.BudgetCalculator}}
+\doxysubsubsection{\texorpdfstring{resetRemaining()}{resetRemaining()}}
+{\footnotesize\ttfamily \label{classcom_1_1saveit_1_1service_1_1_budget_calculator_a710a60bbbab202bc9295e47efab57cde} 
+void com.\+saveit.\+service.\+Budget\+Calculator.\+reset\+Remaining (\begin{DoxyParamCaption}\item[{double}]{limit}{}\end{DoxyParamCaption})}
+
+
+
+Resets the remaining balance to a specific value. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em limit} & The new budget limit to set. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classcom_1_1saveit_1_1service_1_1_budget_calculator_a91d368c1cef96b29202e3896f8ca86b1}\index{com.saveit.service.BudgetCalculator@{com.saveit.service.BudgetCalculator}!sum\_of\_transactions@{sum\_of\_transactions}}
+\index{sum\_of\_transactions@{sum\_of\_transactions}!com.saveit.service.BudgetCalculator@{com.saveit.service.BudgetCalculator}}
+\doxysubsubsection{\texorpdfstring{sum\_of\_transactions()}{sum\_of\_transactions()}}
+{\footnotesize\ttfamily \label{classcom_1_1saveit_1_1service_1_1_budget_calculator_a91d368c1cef96b29202e3896f8ca86b1} 
+double com.\+saveit.\+service.\+Budget\+Calculator.\+sum\+\_\+of\+\_\+transactions (\begin{DoxyParamCaption}\item[{List$<$ \mbox{\hyperlink{classcom_1_1saveit_1_1model_1_1_expense}{Expense}} $>$}]{list}{}\end{DoxyParamCaption})}
+
+
+
+Helper method to calculate the total sum of a list of expenses. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em list} & The list of \doxylink{classcom_1_1saveit_1_1model_1_1_expense}{Expense} objects to iterate through. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+double The total monetary sum of all expenses in the list. 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/main/java/com/saveit/service/Budget\+Calculator.\+java\end{DoxyCompactItemize}

@@ -1,0 +1,108 @@
+\doxysection{com.\+saveit.\+dao.\+User\+DAO Class Reference}
+\hypertarget{classcom_1_1saveit_1_1dao_1_1_user_d_a_o}{}\label{classcom_1_1saveit_1_1dao_1_1_user_d_a_o}\index{com.saveit.dao.UserDAO@{com.saveit.dao.UserDAO}}
+
+
+Data Access Object for \doxylink{classcom_1_1saveit_1_1model_1_1_user}{User} entities.  
+
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classcom_1_1saveit_1_1dao_1_1_user_d_a_o_ab8f50ab78dce6296dc457e3a9e5fa32a}{User\+DAO}} ()
+\begin{DoxyCompactList}\small\item\em Constructor for \doxylink{classcom_1_1saveit_1_1dao_1_1_user_d_a_o}{User\+DAO}. \end{DoxyCompactList}\item 
+boolean \mbox{\hyperlink{classcom_1_1saveit_1_1dao_1_1_user_d_a_o_a60759c217559cc78e906aec2b1eec9ea}{register}} (\mbox{\hyperlink{classcom_1_1saveit_1_1model_1_1_user}{User}} u, String plain\+Password)
+\begin{DoxyCompactList}\small\item\em Registers a new user in the database. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classcom_1_1saveit_1_1model_1_1_user}{User}} \mbox{\hyperlink{classcom_1_1saveit_1_1dao_1_1_user_d_a_o_aba9093f56e96b7013959c8f04e8bc67a}{find\+By\+Username}} (String username)
+\begin{DoxyCompactList}\small\item\em Retrieves a \doxylink{classcom_1_1saveit_1_1model_1_1_user}{User} object based on their unique username. \end{DoxyCompactList}\item 
+String \mbox{\hyperlink{classcom_1_1saveit_1_1dao_1_1_user_d_a_o_a37375b38ac3294a9f76a3ba927eb1529}{get\+Stored\+Password}} (String username)
+\begin{DoxyCompactList}\small\item\em Retrieves the hashed password stored in the database for a specific user. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Data Access Object for \doxylink{classcom_1_1saveit_1_1model_1_1_user}{User} entities. 
+
+This class handles database operations related to user management, including user registration, profile retrieval, and credential verification. 
+
+\label{doc-constructors}
+\Hypertarget{classcom_1_1saveit_1_1dao_1_1_user_d_a_o_doc-constructors}
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classcom_1_1saveit_1_1dao_1_1_user_d_a_o_ab8f50ab78dce6296dc457e3a9e5fa32a}\index{com.saveit.dao.UserDAO@{com.saveit.dao.UserDAO}!UserDAO@{UserDAO}}
+\index{UserDAO@{UserDAO}!com.saveit.dao.UserDAO@{com.saveit.dao.UserDAO}}
+\doxysubsubsection{\texorpdfstring{UserDAO()}{UserDAO()}}
+{\footnotesize\ttfamily \label{classcom_1_1saveit_1_1dao_1_1_user_d_a_o_ab8f50ab78dce6296dc457e3a9e5fa32a} 
+com.\+saveit.\+dao.\+User\+DAO.\+User\+DAO (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Constructor for \doxylink{classcom_1_1saveit_1_1dao_1_1_user_d_a_o}{User\+DAO}. 
+
+Initializes the database connection using the \doxylink{classcom_1_1saveit_1_1dao_1_1_database_connection}{Database\+Connection} singleton. 
+
+\label{doc-func-members}
+\Hypertarget{classcom_1_1saveit_1_1dao_1_1_user_d_a_o_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classcom_1_1saveit_1_1dao_1_1_user_d_a_o_aba9093f56e96b7013959c8f04e8bc67a}\index{com.saveit.dao.UserDAO@{com.saveit.dao.UserDAO}!findByUsername@{findByUsername}}
+\index{findByUsername@{findByUsername}!com.saveit.dao.UserDAO@{com.saveit.dao.UserDAO}}
+\doxysubsubsection{\texorpdfstring{findByUsername()}{findByUsername()}}
+{\footnotesize\ttfamily \label{classcom_1_1saveit_1_1dao_1_1_user_d_a_o_aba9093f56e96b7013959c8f04e8bc67a} 
+\mbox{\hyperlink{classcom_1_1saveit_1_1model_1_1_user}{User}} com.\+saveit.\+dao.\+User\+DAO.\+find\+By\+Username (\begin{DoxyParamCaption}\item[{String}]{username}{}\end{DoxyParamCaption})}
+
+
+
+Retrieves a \doxylink{classcom_1_1saveit_1_1model_1_1_user}{User} object based on their unique username. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em username} & The username to search for. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\doxylink{classcom_1_1saveit_1_1model_1_1_user}{User} The \doxylink{classcom_1_1saveit_1_1model_1_1_user}{User} object if found, or null if no such user exists. 
+\end{DoxyReturn}
+\Hypertarget{classcom_1_1saveit_1_1dao_1_1_user_d_a_o_a37375b38ac3294a9f76a3ba927eb1529}\index{com.saveit.dao.UserDAO@{com.saveit.dao.UserDAO}!getStoredPassword@{getStoredPassword}}
+\index{getStoredPassword@{getStoredPassword}!com.saveit.dao.UserDAO@{com.saveit.dao.UserDAO}}
+\doxysubsubsection{\texorpdfstring{getStoredPassword()}{getStoredPassword()}}
+{\footnotesize\ttfamily \label{classcom_1_1saveit_1_1dao_1_1_user_d_a_o_a37375b38ac3294a9f76a3ba927eb1529} 
+String com.\+saveit.\+dao.\+User\+DAO.\+get\+Stored\+Password (\begin{DoxyParamCaption}\item[{String}]{username}{}\end{DoxyParamCaption})}
+
+
+
+Retrieves the hashed password stored in the database for a specific user. 
+
+Used primarily during the login process to compare against provided credentials.
+
+
+\begin{DoxyParams}{Parameters}
+{\em username} & The username of the user. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+String The Base64 encoded hashed password, or null if not found. 
+\end{DoxyReturn}
+\Hypertarget{classcom_1_1saveit_1_1dao_1_1_user_d_a_o_a60759c217559cc78e906aec2b1eec9ea}\index{com.saveit.dao.UserDAO@{com.saveit.dao.UserDAO}!register@{register}}
+\index{register@{register}!com.saveit.dao.UserDAO@{com.saveit.dao.UserDAO}}
+\doxysubsubsection{\texorpdfstring{register()}{register()}}
+{\footnotesize\ttfamily \label{classcom_1_1saveit_1_1dao_1_1_user_d_a_o_a60759c217559cc78e906aec2b1eec9ea} 
+boolean com.\+saveit.\+dao.\+User\+DAO.\+register (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classcom_1_1saveit_1_1model_1_1_user}{User}}}]{u}{, }\item[{String}]{plain\+Password}{}\end{DoxyParamCaption})}
+
+
+
+Registers a new user in the database. 
+
+Hashes the provided plain-\/text password before storing it for security.
+
+
+\begin{DoxyParams}{Parameters}
+{\em u} & The \doxylink{classcom_1_1saveit_1_1model_1_1_user}{User} object containing profile details. \\
+\hline
+{\em plain\+Password} & The raw password string to be hashed and stored. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+boolean True if registration was successful, false if the username exists or an error occurred. 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/main/java/com/saveit/dao/User\+DAO.\+java\end{DoxyCompactItemize}

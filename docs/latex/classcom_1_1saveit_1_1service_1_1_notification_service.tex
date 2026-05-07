@@ -1,0 +1,65 @@
+\doxysection{com.\+saveit.\+service.\+Notification\+Service Class Reference}
+\hypertarget{classcom_1_1saveit_1_1service_1_1_notification_service}{}\label{classcom_1_1saveit_1_1service_1_1_notification_service}\index{com.saveit.service.NotificationService@{com.saveit.service.NotificationService}}
+
+
+Service responsible for delivering visual alerts and budget status updates.  
+
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classcom_1_1saveit_1_1service_1_1_notification_service_a24eb4b92eba013a4ad8ed0f1c776396b}{check\+Budget\+Status}} (double current\+Total, double limit)
+\begin{DoxyCompactList}\small\item\em Evaluates current spending against the limit and triggers alerts if necessary. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classcom_1_1saveit_1_1service_1_1_notification_service_a9873189fcf2ef4a96e72510124a1f86f}{show\+Popup}} (String message)
+\begin{DoxyCompactList}\small\item\em Displays a graphical popup notification on the screen. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Service responsible for delivering visual alerts and budget status updates. 
+
+This class monitors the percentage of budget consumption and triggers Java\+FX-\/based desktop notifications to inform the user when specific thresholds (e.\+g., 70\% or 100\%) are reached. 
+
+\label{doc-func-members}
+\Hypertarget{classcom_1_1saveit_1_1service_1_1_notification_service_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classcom_1_1saveit_1_1service_1_1_notification_service_a24eb4b92eba013a4ad8ed0f1c776396b}\index{com.saveit.service.NotificationService@{com.saveit.service.NotificationService}!checkBudgetStatus@{checkBudgetStatus}}
+\index{checkBudgetStatus@{checkBudgetStatus}!com.saveit.service.NotificationService@{com.saveit.service.NotificationService}}
+\doxysubsubsection{\texorpdfstring{checkBudgetStatus()}{checkBudgetStatus()}}
+{\footnotesize\ttfamily \label{classcom_1_1saveit_1_1service_1_1_notification_service_a24eb4b92eba013a4ad8ed0f1c776396b} 
+void com.\+saveit.\+service.\+Notification\+Service.\+check\+Budget\+Status (\begin{DoxyParamCaption}\item[{double}]{current\+Total}{, }\item[{double}]{limit}{}\end{DoxyParamCaption})}
+
+
+
+Evaluates current spending against the limit and triggers alerts if necessary. 
+
+If spending reaches 70\% of the limit, a warning is shown. If spending meets or exceeds 100\%, a critical stop alert is displayed.
+
+
+\begin{DoxyParams}{Parameters}
+{\em current\+Total} & The total amount spent in the current cycle. \\
+\hline
+{\em limit} & The maximum budget limit set for the cycle. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classcom_1_1saveit_1_1service_1_1_notification_service_a9873189fcf2ef4a96e72510124a1f86f}\index{com.saveit.service.NotificationService@{com.saveit.service.NotificationService}!showPopup@{showPopup}}
+\index{showPopup@{showPopup}!com.saveit.service.NotificationService@{com.saveit.service.NotificationService}}
+\doxysubsubsection{\texorpdfstring{showPopup()}{showPopup()}}
+{\footnotesize\ttfamily \label{classcom_1_1saveit_1_1service_1_1_notification_service_a9873189fcf2ef4a96e72510124a1f86f} 
+void com.\+saveit.\+service.\+Notification\+Service.\+show\+Popup (\begin{DoxyParamCaption}\item[{String}]{message}{}\end{DoxyParamCaption})}
+
+
+
+Displays a graphical popup notification on the screen. 
+
+This method uses Platform.\+run\+Later to ensure the notification is rendered on the Java\+FX Application Thread. The popup appears in the bottom-\/right corner of the screen.
+
+
+\begin{DoxyParams}{Parameters}
+{\em message} & The text content to display in the notification. \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/main/java/com/saveit/service/Notification\+Service.\+java\end{DoxyCompactItemize}

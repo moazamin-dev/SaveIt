@@ -1,0 +1,372 @@
+\doxysection{com.\+saveit.\+service.\+Budget\+Manager Class Reference}
+\hypertarget{classcom_1_1saveit_1_1service_1_1_budget_manager}{}\label{classcom_1_1saveit_1_1service_1_1_budget_manager}\index{com.saveit.service.BudgetManager@{com.saveit.service.BudgetManager}}
+
+
+Facade class that orchestrates the various budget-\/related services.  
+
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classcom_1_1saveit_1_1service_1_1_budget_manager_afe46f7dffa40cbfb4fa4ba8c1c359767}{Budget\+Manager}} (\mbox{\hyperlink{classcom_1_1saveit_1_1model_1_1_user}{User}} user)
+\begin{DoxyCompactList}\small\item\em Constructs a new \doxylink{classcom_1_1saveit_1_1service_1_1_budget_manager}{Budget\+Manager} for a specific user. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{classcom_1_1saveit_1_1service_1_1_budget_manager_a29a7c4e83fabba0811024a475bd488fb}{get\+Remaining\+Limit}} ()
+\begin{DoxyCompactList}\small\item\em Retrieves the remaining funds in the current cycle. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{classcom_1_1saveit_1_1service_1_1_budget_manager_ab4ceb6c35ad656373f0040245f9ea290}{get\+Cycle\+Limit}} ()
+\begin{DoxyCompactList}\small\item\em Retrieves the total limit set for the current cycle. \end{DoxyCompactList}\item 
+List$<$ \mbox{\hyperlink{classcom_1_1saveit_1_1model_1_1_expense}{Expense}} $>$ \mbox{\hyperlink{classcom_1_1saveit_1_1service_1_1_budget_manager_a79d17efad6aaebe87027ed9cbeb4fe24}{get\+Expense\+List}} ()
+\begin{DoxyCompactList}\small\item\em Gets the list of expenses relevant to the current cycle. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classcom_1_1saveit_1_1service_1_1_budget_manager_ade9e4e61eebe02e26b709eb716282920}{delete\+Expense}} (\mbox{\hyperlink{classcom_1_1saveit_1_1model_1_1_expense}{Expense}} e)
+\begin{DoxyCompactList}\small\item\em Deletes an expense and recalculates the remaining budget. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{classcom_1_1saveit_1_1service_1_1_budget_manager_af8e7a52ca22963663f1efbc9e9cc145e}{calculate\+Daily\+Limit}} ()
+\begin{DoxyCompactList}\small\item\em Calculates how much the user can spend per day for the rest of the cycle. \end{DoxyCompactList}\item 
+double \mbox{\hyperlink{classcom_1_1saveit_1_1service_1_1_budget_manager_a61cae4ef4b38e997463deedba8b6d6a9}{sum\+\_\+of\+\_\+transactions}} (List$<$ \mbox{\hyperlink{classcom_1_1saveit_1_1model_1_1_expense}{Expense}} $>$ list)
+\begin{DoxyCompactList}\small\item\em Sums the amounts of a given list of expenses. \end{DoxyCompactList}\item 
+boolean \mbox{\hyperlink{classcom_1_1saveit_1_1service_1_1_budget_manager_a5b32673ea1bab3c3b8db806bde61f586}{is\+Over\+Budget}} ()
+\begin{DoxyCompactList}\small\item\em Checks if the user has exceeded their assigned budget limit. \end{DoxyCompactList}\item 
+Map$<$ String, Double $>$ \mbox{\hyperlink{classcom_1_1saveit_1_1service_1_1_budget_manager_a0c4e740531a7acab2aaf65ab763d6fe1}{get\+Spending\+By\+Category}} ()
+\begin{DoxyCompactList}\small\item\em Provides a breakdown of spending categorized by name. \end{DoxyCompactList}\item 
+List$<$ \mbox{\hyperlink{classcom_1_1saveit_1_1model_1_1_expense}{Expense}} $>$ \mbox{\hyperlink{classcom_1_1saveit_1_1service_1_1_budget_manager_a818052043055e2b2a20b15aa407784c7}{get\+All\+Expenses}} ()
+\begin{DoxyCompactList}\small\item\em Retrieves all historical expenses for the user across all cycles. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classcom_1_1saveit_1_1service_1_1_budget_manager_a60696b94997fca09b1f631e86057f128}{add\+Transaction}} (double amount, String category, Local\+Date date)
+\begin{DoxyCompactList}\small\item\em Records a new transaction and updates the budget status. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classcom_1_1saveit_1_1service_1_1_budget_manager_a8bc0c1c071a4b39d8dd51490acb262ca}{start\+Cycle}} (double limit, Local\+Date d1, Local\+Date d2)
+\begin{DoxyCompactList}\small\item\em Starts a new financial cycle and resets the remaining budget. \end{DoxyCompactList}\item 
+\Hypertarget{classcom_1_1saveit_1_1service_1_1_budget_manager_ac0290ded5ad6560c170ec2211712d282}\label{classcom_1_1saveit_1_1service_1_1_budget_manager_ac0290ded5ad6560c170ec2211712d282} 
+void {\bfseries cancel\+Cycle} ()
+\begin{DoxyCompactList}\small\item\em Cancels the current active cycle. \end{DoxyCompactList}\item 
+boolean \mbox{\hyperlink{classcom_1_1saveit_1_1service_1_1_budget_manager_a7828fc1bdc7f9cb1093f40fa6ab528f1}{check\+Cycle\+Finish}} ()
+\begin{DoxyCompactList}\small\item\em Checks if the current cycle has reached its end date. \end{DoxyCompactList}\item 
+Local\+Date \mbox{\hyperlink{classcom_1_1saveit_1_1service_1_1_budget_manager_a73e70ce2a40115f4868e5527a1cf8c75}{get\+Cycle\+Start\+Date}} ()
+\begin{DoxyCompactList}\small\item\em Gets the start date of the current cycle. \end{DoxyCompactList}\item 
+Local\+Date \mbox{\hyperlink{classcom_1_1saveit_1_1service_1_1_budget_manager_a51e1fb168e5665749eff2a9f20eb811a}{get\+Cycle\+End\+Date}} ()
+\begin{DoxyCompactList}\small\item\em Gets the end date of the current cycle. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classcom_1_1saveit_1_1service_1_1_budget_manager_aa7fafd478a12b9b6e4d7a435eba4a18c}{add\+Category}} (String name)
+\begin{DoxyCompactList}\small\item\em Adds a new custom category for the user. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classcom_1_1saveit_1_1service_1_1_budget_manager_a7d8a1a8f00e7b188cf1bc9f0a4f1bcba}{remove\+Category}} (int category\+Id)
+\begin{DoxyCompactList}\small\item\em Removes a category based on its unique identifier. \end{DoxyCompactList}\item 
+List$<$ \mbox{\hyperlink{classcom_1_1saveit_1_1model_1_1_category}{Category}} $>$ \mbox{\hyperlink{classcom_1_1saveit_1_1service_1_1_budget_manager_a4effd3908592b76544e74da11c8e85e6}{get\+Categories}} ()
+\begin{DoxyCompactList}\small\item\em Retrieves all categories defined for the current user. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classcom_1_1saveit_1_1model_1_1_category}{Category}} \mbox{\hyperlink{classcom_1_1saveit_1_1service_1_1_budget_manager_a9df9e6b2c52af5459a9baeb64dbd702c}{get\+Category\+By\+Id}} (int category\+Id)
+\begin{DoxyCompactList}\small\item\em Resolves a \doxylink{classcom_1_1saveit_1_1model_1_1_category}{Category} object by its ID. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classcom_1_1saveit_1_1model_1_1_category}{Category}} \mbox{\hyperlink{classcom_1_1saveit_1_1service_1_1_budget_manager_ad4fda210bf909cfec4b6bbb3d7f97589}{get\+Category\+By\+Name}} (String name)
+\begin{DoxyCompactList}\small\item\em Resolves a \doxylink{classcom_1_1saveit_1_1model_1_1_category}{Category} object by its name. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Facade class that orchestrates the various budget-\/related services. 
+
+The \doxylink{classcom_1_1saveit_1_1service_1_1_budget_manager}{Budget\+Manager} acts as the central point of contact for the UI layer, delegating specific tasks to specialized services like \doxylink{classcom_1_1saveit_1_1service_1_1_cycle_manager}{Cycle\+Manager}, \doxylink{classcom_1_1saveit_1_1service_1_1_expense_service}{Expense\+Service}, and \doxylink{classcom_1_1saveit_1_1service_1_1_budget_calculator}{Budget\+Calculator}. It maintains the overall state of a user\textquotesingle{}s financial tracking session. 
+
+\label{doc-constructors}
+\Hypertarget{classcom_1_1saveit_1_1service_1_1_budget_manager_doc-constructors}
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classcom_1_1saveit_1_1service_1_1_budget_manager_afe46f7dffa40cbfb4fa4ba8c1c359767}\index{com.saveit.service.BudgetManager@{com.saveit.service.BudgetManager}!BudgetManager@{BudgetManager}}
+\index{BudgetManager@{BudgetManager}!com.saveit.service.BudgetManager@{com.saveit.service.BudgetManager}}
+\doxysubsubsection{\texorpdfstring{BudgetManager()}{BudgetManager()}}
+{\footnotesize\ttfamily \label{classcom_1_1saveit_1_1service_1_1_budget_manager_afe46f7dffa40cbfb4fa4ba8c1c359767} 
+com.\+saveit.\+service.\+Budget\+Manager.\+Budget\+Manager (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classcom_1_1saveit_1_1model_1_1_user}{User}}}]{user}{}\end{DoxyParamCaption})}
+
+
+
+Constructs a new \doxylink{classcom_1_1saveit_1_1service_1_1_budget_manager}{Budget\+Manager} for a specific user. 
+
+Initializes all internal services required for full budget management.
+
+
+\begin{DoxyParams}{Parameters}
+{\em user} & The \doxylink{classcom_1_1saveit_1_1model_1_1_user}{User} object for whom the budget is being managed. \\
+\hline
+\end{DoxyParams}
+
+
+\label{doc-func-members}
+\Hypertarget{classcom_1_1saveit_1_1service_1_1_budget_manager_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classcom_1_1saveit_1_1service_1_1_budget_manager_aa7fafd478a12b9b6e4d7a435eba4a18c}\index{com.saveit.service.BudgetManager@{com.saveit.service.BudgetManager}!addCategory@{addCategory}}
+\index{addCategory@{addCategory}!com.saveit.service.BudgetManager@{com.saveit.service.BudgetManager}}
+\doxysubsubsection{\texorpdfstring{addCategory()}{addCategory()}}
+{\footnotesize\ttfamily \label{classcom_1_1saveit_1_1service_1_1_budget_manager_aa7fafd478a12b9b6e4d7a435eba4a18c} 
+void com.\+saveit.\+service.\+Budget\+Manager.\+add\+Category (\begin{DoxyParamCaption}\item[{String}]{name}{}\end{DoxyParamCaption})}
+
+
+
+Adds a new custom category for the user. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & The name of the category to add. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classcom_1_1saveit_1_1service_1_1_budget_manager_a60696b94997fca09b1f631e86057f128}\index{com.saveit.service.BudgetManager@{com.saveit.service.BudgetManager}!addTransaction@{addTransaction}}
+\index{addTransaction@{addTransaction}!com.saveit.service.BudgetManager@{com.saveit.service.BudgetManager}}
+\doxysubsubsection{\texorpdfstring{addTransaction()}{addTransaction()}}
+{\footnotesize\ttfamily \label{classcom_1_1saveit_1_1service_1_1_budget_manager_a60696b94997fca09b1f631e86057f128} 
+void com.\+saveit.\+service.\+Budget\+Manager.\+add\+Transaction (\begin{DoxyParamCaption}\item[{double}]{amount}{, }\item[{String}]{category}{, }\item[{Local\+Date}]{date}{}\end{DoxyParamCaption})}
+
+
+
+Records a new transaction and updates the budget status. 
+
+If the transaction date falls within the current active cycle, the amount is deducted from the remaining budget and budget alerts are processed.
+
+
+\begin{DoxyParams}{Parameters}
+{\em amount} & The monetary value of the transaction. \\
+\hline
+{\em category} & The name of the category for this expense. \\
+\hline
+{\em date} & The date the expense occurred. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classcom_1_1saveit_1_1service_1_1_budget_manager_af8e7a52ca22963663f1efbc9e9cc145e}\index{com.saveit.service.BudgetManager@{com.saveit.service.BudgetManager}!calculateDailyLimit@{calculateDailyLimit}}
+\index{calculateDailyLimit@{calculateDailyLimit}!com.saveit.service.BudgetManager@{com.saveit.service.BudgetManager}}
+\doxysubsubsection{\texorpdfstring{calculateDailyLimit()}{calculateDailyLimit()}}
+{\footnotesize\ttfamily \label{classcom_1_1saveit_1_1service_1_1_budget_manager_af8e7a52ca22963663f1efbc9e9cc145e} 
+double com.\+saveit.\+service.\+Budget\+Manager.\+calculate\+Daily\+Limit (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Calculates how much the user can spend per day for the rest of the cycle. 
+
+\begin{DoxyReturn}{Returns}
+double The suggested daily limit. 
+\end{DoxyReturn}
+\Hypertarget{classcom_1_1saveit_1_1service_1_1_budget_manager_a7828fc1bdc7f9cb1093f40fa6ab528f1}\index{com.saveit.service.BudgetManager@{com.saveit.service.BudgetManager}!checkCycleFinish@{checkCycleFinish}}
+\index{checkCycleFinish@{checkCycleFinish}!com.saveit.service.BudgetManager@{com.saveit.service.BudgetManager}}
+\doxysubsubsection{\texorpdfstring{checkCycleFinish()}{checkCycleFinish()}}
+{\footnotesize\ttfamily \label{classcom_1_1saveit_1_1service_1_1_budget_manager_a7828fc1bdc7f9cb1093f40fa6ab528f1} 
+boolean com.\+saveit.\+service.\+Budget\+Manager.\+check\+Cycle\+Finish (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Checks if the current cycle has reached its end date. 
+
+\begin{DoxyReturn}{Returns}
+boolean True if the cycle is finished, false otherwise. 
+\end{DoxyReturn}
+\Hypertarget{classcom_1_1saveit_1_1service_1_1_budget_manager_ade9e4e61eebe02e26b709eb716282920}\index{com.saveit.service.BudgetManager@{com.saveit.service.BudgetManager}!deleteExpense@{deleteExpense}}
+\index{deleteExpense@{deleteExpense}!com.saveit.service.BudgetManager@{com.saveit.service.BudgetManager}}
+\doxysubsubsection{\texorpdfstring{deleteExpense()}{deleteExpense()}}
+{\footnotesize\ttfamily \label{classcom_1_1saveit_1_1service_1_1_budget_manager_ade9e4e61eebe02e26b709eb716282920} 
+void com.\+saveit.\+service.\+Budget\+Manager.\+delete\+Expense (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classcom_1_1saveit_1_1model_1_1_expense}{Expense}}}]{e}{}\end{DoxyParamCaption})}
+
+
+
+Deletes an expense and recalculates the remaining budget. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em e} & The \doxylink{classcom_1_1saveit_1_1model_1_1_expense}{Expense} object to be removed. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classcom_1_1saveit_1_1service_1_1_budget_manager_a818052043055e2b2a20b15aa407784c7}\index{com.saveit.service.BudgetManager@{com.saveit.service.BudgetManager}!getAllExpenses@{getAllExpenses}}
+\index{getAllExpenses@{getAllExpenses}!com.saveit.service.BudgetManager@{com.saveit.service.BudgetManager}}
+\doxysubsubsection{\texorpdfstring{getAllExpenses()}{getAllExpenses()}}
+{\footnotesize\ttfamily \label{classcom_1_1saveit_1_1service_1_1_budget_manager_a818052043055e2b2a20b15aa407784c7} 
+List$<$ \mbox{\hyperlink{classcom_1_1saveit_1_1model_1_1_expense}{Expense}} $>$ com.\+saveit.\+service.\+Budget\+Manager.\+get\+All\+Expenses (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Retrieves all historical expenses for the user across all cycles. 
+
+\begin{DoxyReturn}{Returns}
+List$<$\+Expense$>$ The full list of user expenses. 
+\end{DoxyReturn}
+\Hypertarget{classcom_1_1saveit_1_1service_1_1_budget_manager_a4effd3908592b76544e74da11c8e85e6}\index{com.saveit.service.BudgetManager@{com.saveit.service.BudgetManager}!getCategories@{getCategories}}
+\index{getCategories@{getCategories}!com.saveit.service.BudgetManager@{com.saveit.service.BudgetManager}}
+\doxysubsubsection{\texorpdfstring{getCategories()}{getCategories()}}
+{\footnotesize\ttfamily \label{classcom_1_1saveit_1_1service_1_1_budget_manager_a4effd3908592b76544e74da11c8e85e6} 
+List$<$ \mbox{\hyperlink{classcom_1_1saveit_1_1model_1_1_category}{Category}} $>$ com.\+saveit.\+service.\+Budget\+Manager.\+get\+Categories (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Retrieves all categories defined for the current user. 
+
+\begin{DoxyReturn}{Returns}
+List$<$\+Category$>$ A list of the user\textquotesingle{}s categories. 
+\end{DoxyReturn}
+\Hypertarget{classcom_1_1saveit_1_1service_1_1_budget_manager_a9df9e6b2c52af5459a9baeb64dbd702c}\index{com.saveit.service.BudgetManager@{com.saveit.service.BudgetManager}!getCategoryById@{getCategoryById}}
+\index{getCategoryById@{getCategoryById}!com.saveit.service.BudgetManager@{com.saveit.service.BudgetManager}}
+\doxysubsubsection{\texorpdfstring{getCategoryById()}{getCategoryById()}}
+{\footnotesize\ttfamily \label{classcom_1_1saveit_1_1service_1_1_budget_manager_a9df9e6b2c52af5459a9baeb64dbd702c} 
+\mbox{\hyperlink{classcom_1_1saveit_1_1model_1_1_category}{Category}} com.\+saveit.\+service.\+Budget\+Manager.\+get\+Category\+By\+Id (\begin{DoxyParamCaption}\item[{int}]{category\+Id}{}\end{DoxyParamCaption})}
+
+
+
+Resolves a \doxylink{classcom_1_1saveit_1_1model_1_1_category}{Category} object by its ID. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em category\+Id} & The ID to look up. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\doxylink{classcom_1_1saveit_1_1model_1_1_category}{Category} The matching \doxylink{classcom_1_1saveit_1_1model_1_1_category}{Category} object. 
+\end{DoxyReturn}
+\Hypertarget{classcom_1_1saveit_1_1service_1_1_budget_manager_ad4fda210bf909cfec4b6bbb3d7f97589}\index{com.saveit.service.BudgetManager@{com.saveit.service.BudgetManager}!getCategoryByName@{getCategoryByName}}
+\index{getCategoryByName@{getCategoryByName}!com.saveit.service.BudgetManager@{com.saveit.service.BudgetManager}}
+\doxysubsubsection{\texorpdfstring{getCategoryByName()}{getCategoryByName()}}
+{\footnotesize\ttfamily \label{classcom_1_1saveit_1_1service_1_1_budget_manager_ad4fda210bf909cfec4b6bbb3d7f97589} 
+\mbox{\hyperlink{classcom_1_1saveit_1_1model_1_1_category}{Category}} com.\+saveit.\+service.\+Budget\+Manager.\+get\+Category\+By\+Name (\begin{DoxyParamCaption}\item[{String}]{name}{}\end{DoxyParamCaption})}
+
+
+
+Resolves a \doxylink{classcom_1_1saveit_1_1model_1_1_category}{Category} object by its name. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & The name to look up. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\doxylink{classcom_1_1saveit_1_1model_1_1_category}{Category} The matching \doxylink{classcom_1_1saveit_1_1model_1_1_category}{Category} object. 
+\end{DoxyReturn}
+\Hypertarget{classcom_1_1saveit_1_1service_1_1_budget_manager_a51e1fb168e5665749eff2a9f20eb811a}\index{com.saveit.service.BudgetManager@{com.saveit.service.BudgetManager}!getCycleEndDate@{getCycleEndDate}}
+\index{getCycleEndDate@{getCycleEndDate}!com.saveit.service.BudgetManager@{com.saveit.service.BudgetManager}}
+\doxysubsubsection{\texorpdfstring{getCycleEndDate()}{getCycleEndDate()}}
+{\footnotesize\ttfamily \label{classcom_1_1saveit_1_1service_1_1_budget_manager_a51e1fb168e5665749eff2a9f20eb811a} 
+Local\+Date com.\+saveit.\+service.\+Budget\+Manager.\+get\+Cycle\+End\+Date (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Gets the end date of the current cycle. 
+
+\begin{DoxyReturn}{Returns}
+Local\+Date The end date. 
+\end{DoxyReturn}
+\Hypertarget{classcom_1_1saveit_1_1service_1_1_budget_manager_ab4ceb6c35ad656373f0040245f9ea290}\index{com.saveit.service.BudgetManager@{com.saveit.service.BudgetManager}!getCycleLimit@{getCycleLimit}}
+\index{getCycleLimit@{getCycleLimit}!com.saveit.service.BudgetManager@{com.saveit.service.BudgetManager}}
+\doxysubsubsection{\texorpdfstring{getCycleLimit()}{getCycleLimit()}}
+{\footnotesize\ttfamily \label{classcom_1_1saveit_1_1service_1_1_budget_manager_ab4ceb6c35ad656373f0040245f9ea290} 
+double com.\+saveit.\+service.\+Budget\+Manager.\+get\+Cycle\+Limit (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Retrieves the total limit set for the current cycle. 
+
+\begin{DoxyReturn}{Returns}
+double The total cycle limit. 
+\end{DoxyReturn}
+\Hypertarget{classcom_1_1saveit_1_1service_1_1_budget_manager_a73e70ce2a40115f4868e5527a1cf8c75}\index{com.saveit.service.BudgetManager@{com.saveit.service.BudgetManager}!getCycleStartDate@{getCycleStartDate}}
+\index{getCycleStartDate@{getCycleStartDate}!com.saveit.service.BudgetManager@{com.saveit.service.BudgetManager}}
+\doxysubsubsection{\texorpdfstring{getCycleStartDate()}{getCycleStartDate()}}
+{\footnotesize\ttfamily \label{classcom_1_1saveit_1_1service_1_1_budget_manager_a73e70ce2a40115f4868e5527a1cf8c75} 
+Local\+Date com.\+saveit.\+service.\+Budget\+Manager.\+get\+Cycle\+Start\+Date (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Gets the start date of the current cycle. 
+
+\begin{DoxyReturn}{Returns}
+Local\+Date The start date. 
+\end{DoxyReturn}
+\Hypertarget{classcom_1_1saveit_1_1service_1_1_budget_manager_a79d17efad6aaebe87027ed9cbeb4fe24}\index{com.saveit.service.BudgetManager@{com.saveit.service.BudgetManager}!getExpenseList@{getExpenseList}}
+\index{getExpenseList@{getExpenseList}!com.saveit.service.BudgetManager@{com.saveit.service.BudgetManager}}
+\doxysubsubsection{\texorpdfstring{getExpenseList()}{getExpenseList()}}
+{\footnotesize\ttfamily \label{classcom_1_1saveit_1_1service_1_1_budget_manager_a79d17efad6aaebe87027ed9cbeb4fe24} 
+List$<$ \mbox{\hyperlink{classcom_1_1saveit_1_1model_1_1_expense}{Expense}} $>$ com.\+saveit.\+service.\+Budget\+Manager.\+get\+Expense\+List (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Gets the list of expenses relevant to the current cycle. 
+
+\begin{DoxyReturn}{Returns}
+List$<$\+Expense$>$ The list of cycle-\/specific expenses. 
+\end{DoxyReturn}
+\Hypertarget{classcom_1_1saveit_1_1service_1_1_budget_manager_a29a7c4e83fabba0811024a475bd488fb}\index{com.saveit.service.BudgetManager@{com.saveit.service.BudgetManager}!getRemainingLimit@{getRemainingLimit}}
+\index{getRemainingLimit@{getRemainingLimit}!com.saveit.service.BudgetManager@{com.saveit.service.BudgetManager}}
+\doxysubsubsection{\texorpdfstring{getRemainingLimit()}{getRemainingLimit()}}
+{\footnotesize\ttfamily \label{classcom_1_1saveit_1_1service_1_1_budget_manager_a29a7c4e83fabba0811024a475bd488fb} 
+double com.\+saveit.\+service.\+Budget\+Manager.\+get\+Remaining\+Limit (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Retrieves the remaining funds in the current cycle. 
+
+\begin{DoxyReturn}{Returns}
+double The remaining budget amount. 
+\end{DoxyReturn}
+\Hypertarget{classcom_1_1saveit_1_1service_1_1_budget_manager_a0c4e740531a7acab2aaf65ab763d6fe1}\index{com.saveit.service.BudgetManager@{com.saveit.service.BudgetManager}!getSpendingByCategory@{getSpendingByCategory}}
+\index{getSpendingByCategory@{getSpendingByCategory}!com.saveit.service.BudgetManager@{com.saveit.service.BudgetManager}}
+\doxysubsubsection{\texorpdfstring{getSpendingByCategory()}{getSpendingByCategory()}}
+{\footnotesize\ttfamily \label{classcom_1_1saveit_1_1service_1_1_budget_manager_a0c4e740531a7acab2aaf65ab763d6fe1} 
+Map$<$ String, Double $>$ com.\+saveit.\+service.\+Budget\+Manager.\+get\+Spending\+By\+Category (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Provides a breakdown of spending categorized by name. 
+
+\begin{DoxyReturn}{Returns}
+Map$<$\+String, Double$>$ A map of category names to their total spent amounts. 
+\end{DoxyReturn}
+\Hypertarget{classcom_1_1saveit_1_1service_1_1_budget_manager_a5b32673ea1bab3c3b8db806bde61f586}\index{com.saveit.service.BudgetManager@{com.saveit.service.BudgetManager}!isOverBudget@{isOverBudget}}
+\index{isOverBudget@{isOverBudget}!com.saveit.service.BudgetManager@{com.saveit.service.BudgetManager}}
+\doxysubsubsection{\texorpdfstring{isOverBudget()}{isOverBudget()}}
+{\footnotesize\ttfamily \label{classcom_1_1saveit_1_1service_1_1_budget_manager_a5b32673ea1bab3c3b8db806bde61f586} 
+boolean com.\+saveit.\+service.\+Budget\+Manager.\+is\+Over\+Budget (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Checks if the user has exceeded their assigned budget limit. 
+
+\begin{DoxyReturn}{Returns}
+boolean True if spending exceeds the limit, false otherwise. 
+\end{DoxyReturn}
+\Hypertarget{classcom_1_1saveit_1_1service_1_1_budget_manager_a7d8a1a8f00e7b188cf1bc9f0a4f1bcba}\index{com.saveit.service.BudgetManager@{com.saveit.service.BudgetManager}!removeCategory@{removeCategory}}
+\index{removeCategory@{removeCategory}!com.saveit.service.BudgetManager@{com.saveit.service.BudgetManager}}
+\doxysubsubsection{\texorpdfstring{removeCategory()}{removeCategory()}}
+{\footnotesize\ttfamily \label{classcom_1_1saveit_1_1service_1_1_budget_manager_a7d8a1a8f00e7b188cf1bc9f0a4f1bcba} 
+void com.\+saveit.\+service.\+Budget\+Manager.\+remove\+Category (\begin{DoxyParamCaption}\item[{int}]{category\+Id}{}\end{DoxyParamCaption})}
+
+
+
+Removes a category based on its unique identifier. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em category\+Id} & The ID of the category to remove. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classcom_1_1saveit_1_1service_1_1_budget_manager_a8bc0c1c071a4b39d8dd51490acb262ca}\index{com.saveit.service.BudgetManager@{com.saveit.service.BudgetManager}!startCycle@{startCycle}}
+\index{startCycle@{startCycle}!com.saveit.service.BudgetManager@{com.saveit.service.BudgetManager}}
+\doxysubsubsection{\texorpdfstring{startCycle()}{startCycle()}}
+{\footnotesize\ttfamily \label{classcom_1_1saveit_1_1service_1_1_budget_manager_a8bc0c1c071a4b39d8dd51490acb262ca} 
+void com.\+saveit.\+service.\+Budget\+Manager.\+start\+Cycle (\begin{DoxyParamCaption}\item[{double}]{limit}{, }\item[{Local\+Date}]{d1}{, }\item[{Local\+Date}]{d2}{}\end{DoxyParamCaption})}
+
+
+
+Starts a new financial cycle and resets the remaining budget. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em limit} & The total budget for the new cycle. \\
+\hline
+{\em d1} & The start date. \\
+\hline
+{\em d2} & The end date. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classcom_1_1saveit_1_1service_1_1_budget_manager_a61cae4ef4b38e997463deedba8b6d6a9}\index{com.saveit.service.BudgetManager@{com.saveit.service.BudgetManager}!sum\_of\_transactions@{sum\_of\_transactions}}
+\index{sum\_of\_transactions@{sum\_of\_transactions}!com.saveit.service.BudgetManager@{com.saveit.service.BudgetManager}}
+\doxysubsubsection{\texorpdfstring{sum\_of\_transactions()}{sum\_of\_transactions()}}
+{\footnotesize\ttfamily \label{classcom_1_1saveit_1_1service_1_1_budget_manager_a61cae4ef4b38e997463deedba8b6d6a9} 
+double com.\+saveit.\+service.\+Budget\+Manager.\+sum\+\_\+of\+\_\+transactions (\begin{DoxyParamCaption}\item[{List$<$ \mbox{\hyperlink{classcom_1_1saveit_1_1model_1_1_expense}{Expense}} $>$}]{list}{}\end{DoxyParamCaption})}
+
+
+
+Sums the amounts of a given list of expenses. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em list} & The list of expenses to sum. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+double The total sum. 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/main/java/com/saveit/service/Budget\+Manager.\+java\end{DoxyCompactItemize}

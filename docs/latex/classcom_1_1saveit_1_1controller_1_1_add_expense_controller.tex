@@ -1,0 +1,83 @@
+\doxysection{com.\+saveit.\+controller.\+Add\+Expense\+Controller Class Reference}
+\hypertarget{classcom_1_1saveit_1_1controller_1_1_add_expense_controller}{}\label{classcom_1_1saveit_1_1controller_1_1_add_expense_controller}\index{com.saveit.controller.AddExpenseController@{com.saveit.controller.AddExpenseController}}
+
+
+\doxylink{classcom_1_1saveit_1_1controller_1_1_controller}{Controller} for the "{}\+Add Expense"{} view.  
+
+
+Inheritance diagram for com.\+saveit.\+controller.\+Add\+Expense\+Controller\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classcom_1_1saveit_1_1controller_1_1_add_expense_controller}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classcom_1_1saveit_1_1controller_1_1_add_expense_controller_a2380246f21ea9d346d5634b4979f850d}{handle\+Save}} ()
+\begin{DoxyCompactList}\small\item\em Processes the "{}\+Save"{} action triggered by the user. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classcom_1_1saveit_1_1controller_1_1_add_expense_controller_a05e313735636e948a72dba114feb2098}{initialize}} ()
+\begin{DoxyCompactList}\small\item\em Initializes the controller, setting up the service and resetting form fields. \end{DoxyCompactList}\item 
+Text\+Formatter$<$ Double $>$ \mbox{\hyperlink{classcom_1_1saveit_1_1controller_1_1_add_expense_controller_a485e9935160f7610e928a368d614a295}{setup\+Formatter}} ()
+\begin{DoxyCompactList}\small\item\em Configures a numeric Text\+Formatter for the amount field. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{classcom_1_1saveit_1_1controller_1_1_controller}{com.\+saveit.\+controller.\+Controller}}}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classcom_1_1saveit_1_1controller_1_1_controller_a486b65e3a40563400404b07492a8a02e}{set\+User}} (\mbox{\hyperlink{classcom_1_1saveit_1_1model_1_1_user}{User}} user)
+\begin{DoxyCompactList}\small\item\em Sets the user for this controller. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classcom_1_1saveit_1_1model_1_1_user}{User}} \mbox{\hyperlink{classcom_1_1saveit_1_1controller_1_1_controller_a1eca6a41e7bc053fa003851f9d5cd5e7}{get\+User}} ()
+\begin{DoxyCompactList}\small\item\em Retrieves the user associated with this controller. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\doxylink{classcom_1_1saveit_1_1controller_1_1_controller}{Controller} for the "{}\+Add Expense"{} view. 
+
+This class handles user interactions for recording a new expense, including input validation for amounts, categories, and dates. It utilizes a Text\+Formatter to ensure only valid numeric data is entered into the amount field. 
+
+\label{doc-func-members}
+\Hypertarget{classcom_1_1saveit_1_1controller_1_1_add_expense_controller_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classcom_1_1saveit_1_1controller_1_1_add_expense_controller_a2380246f21ea9d346d5634b4979f850d}\index{com.saveit.controller.AddExpenseController@{com.saveit.controller.AddExpenseController}!handleSave@{handleSave}}
+\index{handleSave@{handleSave}!com.saveit.controller.AddExpenseController@{com.saveit.controller.AddExpenseController}}
+\doxysubsubsection{\texorpdfstring{handleSave()}{handleSave()}}
+{\footnotesize\ttfamily \label{classcom_1_1saveit_1_1controller_1_1_add_expense_controller_a2380246f21ea9d346d5634b4979f850d} 
+void com.\+saveit.\+controller.\+Add\+Expense\+Controller.\+handle\+Save (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Processes the "{}\+Save"{} action triggered by the user. 
+
+Validates that the amount, category, and date are provided. If valid, it delegates the transaction storage to the \doxylink{classcom_1_1saveit_1_1service_1_1_budget_manager}{Budget\+Manager} and refreshes the form. \Hypertarget{classcom_1_1saveit_1_1controller_1_1_add_expense_controller_a05e313735636e948a72dba114feb2098}\index{com.saveit.controller.AddExpenseController@{com.saveit.controller.AddExpenseController}!initialize@{initialize}}
+\index{initialize@{initialize}!com.saveit.controller.AddExpenseController@{com.saveit.controller.AddExpenseController}}
+\doxysubsubsection{\texorpdfstring{initialize()}{initialize()}}
+{\footnotesize\ttfamily \label{classcom_1_1saveit_1_1controller_1_1_add_expense_controller_a05e313735636e948a72dba114feb2098} 
+void com.\+saveit.\+controller.\+Add\+Expense\+Controller.\+initialize (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Initializes the controller, setting up the service and resetting form fields. 
+
+This method is called automatically after the FXML file has been loaded or manually to reset the view state. 
+
+Reimplemented from \mbox{\hyperlink{classcom_1_1saveit_1_1controller_1_1_controller_a4793a6bf0c34b92ef84eb9f61cec19f6}{com.\+saveit.\+controller.\+Controller}}.
+
+\Hypertarget{classcom_1_1saveit_1_1controller_1_1_add_expense_controller_a485e9935160f7610e928a368d614a295}\index{com.saveit.controller.AddExpenseController@{com.saveit.controller.AddExpenseController}!setupFormatter@{setupFormatter}}
+\index{setupFormatter@{setupFormatter}!com.saveit.controller.AddExpenseController@{com.saveit.controller.AddExpenseController}}
+\doxysubsubsection{\texorpdfstring{setupFormatter()}{setupFormatter()}}
+{\footnotesize\ttfamily \label{classcom_1_1saveit_1_1controller_1_1_add_expense_controller_a485e9935160f7610e928a368d614a295} 
+Text\+Formatter$<$ Double $>$ com.\+saveit.\+controller.\+Add\+Expense\+Controller.\+setup\+Formatter (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Configures a numeric Text\+Formatter for the amount field. 
+
+Uses a regex filter to allow only valid double values (including decimals and signs) and provides a converter for mapping the field text to a Double object.
+
+\begin{DoxyReturn}{Returns}
+Text\+Formatter$<$\+Double$>$ The configured text formatter. 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/main/java/com/saveit/controller/Add\+Expense\+Controller.\+java\end{DoxyCompactItemize}

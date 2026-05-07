@@ -1,0 +1,72 @@
+\doxysection{com.\+saveit.\+dao.\+Database\+Connection Class Reference}
+\hypertarget{classcom_1_1saveit_1_1dao_1_1_database_connection}{}\label{classcom_1_1saveit_1_1dao_1_1_database_connection}\index{com.saveit.dao.DatabaseConnection@{com.saveit.dao.DatabaseConnection}}
+
+
+Singleton class to manage the database connection and schema initialization.  
+
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+Connection \mbox{\hyperlink{classcom_1_1saveit_1_1dao_1_1_database_connection_ab2d2cfc7ddfeb776c6e896b1876993bc}{get\+Connection}} ()
+\begin{DoxyCompactList}\small\item\em Gets the active SQL connection. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classcom_1_1saveit_1_1dao_1_1_database_connection_a90e106c22d9df9bc0acdd033112e4774}{initialize\+Database}} ()
+\begin{DoxyCompactList}\small\item\em Creates the database schema if it does not exist. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static Database\+Connection \mbox{\hyperlink{classcom_1_1saveit_1_1dao_1_1_database_connection_ab905408b19bd71528a5c2885915a3340}{get\+Instance}} ()
+\begin{DoxyCompactList}\small\item\em Provides global access to the \doxylink{classcom_1_1saveit_1_1dao_1_1_database_connection}{Database\+Connection} instance. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Singleton class to manage the database connection and schema initialization. 
+
+This class ensures a single connection to the SQLite database is maintained throughout the application\textquotesingle{}s lifecycle and handles the creation of necessary tables. 
+
+\label{doc-func-members}
+\Hypertarget{classcom_1_1saveit_1_1dao_1_1_database_connection_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classcom_1_1saveit_1_1dao_1_1_database_connection_ab2d2cfc7ddfeb776c6e896b1876993bc}\index{com.saveit.dao.DatabaseConnection@{com.saveit.dao.DatabaseConnection}!getConnection@{getConnection}}
+\index{getConnection@{getConnection}!com.saveit.dao.DatabaseConnection@{com.saveit.dao.DatabaseConnection}}
+\doxysubsubsection{\texorpdfstring{getConnection()}{getConnection()}}
+{\footnotesize\ttfamily \label{classcom_1_1saveit_1_1dao_1_1_database_connection_ab2d2cfc7ddfeb776c6e896b1876993bc} 
+Connection com.\+saveit.\+dao.\+Database\+Connection.\+get\+Connection (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Gets the active SQL connection. 
+
+\begin{DoxyReturn}{Returns}
+Connection The current JDBC connection. 
+\end{DoxyReturn}
+\Hypertarget{classcom_1_1saveit_1_1dao_1_1_database_connection_ab905408b19bd71528a5c2885915a3340}\index{com.saveit.dao.DatabaseConnection@{com.saveit.dao.DatabaseConnection}!getInstance@{getInstance}}
+\index{getInstance@{getInstance}!com.saveit.dao.DatabaseConnection@{com.saveit.dao.DatabaseConnection}}
+\doxysubsubsection{\texorpdfstring{getInstance()}{getInstance()}}
+{\footnotesize\ttfamily \label{classcom_1_1saveit_1_1dao_1_1_database_connection_ab905408b19bd71528a5c2885915a3340} 
+Database\+Connection com.\+saveit.\+dao.\+Database\+Connection.\+get\+Instance (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Provides global access to the \doxylink{classcom_1_1saveit_1_1dao_1_1_database_connection}{Database\+Connection} instance. 
+
+Implements the Singleton pattern to ensure only one database connection is opened.
+
+\begin{DoxyReturn}{Returns}
+\doxylink{classcom_1_1saveit_1_1dao_1_1_database_connection}{Database\+Connection} The singleton instance. 
+\end{DoxyReturn}
+\Hypertarget{classcom_1_1saveit_1_1dao_1_1_database_connection_a90e106c22d9df9bc0acdd033112e4774}\index{com.saveit.dao.DatabaseConnection@{com.saveit.dao.DatabaseConnection}!initializeDatabase@{initializeDatabase}}
+\index{initializeDatabase@{initializeDatabase}!com.saveit.dao.DatabaseConnection@{com.saveit.dao.DatabaseConnection}}
+\doxysubsubsection{\texorpdfstring{initializeDatabase()}{initializeDatabase()}}
+{\footnotesize\ttfamily \label{classcom_1_1saveit_1_1dao_1_1_database_connection_a90e106c22d9df9bc0acdd033112e4774} 
+void com.\+saveit.\+dao.\+Database\+Connection.\+initialize\+Database (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Creates the database schema if it does not exist. 
+
+Defines and executes SQL statements to create the \doxylink{classcom_1_1saveit_1_1model_1_1_user}{User}, \doxylink{classcom_1_1saveit_1_1model_1_1_category}{Category}, \doxylink{classcom_1_1saveit_1_1model_1_1_expense}{Expense}, and \doxylink{classcom_1_1saveit_1_1model_1_1_cycle}{Cycle} tables. It also enables foreign key constraints for the connection. 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/main/java/com/saveit/dao/Database\+Connection.\+java\end{DoxyCompactItemize}

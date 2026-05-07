@@ -1,0 +1,73 @@
+\doxysection{com.\+saveit.\+controller.\+Side\+Bar\+Controller Class Reference}
+\hypertarget{classcom_1_1saveit_1_1controller_1_1_side_bar_controller}{}\label{classcom_1_1saveit_1_1controller_1_1_side_bar_controller}\index{com.saveit.controller.SideBarController@{com.saveit.controller.SideBarController}}
+
+
+\doxylink{classcom_1_1saveit_1_1controller_1_1_controller}{Controller} for the application\textquotesingle{}s sidebar navigation menu.  
+
+
+Inheritance diagram for com.\+saveit.\+controller.\+Side\+Bar\+Controller\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classcom_1_1saveit_1_1controller_1_1_side_bar_controller}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classcom_1_1saveit_1_1controller_1_1_side_bar_controller_ad874f853f512ff60d626416541a2bbb9}{initialize}} ()
+\begin{DoxyCompactList}\small\item\em Initializes the sidebar with the current user\textquotesingle{}s information. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classcom_1_1saveit_1_1controller_1_1_side_bar_controller_a7923ceaa0c9484d11ccc5a8f93910cef}{nav\+Btn\+Clicked}} (\mbox{\hyperlink{enumcom_1_1saveit_1_1controller_1_1_view_type}{View\+Type}} view\+Name)
+\begin{DoxyCompactList}\small\item\em Navigates the application to a specific view. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{classcom_1_1saveit_1_1controller_1_1_controller}{com.\+saveit.\+controller.\+Controller}}}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classcom_1_1saveit_1_1controller_1_1_controller_a486b65e3a40563400404b07492a8a02e}{set\+User}} (\mbox{\hyperlink{classcom_1_1saveit_1_1model_1_1_user}{User}} user)
+\begin{DoxyCompactList}\small\item\em Sets the user for this controller. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classcom_1_1saveit_1_1model_1_1_user}{User}} \mbox{\hyperlink{classcom_1_1saveit_1_1controller_1_1_controller_a1eca6a41e7bc053fa003851f9d5cd5e7}{get\+User}} ()
+\begin{DoxyCompactList}\small\item\em Retrieves the user associated with this controller. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\doxylink{classcom_1_1saveit_1_1controller_1_1_controller}{Controller} for the application\textquotesingle{}s sidebar navigation menu. 
+
+This class manages the sidebar UI, including displaying the current user\textquotesingle{}s name, handling navigation between different views based on button clicks, and managing the visual "{}active"{} state of navigation buttons. 
+
+\label{doc-func-members}
+\Hypertarget{classcom_1_1saveit_1_1controller_1_1_side_bar_controller_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classcom_1_1saveit_1_1controller_1_1_side_bar_controller_ad874f853f512ff60d626416541a2bbb9}\index{com.saveit.controller.SideBarController@{com.saveit.controller.SideBarController}!initialize@{initialize}}
+\index{initialize@{initialize}!com.saveit.controller.SideBarController@{com.saveit.controller.SideBarController}}
+\doxysubsubsection{\texorpdfstring{initialize()}{initialize()}}
+{\footnotesize\ttfamily \label{classcom_1_1saveit_1_1controller_1_1_side_bar_controller_ad874f853f512ff60d626416541a2bbb9} 
+void com.\+saveit.\+controller.\+Side\+Bar\+Controller.\+initialize (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Initializes the sidebar with the current user\textquotesingle{}s information. 
+
+Fetches the name from the \doxylink{classcom_1_1saveit_1_1model_1_1_user}{User} object associated with this controller and updates the UI label. 
+
+Reimplemented from \mbox{\hyperlink{classcom_1_1saveit_1_1controller_1_1_controller_a4793a6bf0c34b92ef84eb9f61cec19f6}{com.\+saveit.\+controller.\+Controller}}.
+
+\Hypertarget{classcom_1_1saveit_1_1controller_1_1_side_bar_controller_a7923ceaa0c9484d11ccc5a8f93910cef}\index{com.saveit.controller.SideBarController@{com.saveit.controller.SideBarController}!navBtnClicked@{navBtnClicked}}
+\index{navBtnClicked@{navBtnClicked}!com.saveit.controller.SideBarController@{com.saveit.controller.SideBarController}}
+\doxysubsubsection{\texorpdfstring{navBtnClicked()}{navBtnClicked()}}
+{\footnotesize\ttfamily \label{classcom_1_1saveit_1_1controller_1_1_side_bar_controller_a7923ceaa0c9484d11ccc5a8f93910cef} 
+void com.\+saveit.\+controller.\+Side\+Bar\+Controller.\+nav\+Btn\+Clicked (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{enumcom_1_1saveit_1_1controller_1_1_view_type}{View\+Type}}}]{view\+Name}{}\end{DoxyParamCaption})}
+
+
+
+Navigates the application to a specific view. 
+
+Uses the \doxylink{classcom_1_1saveit_1_1controller_1_1_scene_controller}{Scene\+Controller} to load the requested FXML and updates the primary stage\textquotesingle{}s root node.
+
+
+\begin{DoxyParams}{Parameters}
+{\em view\+Name} & The \doxylink{enumcom_1_1saveit_1_1controller_1_1_view_type}{View\+Type} enum representing the target screen. \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/main/java/com/saveit/controller/Side\+Bar\+Controller.\+java\end{DoxyCompactItemize}

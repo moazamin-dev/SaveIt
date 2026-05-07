@@ -1,0 +1,69 @@
+\doxysection{com.\+saveit.\+controller.\+Main\+Controller Class Reference}
+\hypertarget{classcom_1_1saveit_1_1controller_1_1_main_controller}{}\label{classcom_1_1saveit_1_1controller_1_1_main_controller}\index{com.saveit.controller.MainController@{com.saveit.controller.MainController}}
+
+
+\doxylink{classcom_1_1saveit_1_1controller_1_1_controller}{Controller} responsible for managing the main dashboard view.  
+
+
+Inheritance diagram for com.\+saveit.\+controller.\+Main\+Controller\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classcom_1_1saveit_1_1controller_1_1_main_controller}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classcom_1_1saveit_1_1controller_1_1_main_controller_a8fd9ce811dfd2fff51e600977668ebf8}{initialize}} ()
+\begin{DoxyCompactList}\small\item\em Initializes the controller and sets up data bindings. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classcom_1_1saveit_1_1controller_1_1_main_controller_a4b9a7b993321cfd3eb27430ac7d48542}{refresh}} ()
+\begin{DoxyCompactList}\small\item\em Fetches fresh data from the service layer and updates all UI components. \end{DoxyCompactList}\item 
+\Hypertarget{classcom_1_1saveit_1_1controller_1_1_main_controller_a510cd579f5271a04430eb6a43d3a724f}\label{classcom_1_1saveit_1_1controller_1_1_main_controller_a510cd579f5271a04430eb6a43d3a724f} 
+void {\bfseries go\+To\+Set\+Cycle} ()
+\begin{DoxyCompactList}\small\item\em Navigates the application view to the Budget Setup/\+Cycle screen. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{classcom_1_1saveit_1_1controller_1_1_controller}{com.\+saveit.\+controller.\+Controller}}}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classcom_1_1saveit_1_1controller_1_1_controller_a486b65e3a40563400404b07492a8a02e}{set\+User}} (\mbox{\hyperlink{classcom_1_1saveit_1_1model_1_1_user}{User}} user)
+\begin{DoxyCompactList}\small\item\em Sets the user for this controller. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classcom_1_1saveit_1_1model_1_1_user}{User}} \mbox{\hyperlink{classcom_1_1saveit_1_1controller_1_1_controller_a1eca6a41e7bc053fa003851f9d5cd5e7}{get\+User}} ()
+\begin{DoxyCompactList}\small\item\em Retrieves the user associated with this controller. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\doxylink{classcom_1_1saveit_1_1controller_1_1_controller}{Controller} responsible for managing the main dashboard view. 
+
+This class coordinates the display of high-\/level budget metrics, including remaining funds, daily limits, and cycle dates. It also manages the population of tables showing recent transactions and spending summarized by category. 
+
+\label{doc-func-members}
+\Hypertarget{classcom_1_1saveit_1_1controller_1_1_main_controller_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classcom_1_1saveit_1_1controller_1_1_main_controller_a8fd9ce811dfd2fff51e600977668ebf8}\index{com.saveit.controller.MainController@{com.saveit.controller.MainController}!initialize@{initialize}}
+\index{initialize@{initialize}!com.saveit.controller.MainController@{com.saveit.controller.MainController}}
+\doxysubsubsection{\texorpdfstring{initialize()}{initialize()}}
+{\footnotesize\ttfamily \label{classcom_1_1saveit_1_1controller_1_1_main_controller_a8fd9ce811dfd2fff51e600977668ebf8} 
+void com.\+saveit.\+controller.\+Main\+Controller.\+initialize (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Initializes the controller and sets up data bindings. 
+
+Configures table columns, initializes observable lists, and performs the initial data fetch and refresh for the dashboard UI. 
+
+Reimplemented from \mbox{\hyperlink{classcom_1_1saveit_1_1controller_1_1_controller_a4793a6bf0c34b92ef84eb9f61cec19f6}{com.\+saveit.\+controller.\+Controller}}.
+
+\Hypertarget{classcom_1_1saveit_1_1controller_1_1_main_controller_a4b9a7b993321cfd3eb27430ac7d48542}\index{com.saveit.controller.MainController@{com.saveit.controller.MainController}!refresh@{refresh}}
+\index{refresh@{refresh}!com.saveit.controller.MainController@{com.saveit.controller.MainController}}
+\doxysubsubsection{\texorpdfstring{refresh()}{refresh()}}
+{\footnotesize\ttfamily \label{classcom_1_1saveit_1_1controller_1_1_main_controller_a4b9a7b993321cfd3eb27430ac7d48542} 
+void com.\+saveit.\+controller.\+Main\+Controller.\+refresh (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Fetches fresh data from the service layer and updates all UI components. 
+
+Updates numeric labels (remaining, daily limit, cycle limit), dates, and refreshes both the transaction list and category breakdown map. 
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/main/java/com/saveit/controller/Main\+Controller.\+java\end{DoxyCompactItemize}

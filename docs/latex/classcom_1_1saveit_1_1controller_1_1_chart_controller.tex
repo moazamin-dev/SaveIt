@@ -1,0 +1,57 @@
+\doxysection{com.\+saveit.\+controller.\+Chart\+Controller Class Reference}
+\hypertarget{classcom_1_1saveit_1_1controller_1_1_chart_controller}{}\label{classcom_1_1saveit_1_1controller_1_1_chart_controller}\index{com.saveit.controller.ChartController@{com.saveit.controller.ChartController}}
+
+
+\doxylink{classcom_1_1saveit_1_1controller_1_1_controller}{Controller} responsible for managing and displaying financial data visualizations.  
+
+
+Inheritance diagram for com.\+saveit.\+controller.\+Chart\+Controller\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classcom_1_1saveit_1_1controller_1_1_chart_controller}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classcom_1_1saveit_1_1controller_1_1_chart_controller_ad492c28db44884b09bc1bc917a6a00cb}{initialize}} ()
+\begin{DoxyCompactList}\small\item\em Initializes the controller and triggers the initial chart rendering. \end{DoxyCompactList}\item 
+\Hypertarget{classcom_1_1saveit_1_1controller_1_1_chart_controller_a9bfee01dd758af208517f2775b487ed1}\label{classcom_1_1saveit_1_1controller_1_1_chart_controller_a9bfee01dd758af208517f2775b487ed1} 
+void {\bfseries refresh\+Charts} ()
+\begin{DoxyCompactList}\small\item\em Redraws all charts and updates summary labels with fresh data. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{classcom_1_1saveit_1_1controller_1_1_controller}{com.\+saveit.\+controller.\+Controller}}}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classcom_1_1saveit_1_1controller_1_1_controller_a486b65e3a40563400404b07492a8a02e}{set\+User}} (\mbox{\hyperlink{classcom_1_1saveit_1_1model_1_1_user}{User}} user)
+\begin{DoxyCompactList}\small\item\em Sets the user for this controller. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classcom_1_1saveit_1_1model_1_1_user}{User}} \mbox{\hyperlink{classcom_1_1saveit_1_1controller_1_1_controller_a1eca6a41e7bc053fa003851f9d5cd5e7}{get\+User}} ()
+\begin{DoxyCompactList}\small\item\em Retrieves the user associated with this controller. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\doxylink{classcom_1_1saveit_1_1controller_1_1_controller}{Controller} responsible for managing and displaying financial data visualizations. 
+
+This class interacts with the \doxylink{classcom_1_1saveit_1_1service_1_1_report_generator}{Report\+Generator} to populate various Java\+FX charts, including a Pie\+Chart for categories, a Bar\+Chart for weekly trends, and a Line\+Chart for monthly spending analysis. It also manages summary statistics like total savings and budget usage percentage. 
+
+\label{doc-func-members}
+\Hypertarget{classcom_1_1saveit_1_1controller_1_1_chart_controller_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classcom_1_1saveit_1_1controller_1_1_chart_controller_ad492c28db44884b09bc1bc917a6a00cb}\index{com.saveit.controller.ChartController@{com.saveit.controller.ChartController}!initialize@{initialize}}
+\index{initialize@{initialize}!com.saveit.controller.ChartController@{com.saveit.controller.ChartController}}
+\doxysubsubsection{\texorpdfstring{initialize()}{initialize()}}
+{\footnotesize\ttfamily \label{classcom_1_1saveit_1_1controller_1_1_chart_controller_ad492c28db44884b09bc1bc917a6a00cb} 
+void com.\+saveit.\+controller.\+Chart\+Controller.\+initialize (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Initializes the controller and triggers the initial chart rendering. 
+
+Sets up the \doxylink{classcom_1_1saveit_1_1service_1_1_report_generator}{Report\+Generator} dependency using the currently authenticated user and refreshes all visual components. 
+
+Reimplemented from \mbox{\hyperlink{classcom_1_1saveit_1_1controller_1_1_controller_a4793a6bf0c34b92ef84eb9f61cec19f6}{com.\+saveit.\+controller.\+Controller}}.
+
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/main/java/com/saveit/controller/Chart\+Controller.\+java\end{DoxyCompactItemize}

@@ -1,0 +1,88 @@
+\doxysection{com.\+saveit.\+dao.\+DAO\texorpdfstring{$<$}{<} T \texorpdfstring{$>$}{>} Interface Template Reference}
+\hypertarget{interfacecom_1_1saveit_1_1dao_1_1_d_a_o}{}\label{interfacecom_1_1saveit_1_1dao_1_1_d_a_o}\index{com.saveit.dao.DAO$<$ T $>$@{com.saveit.dao.DAO$<$ T $>$}}
+
+
+Generic Data Access Object (\doxylink{interfacecom_1_1saveit_1_1dao_1_1_d_a_o}{DAO}) interface.  
+
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{interfacecom_1_1saveit_1_1dao_1_1_d_a_o_a58c39a5e37f6d6195f4800ea7b0fedd5}{save}} (T entity)
+\begin{DoxyCompactList}\small\item\em Persists the given entity to the data source. \end{DoxyCompactList}\item 
+List$<$ T $>$ \mbox{\hyperlink{interfacecom_1_1saveit_1_1dao_1_1_d_a_o_a6100efeb85551059b2f8a6b34e569fbb}{get\+All}} (int id)
+\begin{DoxyCompactList}\small\item\em Retrieves all entities associated with a specific identifier. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{interfacecom_1_1saveit_1_1dao_1_1_d_a_o_aa447afe03679ed6b4d430ad1f02c2fad}{delete}} (int id)
+\begin{DoxyCompactList}\small\item\em Deletes an entity from the data source by its unique identifier. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Generic Data Access Object (\doxylink{interfacecom_1_1saveit_1_1dao_1_1_d_a_o}{DAO}) interface. 
+
+This interface defines the standard operations to be performed on a specific type of entity, following the Data Access Object pattern to separate low-\/level data accessing API or operations from high-\/level business services.
+
+
+\begin{DoxyParams}{Parameters}
+{\em $<$\+T$>$} & The type of the domain object (entity) this \doxylink{interfacecom_1_1saveit_1_1dao_1_1_d_a_o}{DAO} manages. \\
+\hline
+\end{DoxyParams}
+
+
+\label{doc-func-members}
+\Hypertarget{interfacecom_1_1saveit_1_1dao_1_1_d_a_o_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{interfacecom_1_1saveit_1_1dao_1_1_d_a_o_aa447afe03679ed6b4d430ad1f02c2fad}\index{com.saveit.dao.DAO$<$ T $>$@{com.saveit.dao.DAO$<$ T $>$}!delete@{delete}}
+\index{delete@{delete}!com.saveit.dao.DAO$<$ T $>$@{com.saveit.dao.DAO$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{delete()}{delete()}}
+{\footnotesize\ttfamily \label{interfacecom_1_1saveit_1_1dao_1_1_d_a_o_aa447afe03679ed6b4d430ad1f02c2fad} 
+void \mbox{\hyperlink{interfacecom_1_1saveit_1_1dao_1_1_d_a_o}{com.\+saveit.\+dao.\+DAO}}$<$ T $>$.delete (\begin{DoxyParamCaption}\item[{int}]{id}{}\end{DoxyParamCaption})}
+
+
+
+Deletes an entity from the data source by its unique identifier. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em id} & The unique ID of the record to be removed. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{interfacecom_1_1saveit_1_1dao_1_1_d_a_o_a6100efeb85551059b2f8a6b34e569fbb}\index{com.saveit.dao.DAO$<$ T $>$@{com.saveit.dao.DAO$<$ T $>$}!getAll@{getAll}}
+\index{getAll@{getAll}!com.saveit.dao.DAO$<$ T $>$@{com.saveit.dao.DAO$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{getAll()}{getAll()}}
+{\footnotesize\ttfamily \label{interfacecom_1_1saveit_1_1dao_1_1_d_a_o_a6100efeb85551059b2f8a6b34e569fbb} 
+List$<$ T $>$ \mbox{\hyperlink{interfacecom_1_1saveit_1_1dao_1_1_d_a_o}{com.\+saveit.\+dao.\+DAO}}$<$ T $>$.get\+All (\begin{DoxyParamCaption}\item[{int}]{id}{}\end{DoxyParamCaption})}
+
+
+
+Retrieves all entities associated with a specific identifier. 
+
+Typically used to fetch all records belonging to a specific user or parent entity.
+
+
+\begin{DoxyParams}{Parameters}
+{\em id} & The unique identifier used to filter the records (e.\+g., user\+\_\+id). \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+List$<$\+T$>$ A list of entities found in the data source. 
+\end{DoxyReturn}
+\Hypertarget{interfacecom_1_1saveit_1_1dao_1_1_d_a_o_a58c39a5e37f6d6195f4800ea7b0fedd5}\index{com.saveit.dao.DAO$<$ T $>$@{com.saveit.dao.DAO$<$ T $>$}!save@{save}}
+\index{save@{save}!com.saveit.dao.DAO$<$ T $>$@{com.saveit.dao.DAO$<$ T $>$}}
+\doxysubsubsection{\texorpdfstring{save()}{save()}}
+{\footnotesize\ttfamily \label{interfacecom_1_1saveit_1_1dao_1_1_d_a_o_a58c39a5e37f6d6195f4800ea7b0fedd5} 
+void \mbox{\hyperlink{interfacecom_1_1saveit_1_1dao_1_1_d_a_o}{com.\+saveit.\+dao.\+DAO}}$<$ T $>$.save (\begin{DoxyParamCaption}\item[{T}]{entity}{}\end{DoxyParamCaption})}
+
+
+
+Persists the given entity to the data source. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em entity} & The object of type T to be saved. \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this interface was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/main/java/com/saveit/dao/DAO.\+java\end{DoxyCompactItemize}

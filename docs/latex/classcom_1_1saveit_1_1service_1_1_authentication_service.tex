@@ -1,0 +1,115 @@
+\doxysection{com.\+saveit.\+service.\+Authentication\+Service Class Reference}
+\hypertarget{classcom_1_1saveit_1_1service_1_1_authentication_service}{}\label{classcom_1_1saveit_1_1service_1_1_authentication_service}\index{com.saveit.service.AuthenticationService@{com.saveit.service.AuthenticationService}}
+
+
+Service class handling user authentication and session management.  
+
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classcom_1_1saveit_1_1service_1_1_authentication_service_a9e78ee73edcccf876daa936201489ffc}{Authentication\+Service}} ()
+\begin{DoxyCompactList}\small\item\em Constructor for \doxylink{classcom_1_1saveit_1_1service_1_1_authentication_service}{Authentication\+Service}. \end{DoxyCompactList}\item 
+boolean \mbox{\hyperlink{classcom_1_1saveit_1_1service_1_1_authentication_service_a38bfe571b50abe8bd20cba575a6536a2}{login}} (String username, String raw\+Password)
+\begin{DoxyCompactList}\small\item\em Authenticates a user based on username and password. \end{DoxyCompactList}\item 
+boolean \mbox{\hyperlink{classcom_1_1saveit_1_1service_1_1_authentication_service_a5597eab3650427ac5315aa1cad413373}{sign\+Up}} (String name, String phone, String username, String password)
+\begin{DoxyCompactList}\small\item\em Registers a new user in the system. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\Hypertarget{classcom_1_1saveit_1_1service_1_1_authentication_service_a87c4159a744b2f831271713f4a449256}\label{classcom_1_1saveit_1_1service_1_1_authentication_service_a87c4159a744b2f831271713f4a449256} 
+static void {\bfseries logout} ()
+\begin{DoxyCompactList}\small\item\em Logs out the current user by clearing the session reference. \end{DoxyCompactList}\item 
+static \mbox{\hyperlink{classcom_1_1saveit_1_1model_1_1_user}{User}} \mbox{\hyperlink{classcom_1_1saveit_1_1service_1_1_authentication_service_a6db846c9252ff9d86bde79c8111aba89}{get\+Current\+User}} ()
+\begin{DoxyCompactList}\small\item\em Retrieves the currently authenticated user. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Service class handling user authentication and session management. 
+
+This class provides methods for user login, registration, and logout, while maintaining a reference to the currently authenticated user session. 
+
+\label{doc-constructors}
+\Hypertarget{classcom_1_1saveit_1_1service_1_1_authentication_service_doc-constructors}
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classcom_1_1saveit_1_1service_1_1_authentication_service_a9e78ee73edcccf876daa936201489ffc}\index{com.saveit.service.AuthenticationService@{com.saveit.service.AuthenticationService}!AuthenticationService@{AuthenticationService}}
+\index{AuthenticationService@{AuthenticationService}!com.saveit.service.AuthenticationService@{com.saveit.service.AuthenticationService}}
+\doxysubsubsection{\texorpdfstring{AuthenticationService()}{AuthenticationService()}}
+{\footnotesize\ttfamily \label{classcom_1_1saveit_1_1service_1_1_authentication_service_a9e78ee73edcccf876daa936201489ffc} 
+com.\+saveit.\+service.\+Authentication\+Service.\+Authentication\+Service (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Constructor for \doxylink{classcom_1_1saveit_1_1service_1_1_authentication_service}{Authentication\+Service}. 
+
+Initializes the \doxylink{classcom_1_1saveit_1_1dao_1_1_user_d_a_o}{User\+DAO} to enable database interaction. 
+
+\label{doc-func-members}
+\Hypertarget{classcom_1_1saveit_1_1service_1_1_authentication_service_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classcom_1_1saveit_1_1service_1_1_authentication_service_a6db846c9252ff9d86bde79c8111aba89}\index{com.saveit.service.AuthenticationService@{com.saveit.service.AuthenticationService}!getCurrentUser@{getCurrentUser}}
+\index{getCurrentUser@{getCurrentUser}!com.saveit.service.AuthenticationService@{com.saveit.service.AuthenticationService}}
+\doxysubsubsection{\texorpdfstring{getCurrentUser()}{getCurrentUser()}}
+{\footnotesize\ttfamily \label{classcom_1_1saveit_1_1service_1_1_authentication_service_a6db846c9252ff9d86bde79c8111aba89} 
+\mbox{\hyperlink{classcom_1_1saveit_1_1model_1_1_user}{User}} com.\+saveit.\+service.\+Authentication\+Service.\+get\+Current\+User (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Retrieves the currently authenticated user. 
+
+\begin{DoxyReturn}{Returns}
+\doxylink{classcom_1_1saveit_1_1model_1_1_user}{User} The \doxylink{classcom_1_1saveit_1_1model_1_1_user}{User} object of the current session, or null if no user is logged in. 
+\end{DoxyReturn}
+\Hypertarget{classcom_1_1saveit_1_1service_1_1_authentication_service_a38bfe571b50abe8bd20cba575a6536a2}\index{com.saveit.service.AuthenticationService@{com.saveit.service.AuthenticationService}!login@{login}}
+\index{login@{login}!com.saveit.service.AuthenticationService@{com.saveit.service.AuthenticationService}}
+\doxysubsubsection{\texorpdfstring{login()}{login()}}
+{\footnotesize\ttfamily \label{classcom_1_1saveit_1_1service_1_1_authentication_service_a38bfe571b50abe8bd20cba575a6536a2} 
+boolean com.\+saveit.\+service.\+Authentication\+Service.\+login (\begin{DoxyParamCaption}\item[{String}]{username}{, }\item[{String}]{raw\+Password}{}\end{DoxyParamCaption})}
+
+
+
+Authenticates a user based on username and password. 
+
+Retrieves the stored password hash from the database and compares it with the hash of the provided raw password. If they match, the current\+User is set.
+
+
+\begin{DoxyParams}{Parameters}
+{\em username} & The username provided by the user. \\
+\hline
+{\em raw\+Password} & The plain-\/text password provided by the user. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+boolean True if authentication is successful, false otherwise. 
+\end{DoxyReturn}
+\Hypertarget{classcom_1_1saveit_1_1service_1_1_authentication_service_a5597eab3650427ac5315aa1cad413373}\index{com.saveit.service.AuthenticationService@{com.saveit.service.AuthenticationService}!signUp@{signUp}}
+\index{signUp@{signUp}!com.saveit.service.AuthenticationService@{com.saveit.service.AuthenticationService}}
+\doxysubsubsection{\texorpdfstring{signUp()}{signUp()}}
+{\footnotesize\ttfamily \label{classcom_1_1saveit_1_1service_1_1_authentication_service_a5597eab3650427ac5315aa1cad413373} 
+boolean com.\+saveit.\+service.\+Authentication\+Service.\+sign\+Up (\begin{DoxyParamCaption}\item[{String}]{name}{, }\item[{String}]{phone}{, }\item[{String}]{username}{, }\item[{String}]{password}{}\end{DoxyParamCaption})}
+
+
+
+Registers a new user in the system. 
+
+Creates a new \doxylink{classcom_1_1saveit_1_1model_1_1_user}{User} object and passes it along with the plain-\/text password to the DAO for hashing and storage.
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & The full name of the user. \\
+\hline
+{\em phone} & The contact phone number. \\
+\hline
+{\em username} & The desired unique username. \\
+\hline
+{\em password} & The raw password to be secured and stored. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+boolean True if the sign-\/up process was successful, false otherwise. 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/main/java/com/saveit/service/Authentication\+Service.\+java\end{DoxyCompactItemize}

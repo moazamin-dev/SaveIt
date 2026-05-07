@@ -8,7 +8,6 @@ import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 import javafx.collections.transformation.FilteredList;
 import javafx.fxml.FXML;
-import javafx.scene.Node;
 import javafx.scene.Parent;
 import javafx.scene.control.ComboBox;
 import javafx.scene.control.Label;
@@ -20,20 +19,57 @@ import javafx.scene.layout.HBox;
 import java.time.LocalDate;
 import java.util.List;
 
+/**
+ * @brief Controller for the Expense Log view.
+ *
+ * This class manages the display of historical expenses in a tabular format. It provides
+ * functionality for filtering expenses by category, deleting specific transactions,
+ * calculating total historical spending, and navigating to the expense creation view.
+ */
 public class ExpenseLogController extends Controller {
 
+    /** @var HBox Expense_log The root container for the expense log view */
     @FXML private HBox Expense_log;
+
+    /** @var TableView<Expense> expenseTable Table UI component to display expense records */
     @FXML private TableView<Expense> expenseTable;
+
+    /** @var TableColumn<Expense, String> colCategory Column displaying the category name */
     @FXML private TableColumn<Expense, String> colCategory;
+
+    /** @var TableColumn<Expense, Double> colAmount Column displaying the expense amount */
     @FXML private TableColumn<Expense, Double> colAmount;
+
+    /** @var TableColumn<Expense, LocalDate> colDate Column displaying the transaction date */
     @FXML private TableColumn<Expense, LocalDate> colDate;
+
+    /** @var TableColumn<Expense, String> colDescription Column displaying the expense description */
     @FXML private TableColumn<Expense, String> colDescription;
+
+    /** @var ComboBox<Category> categoryFilter Dropdown menu for filtering table data by category */
     @FXML private ComboBox<Category> categoryFilter;
+
+    /** @var Label totalSpentLabel Label displaying the sum of amounts currently in the list */
     @FXML private Label totalSpentLabel;
+
+    /** @var ObservableList<Expense> expenseList The master list of expenses retrieved from the database */
     private final ObservableList<Expense> expenseList = FXCollections.observableArrayList();
+
+    /** @var ObservableList<Category> categoryList The list of categories available for filtering */
     private final ObservableList<Category> categoryList = FXCollections.observableArrayList();
+
+    /** @var FilteredList<Expense> filteredData A wrapper around expenseList that allows real-time UI filtering */
     private FilteredList<Expense> filteredData;
+
+    /** @var BudgetManager manager The business logic service for budget and expense operations */
     private BudgetManager  manager;
+
+    /**
+     * @brief Initializes the controller, sets up table columns, and populates data.
+     *
+     * Configures the cell value factories for the TableView and sets up listeners
+     * for the category filter dropdown.
+     */
     @Override
     public void initialize() {
         manager = new BudgetManager(getUser());
@@ -58,6 +94,12 @@ public class ExpenseLogController extends Controller {
         updateTotalSpent();
     }
 
+    /**
+     * @brief Configures the category filter ComboBox.
+     *
+     * Adds an "All Categories" option and populates the remaining items from the
+     * user's saved categories.
+     */
     private void setupCategoryFilter() {
         categoryList.clear();
 
@@ -85,6 +127,9 @@ public class ExpenseLogController extends Controller {
         categoryFilter.getSelectionModel().selectFirst();
     }
 
+    /**
+     * @brief Calculates and updates the UI label for the total amount spent.
+     */
     private void updateTotalSpent() {
         double total = 0.0;
 
@@ -96,6 +141,9 @@ public class ExpenseLogController extends Controller {
 
     }
 
+    /**
+     * @brief Fetches all historical expenses for the user and populates the observable list.
+     */
     private void populateTable() {
         expenseList.clear();
         List<Expense> data = manager.getAllExpenses();
@@ -104,6 +152,9 @@ public class ExpenseLogController extends Controller {
         }
     }
 
+    /**
+     * @brief Helper method to fetch categories from the manager.
+     */
     private void setupCategory() {
         List<Category> data = manager.getCategories();
         if (data != null) {
@@ -111,6 +162,11 @@ public class ExpenseLogController extends Controller {
         }
     }
 
+    /**
+     * @brief Filters the table data based on the selected category.
+     *
+     * @param category The Category object selected in the filter ComboBox.
+     */
     public void onFilterByCategory(Category category) {
         filteredData.setPredicate(expense -> {
             if (category == null || category.getName().equals("All Categories") || category.getCategoryID() == -1) {
@@ -122,6 +178,9 @@ public class ExpenseLogController extends Controller {
         updateTotalSpent();
     }
 
+    /**
+     * @brief Navigates the UI to the "Add Expense" view.
+     */
     public void goToAddExpense() {
         Parent nextView = SceneController.getInstance().loadScene(ViewType.ADD_EXPENSE);
 
@@ -131,12 +190,17 @@ public class ExpenseLogController extends Controller {
         }
     }
 
+    /**
+     * @brief Handles the deletion of a selected expense from the table.
+     *
+     * Prompts the user for confirmation, deletes the record from the database
+     * via BudgetManager, and updates the UI lists.
+     */
     @FXML
     private void handleDeleteExpense() {
         Expense selectedExpense = expenseTable.getSelectionModel().getSelectedItem();
 
         if (selectedExpense == null) {
-            // Show a simple warning if nothing is selected
             javafx.scene.control.Alert alert = new javafx.scene.control.Alert(javafx.scene.control.Alert.AlertType.WARNING);
             alert.setTitle("No Selection");
             alert.setContentText("Please select a transaction from the table to delete.");
@@ -144,19 +208,15 @@ public class ExpenseLogController extends Controller {
             return;
         }
 
-        // Confirmation Dialog
         javafx.scene.control.Alert confirm = new javafx.scene.control.Alert(javafx.scene.control.Alert.AlertType.CONFIRMATION);
         confirm.setTitle("Confirm Delete");
         confirm.setHeaderText("Delete this transaction?");
 
         if (confirm.showAndWait().get() == javafx.scene.control.ButtonType.OK) {
-            // 1. Delete from DB via Manager
             manager.deleteExpense(selectedExpense);
 
-            // 2. Remove from the ObservableList (Table updates automatically)
             expenseList.remove(selectedExpense);
 
-            // 3. Update the dynamic total label
             updateTotalSpent();
         }
     }

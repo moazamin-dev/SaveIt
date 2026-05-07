@@ -1,0 +1,86 @@
+\doxysection{com.\+saveit.\+controller.\+Scene\+Controller Class Reference}
+\hypertarget{classcom_1_1saveit_1_1controller_1_1_scene_controller}{}\label{classcom_1_1saveit_1_1controller_1_1_scene_controller}\index{com.saveit.controller.SceneController@{com.saveit.controller.SceneController}}
+
+
+Singleton class responsible for managing scene transitions and controller lifecycle.  
+
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classcom_1_1saveit_1_1controller_1_1_scene_controller_a5ff3fd25413be66ad96c67579a44868e}{handle\+Event}} (String event, Object data)
+\begin{DoxyCompactList}\small\item\em Dispatches events to all registered controllers. \end{DoxyCompactList}\item 
+Parent \mbox{\hyperlink{classcom_1_1saveit_1_1controller_1_1_scene_controller_a6054b3ee79e5c7a5245ba5a2b4aad946}{load\+Scene}} (\mbox{\hyperlink{enumcom_1_1saveit_1_1controller_1_1_view_type}{View\+Type}} view\+Type)
+\begin{DoxyCompactList}\small\item\em Loads an FXML scene and configures its controller. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static Scene\+Controller \mbox{\hyperlink{classcom_1_1saveit_1_1controller_1_1_scene_controller_a84a3bd735ee6f47f54b5a2ed9af9883e}{get\+Instance}} ()
+\begin{DoxyCompactList}\small\item\em Retrieves the Singleton instance of the \doxylink{classcom_1_1saveit_1_1controller_1_1_scene_controller}{Scene\+Controller}. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Singleton class responsible for managing scene transitions and controller lifecycle. 
+
+The \doxylink{classcom_1_1saveit_1_1controller_1_1_scene_controller}{Scene\+Controller} handles the loading of FXML files, instantiation of controllers via a custom controller factory, and global event dispatching (such as user session updates) across all active controllers. 
+
+\label{doc-func-members}
+\Hypertarget{classcom_1_1saveit_1_1controller_1_1_scene_controller_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classcom_1_1saveit_1_1controller_1_1_scene_controller_a84a3bd735ee6f47f54b5a2ed9af9883e}\index{com.saveit.controller.SceneController@{com.saveit.controller.SceneController}!getInstance@{getInstance}}
+\index{getInstance@{getInstance}!com.saveit.controller.SceneController@{com.saveit.controller.SceneController}}
+\doxysubsubsection{\texorpdfstring{getInstance()}{getInstance()}}
+{\footnotesize\ttfamily \label{classcom_1_1saveit_1_1controller_1_1_scene_controller_a84a3bd735ee6f47f54b5a2ed9af9883e} 
+Scene\+Controller com.\+saveit.\+controller.\+Scene\+Controller.\+get\+Instance (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Retrieves the Singleton instance of the \doxylink{classcom_1_1saveit_1_1controller_1_1_scene_controller}{Scene\+Controller}. 
+
+\begin{DoxyReturn}{Returns}
+\doxylink{classcom_1_1saveit_1_1controller_1_1_scene_controller}{Scene\+Controller} The active instance. 
+\end{DoxyReturn}
+\Hypertarget{classcom_1_1saveit_1_1controller_1_1_scene_controller_a5ff3fd25413be66ad96c67579a44868e}\index{com.saveit.controller.SceneController@{com.saveit.controller.SceneController}!handleEvent@{handleEvent}}
+\index{handleEvent@{handleEvent}!com.saveit.controller.SceneController@{com.saveit.controller.SceneController}}
+\doxysubsubsection{\texorpdfstring{handleEvent()}{handleEvent()}}
+{\footnotesize\ttfamily \label{classcom_1_1saveit_1_1controller_1_1_scene_controller_a5ff3fd25413be66ad96c67579a44868e} 
+void com.\+saveit.\+controller.\+Scene\+Controller.\+handle\+Event (\begin{DoxyParamCaption}\item[{String}]{event}{, }\item[{Object}]{data}{}\end{DoxyParamCaption})}
+
+
+
+Dispatches events to all registered controllers. 
+
+Currently supports "{}\+USER\+\_\+\+UPDATED"{} events to synchronize the active \doxylink{classcom_1_1saveit_1_1model_1_1_user}{User} object across all UI components and re-\/initialize their logic.
+
+
+\begin{DoxyParams}{Parameters}
+{\em event} & The string identifier of the event. \\
+\hline
+{\em data} & The data object associated with the event (e.\+g., a \doxylink{classcom_1_1saveit_1_1model_1_1_user}{User} instance). \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classcom_1_1saveit_1_1controller_1_1_scene_controller_a6054b3ee79e5c7a5245ba5a2b4aad946}\index{com.saveit.controller.SceneController@{com.saveit.controller.SceneController}!loadScene@{loadScene}}
+\index{loadScene@{loadScene}!com.saveit.controller.SceneController@{com.saveit.controller.SceneController}}
+\doxysubsubsection{\texorpdfstring{loadScene()}{loadScene()}}
+{\footnotesize\ttfamily \label{classcom_1_1saveit_1_1controller_1_1_scene_controller_a6054b3ee79e5c7a5245ba5a2b4aad946} 
+Parent com.\+saveit.\+controller.\+Scene\+Controller.\+load\+Scene (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{enumcom_1_1saveit_1_1controller_1_1_view_type}{View\+Type}}}]{view\+Type}{}\end{DoxyParamCaption})}
+
+
+
+Loads an FXML scene and configures its controller. 
+
+This method utilizes a custom controller factory to inject the current session user into newly created controllers and registers them in the internal tracking map.
+
+
+\begin{DoxyParams}{Parameters}
+{\em view\+Type} & The \doxylink{enumcom_1_1saveit_1_1controller_1_1_view_type}{View\+Type} enum indicating which FXML file to load. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+Parent The root node of the loaded scene, or null if loading fails. 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/main/java/com/saveit/controller/Scene\+Controller.\+java\end{DoxyCompactItemize}

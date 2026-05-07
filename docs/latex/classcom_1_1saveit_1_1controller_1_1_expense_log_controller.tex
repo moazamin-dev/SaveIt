@@ -1,0 +1,74 @@
+\doxysection{com.\+saveit.\+controller.\+Expense\+Log\+Controller Class Reference}
+\hypertarget{classcom_1_1saveit_1_1controller_1_1_expense_log_controller}{}\label{classcom_1_1saveit_1_1controller_1_1_expense_log_controller}\index{com.saveit.controller.ExpenseLogController@{com.saveit.controller.ExpenseLogController}}
+
+
+\doxylink{classcom_1_1saveit_1_1controller_1_1_controller}{Controller} for the \doxylink{classcom_1_1saveit_1_1model_1_1_expense}{Expense} Log view.  
+
+
+Inheritance diagram for com.\+saveit.\+controller.\+Expense\+Log\+Controller\+:\begin{figure}[H]
+\begin{center}
+\leavevmode
+\includegraphics[height=2.000000cm]{classcom_1_1saveit_1_1controller_1_1_expense_log_controller}
+\end{center}
+\end{figure}
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classcom_1_1saveit_1_1controller_1_1_expense_log_controller_a52153339781a312d80be133f9a8d067f}{initialize}} ()
+\begin{DoxyCompactList}\small\item\em Initializes the controller, sets up table columns, and populates data. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classcom_1_1saveit_1_1controller_1_1_expense_log_controller_a092ca77ef1f9dce8bd952ac3b813e4f7}{on\+Filter\+By\+Category}} (\mbox{\hyperlink{classcom_1_1saveit_1_1model_1_1_category}{Category}} category)
+\begin{DoxyCompactList}\small\item\em Filters the table data based on the selected category. \end{DoxyCompactList}\item 
+\Hypertarget{classcom_1_1saveit_1_1controller_1_1_expense_log_controller_a0400702649b4c47302035476624533ce}\label{classcom_1_1saveit_1_1controller_1_1_expense_log_controller_a0400702649b4c47302035476624533ce} 
+void {\bfseries go\+To\+Add\+Expense} ()
+\begin{DoxyCompactList}\small\item\em Navigates the UI to the "{}\+Add Expense"{} view. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsection*{Public Member Functions inherited from \mbox{\hyperlink{classcom_1_1saveit_1_1controller_1_1_controller}{com.\+saveit.\+controller.\+Controller}}}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classcom_1_1saveit_1_1controller_1_1_controller_a486b65e3a40563400404b07492a8a02e}{set\+User}} (\mbox{\hyperlink{classcom_1_1saveit_1_1model_1_1_user}{User}} user)
+\begin{DoxyCompactList}\small\item\em Sets the user for this controller. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classcom_1_1saveit_1_1model_1_1_user}{User}} \mbox{\hyperlink{classcom_1_1saveit_1_1controller_1_1_controller_a1eca6a41e7bc053fa003851f9d5cd5e7}{get\+User}} ()
+\begin{DoxyCompactList}\small\item\em Retrieves the user associated with this controller. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+\doxylink{classcom_1_1saveit_1_1controller_1_1_controller}{Controller} for the \doxylink{classcom_1_1saveit_1_1model_1_1_expense}{Expense} Log view. 
+
+This class manages the display of historical expenses in a tabular format. It provides functionality for filtering expenses by category, deleting specific transactions, calculating total historical spending, and navigating to the expense creation view. 
+
+\label{doc-func-members}
+\Hypertarget{classcom_1_1saveit_1_1controller_1_1_expense_log_controller_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classcom_1_1saveit_1_1controller_1_1_expense_log_controller_a52153339781a312d80be133f9a8d067f}\index{com.saveit.controller.ExpenseLogController@{com.saveit.controller.ExpenseLogController}!initialize@{initialize}}
+\index{initialize@{initialize}!com.saveit.controller.ExpenseLogController@{com.saveit.controller.ExpenseLogController}}
+\doxysubsubsection{\texorpdfstring{initialize()}{initialize()}}
+{\footnotesize\ttfamily \label{classcom_1_1saveit_1_1controller_1_1_expense_log_controller_a52153339781a312d80be133f9a8d067f} 
+void com.\+saveit.\+controller.\+Expense\+Log\+Controller.\+initialize (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Initializes the controller, sets up table columns, and populates data. 
+
+Configures the cell value factories for the Table\+View and sets up listeners for the category filter dropdown. 
+
+Reimplemented from \mbox{\hyperlink{classcom_1_1saveit_1_1controller_1_1_controller_a4793a6bf0c34b92ef84eb9f61cec19f6}{com.\+saveit.\+controller.\+Controller}}.
+
+\Hypertarget{classcom_1_1saveit_1_1controller_1_1_expense_log_controller_a092ca77ef1f9dce8bd952ac3b813e4f7}\index{com.saveit.controller.ExpenseLogController@{com.saveit.controller.ExpenseLogController}!onFilterByCategory@{onFilterByCategory}}
+\index{onFilterByCategory@{onFilterByCategory}!com.saveit.controller.ExpenseLogController@{com.saveit.controller.ExpenseLogController}}
+\doxysubsubsection{\texorpdfstring{onFilterByCategory()}{onFilterByCategory()}}
+{\footnotesize\ttfamily \label{classcom_1_1saveit_1_1controller_1_1_expense_log_controller_a092ca77ef1f9dce8bd952ac3b813e4f7} 
+void com.\+saveit.\+controller.\+Expense\+Log\+Controller.\+on\+Filter\+By\+Category (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classcom_1_1saveit_1_1model_1_1_category}{Category}}}]{category}{}\end{DoxyParamCaption})}
+
+
+
+Filters the table data based on the selected category. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em category} & The \doxylink{classcom_1_1saveit_1_1model_1_1_category}{Category} object selected in the filter Combo\+Box. \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/main/java/com/saveit/controller/Expense\+Log\+Controller.\+java\end{DoxyCompactItemize}

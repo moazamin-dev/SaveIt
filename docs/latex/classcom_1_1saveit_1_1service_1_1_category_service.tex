@@ -1,0 +1,149 @@
+\doxysection{com.\+saveit.\+service.\+Category\+Service Class Reference}
+\hypertarget{classcom_1_1saveit_1_1service_1_1_category_service}{}\label{classcom_1_1saveit_1_1service_1_1_category_service}\index{com.saveit.service.CategoryService@{com.saveit.service.CategoryService}}
+
+
+Service class providing business logic for managing categories.  
+
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\mbox{\hyperlink{classcom_1_1saveit_1_1service_1_1_category_service_abcb54c2563702854f327387188497a5a}{Category\+Service}} (\mbox{\hyperlink{classcom_1_1saveit_1_1model_1_1_user}{User}} user)
+\begin{DoxyCompactList}\small\item\em Constructs a \doxylink{classcom_1_1saveit_1_1service_1_1_category_service}{Category\+Service} for a specific user. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classcom_1_1saveit_1_1service_1_1_category_service_aa50caf54a5b66c09cacc6ff16b28348e}{add\+Category}} (String name, int user\+Id)
+\begin{DoxyCompactList}\small\item\em Creates and saves a new category for a user. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classcom_1_1saveit_1_1service_1_1_category_service_a6dfe563378d004e9f3ed7d00f21bd159}{remove\+Category}} (int category\+Id)
+\begin{DoxyCompactList}\small\item\em Removes a category from the system based on its ID. \end{DoxyCompactList}\item 
+List$<$ \mbox{\hyperlink{classcom_1_1saveit_1_1model_1_1_category}{Category}} $>$ \mbox{\hyperlink{classcom_1_1saveit_1_1service_1_1_category_service_aecf5299ce98e3e339191777a444d3a7c}{get\+Categories\+For\+User}} (int user\+Id)
+\begin{DoxyCompactList}\small\item\em Retrieves all categories belonging to a specific user. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classcom_1_1saveit_1_1model_1_1_category}{Category}} \mbox{\hyperlink{classcom_1_1saveit_1_1service_1_1_category_service_ac03c1f8faf073c374e2468b2e50bcb20}{resolve\+By\+Id}} (int user\+Id, int category\+Id)
+\begin{DoxyCompactList}\small\item\em Resolves a \doxylink{classcom_1_1saveit_1_1model_1_1_category}{Category} object by its unique ID and verifies its existence. \end{DoxyCompactList}\item 
+\mbox{\hyperlink{classcom_1_1saveit_1_1model_1_1_category}{Category}} \mbox{\hyperlink{classcom_1_1saveit_1_1service_1_1_category_service_ae96e901b18ae7860293abd81d364a83b}{resolve\+By\+Name}} (int user\+Id, String name)
+\begin{DoxyCompactList}\small\item\em Resolves a \doxylink{classcom_1_1saveit_1_1model_1_1_category}{Category} object by its name. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Service class providing business logic for managing categories. 
+
+This class acts as an intermediary between the UI/\+Controller layers and the \doxylink{classcom_1_1saveit_1_1dao_1_1_category_d_a_o}{Category\+DAO}. It handles the creation, deletion, and resolution of categories specifically for an authenticated user. 
+
+\label{doc-constructors}
+\Hypertarget{classcom_1_1saveit_1_1service_1_1_category_service_doc-constructors}
+\doxysubsection{Constructor \& Destructor Documentation}
+\Hypertarget{classcom_1_1saveit_1_1service_1_1_category_service_abcb54c2563702854f327387188497a5a}\index{com.saveit.service.CategoryService@{com.saveit.service.CategoryService}!CategoryService@{CategoryService}}
+\index{CategoryService@{CategoryService}!com.saveit.service.CategoryService@{com.saveit.service.CategoryService}}
+\doxysubsubsection{\texorpdfstring{CategoryService()}{CategoryService()}}
+{\footnotesize\ttfamily \label{classcom_1_1saveit_1_1service_1_1_category_service_abcb54c2563702854f327387188497a5a} 
+com.\+saveit.\+service.\+Category\+Service.\+Category\+Service (\begin{DoxyParamCaption}\item[{\mbox{\hyperlink{classcom_1_1saveit_1_1model_1_1_user}{User}}}]{user}{}\end{DoxyParamCaption})}
+
+
+
+Constructs a \doxylink{classcom_1_1saveit_1_1service_1_1_category_service}{Category\+Service} for a specific user. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em user} & The \doxylink{classcom_1_1saveit_1_1model_1_1_user}{User} object who owns the categories being managed. \\
+\hline
+\end{DoxyParams}
+
+
+\label{doc-func-members}
+\Hypertarget{classcom_1_1saveit_1_1service_1_1_category_service_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classcom_1_1saveit_1_1service_1_1_category_service_aa50caf54a5b66c09cacc6ff16b28348e}\index{com.saveit.service.CategoryService@{com.saveit.service.CategoryService}!addCategory@{addCategory}}
+\index{addCategory@{addCategory}!com.saveit.service.CategoryService@{com.saveit.service.CategoryService}}
+\doxysubsubsection{\texorpdfstring{addCategory()}{addCategory()}}
+{\footnotesize\ttfamily \label{classcom_1_1saveit_1_1service_1_1_category_service_aa50caf54a5b66c09cacc6ff16b28348e} 
+void com.\+saveit.\+service.\+Category\+Service.\+add\+Category (\begin{DoxyParamCaption}\item[{String}]{name}{, }\item[{int}]{user\+Id}{}\end{DoxyParamCaption})}
+
+
+
+Creates and saves a new category for a user. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & The name of the category (will be trimmed of whitespace). \\
+\hline
+{\em user\+Id} & The ID of the user creating the category. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classcom_1_1saveit_1_1service_1_1_category_service_aecf5299ce98e3e339191777a444d3a7c}\index{com.saveit.service.CategoryService@{com.saveit.service.CategoryService}!getCategoriesForUser@{getCategoriesForUser}}
+\index{getCategoriesForUser@{getCategoriesForUser}!com.saveit.service.CategoryService@{com.saveit.service.CategoryService}}
+\doxysubsubsection{\texorpdfstring{getCategoriesForUser()}{getCategoriesForUser()}}
+{\footnotesize\ttfamily \label{classcom_1_1saveit_1_1service_1_1_category_service_aecf5299ce98e3e339191777a444d3a7c} 
+List$<$ \mbox{\hyperlink{classcom_1_1saveit_1_1model_1_1_category}{Category}} $>$ com.\+saveit.\+service.\+Category\+Service.\+get\+Categories\+For\+User (\begin{DoxyParamCaption}\item[{int}]{user\+Id}{}\end{DoxyParamCaption})}
+
+
+
+Retrieves all categories belonging to a specific user. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em user\+Id} & The ID of the user whose categories are being requested. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+List$<$\+Category$>$ A list of categories, or an empty list if none are found. 
+\end{DoxyReturn}
+\Hypertarget{classcom_1_1saveit_1_1service_1_1_category_service_a6dfe563378d004e9f3ed7d00f21bd159}\index{com.saveit.service.CategoryService@{com.saveit.service.CategoryService}!removeCategory@{removeCategory}}
+\index{removeCategory@{removeCategory}!com.saveit.service.CategoryService@{com.saveit.service.CategoryService}}
+\doxysubsubsection{\texorpdfstring{removeCategory()}{removeCategory()}}
+{\footnotesize\ttfamily \label{classcom_1_1saveit_1_1service_1_1_category_service_a6dfe563378d004e9f3ed7d00f21bd159} 
+void com.\+saveit.\+service.\+Category\+Service.\+remove\+Category (\begin{DoxyParamCaption}\item[{int}]{category\+Id}{}\end{DoxyParamCaption})}
+
+
+
+Removes a category from the system based on its ID. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em category\+Id} & The unique identifier of the category to delete. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classcom_1_1saveit_1_1service_1_1_category_service_ac03c1f8faf073c374e2468b2e50bcb20}\index{com.saveit.service.CategoryService@{com.saveit.service.CategoryService}!resolveById@{resolveById}}
+\index{resolveById@{resolveById}!com.saveit.service.CategoryService@{com.saveit.service.CategoryService}}
+\doxysubsubsection{\texorpdfstring{resolveById()}{resolveById()}}
+{\footnotesize\ttfamily \label{classcom_1_1saveit_1_1service_1_1_category_service_ac03c1f8faf073c374e2468b2e50bcb20} 
+\mbox{\hyperlink{classcom_1_1saveit_1_1model_1_1_category}{Category}} com.\+saveit.\+service.\+Category\+Service.\+resolve\+By\+Id (\begin{DoxyParamCaption}\item[{int}]{user\+Id}{, }\item[{int}]{category\+Id}{}\end{DoxyParamCaption})}
+
+
+
+Resolves a \doxylink{classcom_1_1saveit_1_1model_1_1_category}{Category} object by its unique ID and verifies its existence. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em user\+Id} & The ID of the user. \\
+\hline
+{\em category\+Id} & The ID of the category to resolve. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\doxylink{classcom_1_1saveit_1_1model_1_1_category}{Category} The found \doxylink{classcom_1_1saveit_1_1model_1_1_category}{Category} object, or null if no valid category exists. 
+\end{DoxyReturn}
+\Hypertarget{classcom_1_1saveit_1_1service_1_1_category_service_ae96e901b18ae7860293abd81d364a83b}\index{com.saveit.service.CategoryService@{com.saveit.service.CategoryService}!resolveByName@{resolveByName}}
+\index{resolveByName@{resolveByName}!com.saveit.service.CategoryService@{com.saveit.service.CategoryService}}
+\doxysubsubsection{\texorpdfstring{resolveByName()}{resolveByName()}}
+{\footnotesize\ttfamily \label{classcom_1_1saveit_1_1service_1_1_category_service_ae96e901b18ae7860293abd81d364a83b} 
+\mbox{\hyperlink{classcom_1_1saveit_1_1model_1_1_category}{Category}} com.\+saveit.\+service.\+Category\+Service.\+resolve\+By\+Name (\begin{DoxyParamCaption}\item[{int}]{user\+Id}{, }\item[{String}]{name}{}\end{DoxyParamCaption})}
+
+
+
+Resolves a \doxylink{classcom_1_1saveit_1_1model_1_1_category}{Category} object by its name. 
+
+If the category does not exist, the underlying DAO implementation may create it.
+
+
+\begin{DoxyParams}{Parameters}
+{\em user\+Id} & The ID of the user. \\
+\hline
+{\em name} & The name of the category (will be trimmed of whitespace). \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+\doxylink{classcom_1_1saveit_1_1model_1_1_category}{Category} The resolved \doxylink{classcom_1_1saveit_1_1model_1_1_category}{Category} object. 
+\end{DoxyReturn}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/main/java/com/saveit/service/Category\+Service.\+java\end{DoxyCompactItemize}

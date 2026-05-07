@@ -1,0 +1,33 @@
+.date-picker-popup {
+    -fx-background-color: #2b2b2b;
+    -fx-border-color: #444;
+}
+
+.date-picker-popup > .month-year-pane {
+    -fx-background-color: #3c3f41;
+}
+
+.date-picker-popup > .month-year-pane > .label {
+    -fx-text-fill: white;
+    -fx-font-weight: bold;
+}
+
+.date-picker-popup > .calendar-grid > .day-cell {
+    -fx-background-color: #2b2b2b;
+    -fx-text-fill: #bbb;
+}
+
+.date-picker-popup > .calendar-grid > .day-cell:hover {
+    -fx-background-color: #4b6eaf;
+    -fx-text-fill: white;
+}
+
+.date-picker-popup > .calendar-grid > .selected {
+    -fx-background-color: #3658a0;
+    -fx-text-fill: white;
+}
+
+
+.date-picker-popup > .calendar-grid > .today {
+    -fx-border-color: #4b6eaf;
+}

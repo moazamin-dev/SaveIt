@@ -1,0 +1,178 @@
+\doxysection{com.\+saveit.\+model.\+User Class Reference}
+\hypertarget{classcom_1_1saveit_1_1model_1_1_user}{}\label{classcom_1_1saveit_1_1model_1_1_user}\index{com.saveit.model.User@{com.saveit.model.User}}
+
+
+Represents a user within the Save\+It application.  
+
+
+\doxysubsubsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+void \mbox{\hyperlink{classcom_1_1saveit_1_1model_1_1_user_a485d772907d9a1b52c705e80b4b3b6e3}{set\+Id}} (int id)
+\begin{DoxyCompactList}\small\item\em Sets the unique identifier for the user. \end{DoxyCompactList}\item 
+int \mbox{\hyperlink{classcom_1_1saveit_1_1model_1_1_user_ad78cd24fdb959185c45334e58bb5e2a9}{get\+Id}} ()
+\begin{DoxyCompactList}\small\item\em Gets the unique identifier of the user. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classcom_1_1saveit_1_1model_1_1_user_acd481d9b8aecb8aa92d9a5a8ac58f631}{set\+Name}} (String name)
+\begin{DoxyCompactList}\small\item\em Sets the full name of the user. \end{DoxyCompactList}\item 
+String \mbox{\hyperlink{classcom_1_1saveit_1_1model_1_1_user_a5d08114c9cb1450ff0a09b7bd435d86c}{get\+Name}} ()
+\begin{DoxyCompactList}\small\item\em Gets the full name of the user. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classcom_1_1saveit_1_1model_1_1_user_af14ae4410d24ffc178dfda937adca662}{set\+Uname}} (String uname)
+\begin{DoxyCompactList}\small\item\em Sets the login username. \end{DoxyCompactList}\item 
+String \mbox{\hyperlink{classcom_1_1saveit_1_1model_1_1_user_a1bd342ff254717897370d1a98c131a27}{get\+Uname}} ()
+\begin{DoxyCompactList}\small\item\em Gets the login username. \end{DoxyCompactList}\item 
+void \mbox{\hyperlink{classcom_1_1saveit_1_1model_1_1_user_a2af5e4fcc49a07223069491a99bdda0a}{set\+Phone}} (String phone)
+\begin{DoxyCompactList}\small\item\em Sets the contact phone number for the user. \end{DoxyCompactList}\item 
+String \mbox{\hyperlink{classcom_1_1saveit_1_1model_1_1_user_af18f3f1a2e3f2d58af895e95a0426d0b}{get\+Phone}} ()
+\begin{DoxyCompactList}\small\item\em Gets the contact phone number of the user. \end{DoxyCompactList}\end{DoxyCompactItemize}
+\doxysubsubsection*{Static Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+static String \mbox{\hyperlink{classcom_1_1saveit_1_1model_1_1_user_a3e86d79a4a708ce8f5542f2465510997}{hash\+Password}} (String pass)
+\begin{DoxyCompactList}\small\item\em Hashes a plain-\/text password using the SHA-\/256 algorithm. \end{DoxyCompactList}\end{DoxyCompactItemize}
+
+
+\doxysubsection{Detailed Description}
+Represents a user within the Save\+It application. 
+
+This class stores profile information for a user, including their name, contact details, and credentials. It also provides utility methods for secure password handling. 
+
+\label{doc-func-members}
+\Hypertarget{classcom_1_1saveit_1_1model_1_1_user_doc-func-members}
+\doxysubsection{Member Function Documentation}
+\Hypertarget{classcom_1_1saveit_1_1model_1_1_user_ad78cd24fdb959185c45334e58bb5e2a9}\index{com.saveit.model.User@{com.saveit.model.User}!getId@{getId}}
+\index{getId@{getId}!com.saveit.model.User@{com.saveit.model.User}}
+\doxysubsubsection{\texorpdfstring{getId()}{getId()}}
+{\footnotesize\ttfamily \label{classcom_1_1saveit_1_1model_1_1_user_ad78cd24fdb959185c45334e58bb5e2a9} 
+int com.\+saveit.\+model.\+User.\+get\+Id (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Gets the unique identifier of the user. 
+
+\begin{DoxyReturn}{Returns}
+int The user ID. 
+\end{DoxyReturn}
+\Hypertarget{classcom_1_1saveit_1_1model_1_1_user_a5d08114c9cb1450ff0a09b7bd435d86c}\index{com.saveit.model.User@{com.saveit.model.User}!getName@{getName}}
+\index{getName@{getName}!com.saveit.model.User@{com.saveit.model.User}}
+\doxysubsubsection{\texorpdfstring{getName()}{getName()}}
+{\footnotesize\ttfamily \label{classcom_1_1saveit_1_1model_1_1_user_a5d08114c9cb1450ff0a09b7bd435d86c} 
+String com.\+saveit.\+model.\+User.\+get\+Name (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Gets the full name of the user. 
+
+\begin{DoxyReturn}{Returns}
+String The user\textquotesingle{}s name. 
+\end{DoxyReturn}
+\Hypertarget{classcom_1_1saveit_1_1model_1_1_user_af18f3f1a2e3f2d58af895e95a0426d0b}\index{com.saveit.model.User@{com.saveit.model.User}!getPhone@{getPhone}}
+\index{getPhone@{getPhone}!com.saveit.model.User@{com.saveit.model.User}}
+\doxysubsubsection{\texorpdfstring{getPhone()}{getPhone()}}
+{\footnotesize\ttfamily \label{classcom_1_1saveit_1_1model_1_1_user_af18f3f1a2e3f2d58af895e95a0426d0b} 
+String com.\+saveit.\+model.\+User.\+get\+Phone (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Gets the contact phone number of the user. 
+
+\begin{DoxyReturn}{Returns}
+String The phone number. 
+\end{DoxyReturn}
+\Hypertarget{classcom_1_1saveit_1_1model_1_1_user_a1bd342ff254717897370d1a98c131a27}\index{com.saveit.model.User@{com.saveit.model.User}!getUname@{getUname}}
+\index{getUname@{getUname}!com.saveit.model.User@{com.saveit.model.User}}
+\doxysubsubsection{\texorpdfstring{getUname()}{getUname()}}
+{\footnotesize\ttfamily \label{classcom_1_1saveit_1_1model_1_1_user_a1bd342ff254717897370d1a98c131a27} 
+String com.\+saveit.\+model.\+User.\+get\+Uname (\begin{DoxyParamCaption}{}{}\end{DoxyParamCaption})}
+
+
+
+Gets the login username. 
+
+\begin{DoxyReturn}{Returns}
+String The username. 
+\end{DoxyReturn}
+\Hypertarget{classcom_1_1saveit_1_1model_1_1_user_a3e86d79a4a708ce8f5542f2465510997}\index{com.saveit.model.User@{com.saveit.model.User}!hashPassword@{hashPassword}}
+\index{hashPassword@{hashPassword}!com.saveit.model.User@{com.saveit.model.User}}
+\doxysubsubsection{\texorpdfstring{hashPassword()}{hashPassword()}}
+{\footnotesize\ttfamily \label{classcom_1_1saveit_1_1model_1_1_user_a3e86d79a4a708ce8f5542f2465510997} 
+String com.\+saveit.\+model.\+User.\+hash\+Password (\begin{DoxyParamCaption}\item[{String}]{pass}{}\end{DoxyParamCaption})\hspace{0.3cm}{\ttfamily [static]}}
+
+
+
+Hashes a plain-\/text password using the SHA-\/256 algorithm. 
+
+This method takes a raw string, computes its SHA-\/256 hash, and returns the result as a Base64 encoded string for secure storage.
+
+
+\begin{DoxyParams}{Parameters}
+{\em pass} & The plain-\/text password to be hashed. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+String The Base64 encoded hash, or null if the algorithm is unavailable. 
+\end{DoxyReturn}
+\Hypertarget{classcom_1_1saveit_1_1model_1_1_user_a485d772907d9a1b52c705e80b4b3b6e3}\index{com.saveit.model.User@{com.saveit.model.User}!setId@{setId}}
+\index{setId@{setId}!com.saveit.model.User@{com.saveit.model.User}}
+\doxysubsubsection{\texorpdfstring{setId()}{setId()}}
+{\footnotesize\ttfamily \label{classcom_1_1saveit_1_1model_1_1_user_a485d772907d9a1b52c705e80b4b3b6e3} 
+void com.\+saveit.\+model.\+User.\+set\+Id (\begin{DoxyParamCaption}\item[{int}]{id}{}\end{DoxyParamCaption})}
+
+
+
+Sets the unique identifier for the user. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em id} & The ID to assign to the user. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classcom_1_1saveit_1_1model_1_1_user_acd481d9b8aecb8aa92d9a5a8ac58f631}\index{com.saveit.model.User@{com.saveit.model.User}!setName@{setName}}
+\index{setName@{setName}!com.saveit.model.User@{com.saveit.model.User}}
+\doxysubsubsection{\texorpdfstring{setName()}{setName()}}
+{\footnotesize\ttfamily \label{classcom_1_1saveit_1_1model_1_1_user_acd481d9b8aecb8aa92d9a5a8ac58f631} 
+void com.\+saveit.\+model.\+User.\+set\+Name (\begin{DoxyParamCaption}\item[{String}]{name}{}\end{DoxyParamCaption})}
+
+
+
+Sets the full name of the user. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em name} & The name to set. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classcom_1_1saveit_1_1model_1_1_user_a2af5e4fcc49a07223069491a99bdda0a}\index{com.saveit.model.User@{com.saveit.model.User}!setPhone@{setPhone}}
+\index{setPhone@{setPhone}!com.saveit.model.User@{com.saveit.model.User}}
+\doxysubsubsection{\texorpdfstring{setPhone()}{setPhone()}}
+{\footnotesize\ttfamily \label{classcom_1_1saveit_1_1model_1_1_user_a2af5e4fcc49a07223069491a99bdda0a} 
+void com.\+saveit.\+model.\+User.\+set\+Phone (\begin{DoxyParamCaption}\item[{String}]{phone}{}\end{DoxyParamCaption})}
+
+
+
+Sets the contact phone number for the user. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em phone} & The phone number to set. \\
+\hline
+\end{DoxyParams}
+\Hypertarget{classcom_1_1saveit_1_1model_1_1_user_af14ae4410d24ffc178dfda937adca662}\index{com.saveit.model.User@{com.saveit.model.User}!setUname@{setUname}}
+\index{setUname@{setUname}!com.saveit.model.User@{com.saveit.model.User}}
+\doxysubsubsection{\texorpdfstring{setUname()}{setUname()}}
+{\footnotesize\ttfamily \label{classcom_1_1saveit_1_1model_1_1_user_af14ae4410d24ffc178dfda937adca662} 
+void com.\+saveit.\+model.\+User.\+set\+Uname (\begin{DoxyParamCaption}\item[{String}]{uname}{}\end{DoxyParamCaption})}
+
+
+
+Sets the login username. 
+
+
+\begin{DoxyParams}{Parameters}
+{\em uname} & The username to assign. \\
+\hline
+\end{DoxyParams}
+
+
+The documentation for this class was generated from the following file\+:\begin{DoxyCompactItemize}
+\item 
+src/main/java/com/saveit/model/User.\+java\end{DoxyCompactItemize}
